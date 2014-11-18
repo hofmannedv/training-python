@@ -11,4 +11,7 @@ README
   the built-in function sum().
 
   For a list of built-in functions in Python 3.4 see:
-  https://docs.python.org/3.4/library/functions.html#sum
+  https://docs.python.org/3.4/library/functions.html
+
+* average.py: calculate the average for a list of values. Shows the
+  output differences between Python 2.x, and 3.x, too.
