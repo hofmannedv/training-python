@@ -6,3 +6,6 @@ README
   python 2.x, and 3.x, too.
 
 * calc2.py: Demonstrates how to sum a list of integer variables.
+
+* calc3.py: Demonstrates how to sum a list of integer variables using
+  the built-in function sum().
