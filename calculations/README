@@ -1,0 +1,6 @@
+README
+------
+
+Demonstrates how to define two integer variables, and calculate the
+total sum. Shows the output differences between python 2.x, and 3.x,
+too.
