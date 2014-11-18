@@ -3,9 +3,12 @@ README
 
 * calc1.py: Demonstrates how to define two integer variables, and
   calculate the total sum. Shows the output differences between 
-  python 2.x, and 3.x, too.
+  Python 2.x, and 3.x, too.
 
 * calc2.py: Demonstrates how to sum a list of integer variables.
 
 * calc3.py: Demonstrates how to sum a list of integer variables using
   the built-in function sum().
+
+  For a list of built-in functions in Python 3.4 see:
+  https://docs.python.org/3.4/library/functions.html#sum
