@@ -1,0 +1,5 @@
+README
+------
+
+* even.py: demonstrates the usage of the "%" operator, and the def
+  statement to figure out whether a given number is even, or odd 
