@@ -3,3 +3,6 @@ README
 
 * while.py: demonstrates the usage of a while loop with index, and a
   list to step through
+
+* for.py: demonstrates the basic usage of a for loop either with, or
+  without an index value to step through the given list
