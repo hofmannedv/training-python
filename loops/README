@@ -9,3 +9,6 @@ README
 
 * for-range.py: demonstrates the basic usage of a for loop using a given
   range of index values either with or without step value
+
+* for-range-uneven.py: prints the list items with an uneven index
+  position in the list, only
