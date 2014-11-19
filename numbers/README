@@ -3,3 +3,6 @@ README
 
 * even.py: demonstrates the usage of the "%" operator, and the def
   statement to figure out whether a given number is even, or odd 
+
+* find-largest.py: find the largest number in a list of integers
+  using a) a for loop, or b) the max function
