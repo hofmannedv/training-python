@@ -12,3 +12,6 @@ README
 
 * for-range-uneven.py: prints the list items with an uneven index
   position in the list, only
+
+* for-total.py: simulates the calculation of a shopping cart using a
+  list and a for loop
