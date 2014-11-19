@@ -26,4 +26,17 @@ for itemIndex in listRange:
 
 print ("----------------")
 print ("total:", listItems, "items")
+print ()
+
+# use an additional step value
+step = 2
+
+listRange = range(lowerBound, upperBound + 1, step)
+listItems = len(listRange)
+for itemIndex in listRange:
+	print (itemIndex, shoppingCart[itemIndex])
+
+print ("----------------")
+print ("total:", listItems, "items")
+
 

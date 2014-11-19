@@ -8,4 +8,4 @@ README
   without an index value to step through the given list
 
 * for-range.py: demonstrates the basic usage of a for loop using a given
-  range of index values
+  range of index values either with or without step value
