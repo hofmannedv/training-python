@@ -16,6 +16,7 @@
   - assignments
     variables and value
     two values, and the according operators
+    multiple assignments
   - data precision, and according effects
 
 * statements
