@@ -24,6 +24,14 @@ print (("d,e   : %i,%i") % (d,e))
 # assignments with calculations
 total = a + b - c + d -e		# simple addition
 output = colour * 4				# concatenate a string four times
+output2 = "light" + colour		# concatenate two strings
+output3 = colour + str(total)	# concatenate a string with converted integer
 print (("total : %i") % (total))
 print (("colour: %s") % (colour))
 print (("output: %s") % (output))
+print (("output2: %s") % (output2))
+print (("output3: %s") % (output3))
+
+# print a partial string
+partialString = output2[2:4]
+print ("partialString:", partialString)
