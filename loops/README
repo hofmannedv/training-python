@@ -18,3 +18,6 @@ README
 
 * while-break.py: demonstrates exiting a while loop using the break
   statement
+
+* while-continue.py: demonstrates the usage of continue in a while loop
+  to skip the statements in the body of the loop
