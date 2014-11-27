@@ -15,3 +15,6 @@ README
 
 * for-total.py: simulates the calculation of a shopping cart using a
   list and a for loop
+
+* while-break.py: demonstrates exiting a while loop using the break
+  statement
