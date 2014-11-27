@@ -1,0 +1,85 @@
+
+= Contents =
+
+* writing python code
+  - code order, blocks, and code structure
+  - spaces vs. tabulators
+  - development steps
+  - documenting your code
+  - writing clean code
+
+* variables
+  - defining identifiers
+  - datatypes
+    dynamic vs. explicit datatype assignments
+    datatype changes
+  - assignments
+    variables and value
+    two values, and the according operators
+  - data precision, and according effects
+
+* statements
+  - testing conditions using if-else
+  - loops
+    for loop
+    while loop
+  - break and continue
+
+* lists and tuples
+  - definition
+  - accessing single elements
+  - accessing a subset of elements
+  - working with lists (operations)
+  - keys and indexes
+  - the in operator
+  - the range() function
+  - sorting, and re-arranging lists
+
+* structured data
+  - lists, tuples, and objects
+  - data order
+
+* basic functions in practice
+  - range()
+  - in operator
+  - count()
+  - sort()
+
+* string functions
+  - defining a string
+  - string assignments
+  - accessing partial strings
+  - string concatenations
+  - string output using print
+  - basic string functions
+    len()
+    startswith()
+    endswith()
+  - the in operator
+  - comparing strings
+  - lower, and upper case
+
+* defining functions and sub modules
+  - defining function identifiers
+  - setting parameters
+  - return value
+  - how to call a function
+  - fixed parameters vs. dynamic parameters
+  - assigning paramaters and values
+  - validity of variables, and names
+  - using global variables, and side effects
+  - recursive function calls
+
+* code validation
+  - testing code in the python shell
+  - unit tests
+  - partial testing, and validation
+  - run time tests, and speed optimization
+
+* using python modules
+  - python standard modules
+  - fully include modules
+  - include selected functions from a module
+  - include code using a different name
+
+= References and Further Reading =
