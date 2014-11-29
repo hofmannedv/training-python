@@ -6,3 +6,6 @@ README
 
 * find-largest.py: find the largest number in a list of integers
   using a) a for loop, or b) the max function
+
+* count-numbers.py: shows how to count numbers in a list (finding the
+  elements that are numbers)
