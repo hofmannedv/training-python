@@ -21,3 +21,8 @@ print (numbersTuple)
 print (smallTuple)
 print (numbersTuple + smallTuple)
 
+# define a dictionary
+book = {}
+book['isbn'] = "3-145-789"
+book['title'] = "Learning Python"
+print (("title, isbn: %s, %s") % (book['title'], book['isbn']))
