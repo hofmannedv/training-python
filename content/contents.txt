@@ -26,7 +26,7 @@
     while loop
   - break and continue
 
-* lists and tuples
+* lists, tuples and dictionaries
   - definition
   - accessing single elements
   - accessing a subset of elements
@@ -34,10 +34,10 @@
   - keys and indexes
   - the in operator
   - the range() function
-  - sorting, and re-arranging lists
+  - sorting, and re-arranging data
 
 * structured data
-  - lists, tuples, and objects
+  - lists, tuples, dictionaries, and objects
   - data order
 
 * basic functions in practice
@@ -82,5 +82,21 @@
   - fully include modules
   - include selected functions from a module
   - include code using a different name
+
+* input and putput
+  - reading keyboard input
+  - output data (stdout, stderr)
+
+* files and directories
+  - input and output
+  - reading and writing files line by line
+  - reading and writing files en bloc
+  - appending data to files
+  - files and UNIX access rights
+  - get and set the current working directory
+  - creating and deleting directories
+    single directories
+    directories with its full content, and data structure
+  - exception handling
 
 = References and Further Reading =
