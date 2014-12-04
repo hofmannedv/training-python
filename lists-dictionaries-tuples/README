@@ -1,4 +1,4 @@
 README
 ------
 
-* overview.py: demonstrates how to create lists, dictionaries, and tuples
+* arguments.py: demonstrates how to read commandline arguments
