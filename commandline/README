@@ -1,23 +1,8 @@
 README
 ------
 
-* while.py: demonstrates the usage of a while loop with index, and a
-  list to step through
+* arguments.py: how to count, and read commandline arguments
 
-* for.py: demonstrates the basic usage of a for loop either with, or
-  without an index value to step through the given list
+* arguments-getopt.py: how to count, and read commandline arguments
+  using getopt
 
-* for-range.py: demonstrates the basic usage of a for loop using a given
-  range of index values either with or without step value
-
-* for-range-uneven.py: prints the list items with an uneven index
-  position in the list, only
-
-* for-total.py: simulates the calculation of a shopping cart using a
-  list and a for loop
-
-* while-break.py: demonstrates exiting a while loop using the break
-  statement
-
-* while-continue.py: demonstrates the usage of continue in a while loop
-  to skip the statements in the body of the loop
