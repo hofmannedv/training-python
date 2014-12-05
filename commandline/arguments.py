@@ -12,7 +12,12 @@ import sys
 # initiate a basic counter variable
 count = 0
 
+# count number of parameters
+numPara = len(sys.argv) - 1
+program = sys.argv[0]
+print (("called %s with %i further parameters") % (program, numPara))
+
 # output every argument we were called with
 for parameter in sys.argv:
-	print (count, parameter)
+	print (count, ":", parameter)
 	count = count + 1 
