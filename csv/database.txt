@@ -1,0 +1,5 @@
+Name,Address,City,Zip,Country
+John McLaren, 11 Park Lane, London, E15 2JG, Great Britain
+Catherine Bernard, 17 Route de Dole, Arbois, 39600, France
+Alois Fahrnberger, Humboldtstraße 3, Salzburg, 5020, Austria
+Phillip Werner, Lilienstraße 5b, Saarbrücken, 66119, Germany

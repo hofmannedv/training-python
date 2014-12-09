@@ -1,0 +1,6 @@
+README
+------
+
+* reading-csv.py: demonstrates how to read a csv file, and output
+  desired columns
+
