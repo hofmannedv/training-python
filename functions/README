@@ -1,6 +1,7 @@
 README
 ------
 
-* function.py: 					demonstrates how to write a function, basically
+* function.py: 					demonstrates how to write, and call a function, basically
 * function-tupel.py:			writing a function that returns a tuple
 * function-lambda.py:			writing a lambda function 
+* function-parameter.py:		writing a function with a function name as a parameter
