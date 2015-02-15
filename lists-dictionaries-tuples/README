@@ -10,3 +10,4 @@ README
 * list-keys.py:			demonstrates how to extract the keys of a dictionary using keys()
 * list-values.py:		demonstrates how to extract the values of a dictionary using values()
 * set-operations.py:	demonstrates how to work with sets (basic operations)
+* subset-operations.py:	demonstrates how to work with subsets 
