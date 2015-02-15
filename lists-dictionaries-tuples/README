@@ -1,7 +1,9 @@
 README
 ------
 
-* overview.py: demonstrates how to use lists, tuples, and dictionaries
-* iterable-zip.py: show how to use the zip function with lists
-* iterable-map.py: show how to use the map function with lists
-* iterable-map2.py: show how to use the map function with an array
+* overview.py: 			demonstrates how to use lists, tuples, and dictionaries
+* iterable-filter.py: 	show the filter function
+* iterable-map.py: 		show how to use the map function with lists
+* iterable-map2.py: 	show how to use the map function with an array
+* iterable-zip.py: 		show how to use the zip function with lists
+
