@@ -1,4 +1,5 @@
 README
 ------
 
-* arguments.py: demonstrates how to read commandline arguments
+* overview.py: demonstrates how to use lists, tuples, and dictionaries
+* iterable-zip.py: show how to use the zip function with lists
