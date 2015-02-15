@@ -3,3 +3,4 @@ README
 
 * function.py: 					demonstrates how to write a function, basically
 * function-tupel.py:			writing a function that returns a tuple
+* function-lambda.py:			writing a lambda function 
