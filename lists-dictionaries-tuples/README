@@ -3,3 +3,4 @@ README
 
 * overview.py: demonstrates how to use lists, tuples, and dictionaries
 * iterable-zip.py: show how to use the zip function with lists
+* iterable-map.py: show how to use the map function with lists
