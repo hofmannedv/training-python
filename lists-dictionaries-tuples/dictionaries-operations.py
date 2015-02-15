@@ -22,10 +22,26 @@ print("modified:", capitals)
 del capitals["Norway"]
 print("modified:", capitals)
 
+# is capital in dictionary?
+if "France" in capitals:
+	print("France is in capitals:", capitals["France"])
+
+if "Spain" not in capitals:
+	print("Spain is not in capitals")
+
 # count the number of capitals
 print("number of elements:", len(capitals))
 
 # clear the dictionary
 capitals = {}
-print("empty disctionary:", capitals)
+print("empty dictionary:", capitals)
 
+# replace using a second dictionary (update)
+capitals2 = {"Hungary": "Budapest", "Austria": "Wien"}
+capitals.update(capitals2)
+print("updated dictionary:", capitals)
+
+# extend the list
+capitals["Poland"] = "Warsaw"
+capitals["Nederland"] = "Amsterdam"
+print("updated dictionary:", capitals)
