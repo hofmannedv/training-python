@@ -16,3 +16,15 @@ print(cities2)
 # adding another list element
 cities1.append("Lyon")
 print("modified:", cities1)
+
+# substituting the second element
+cities1[1] = "Nancy"
+print("modified:", cities1)
+
+# substituting a number of elements
+cities1[1:3] = cities2
+print("modified:", cities1)
+
+# removing the first element
+del cities1[:1]
+print("modified:", cities1)
