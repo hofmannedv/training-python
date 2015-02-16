@@ -25,6 +25,28 @@ print("modified:", cities1)
 cities1[1:3] = cities2
 print("modified:", cities1)
 
-# removing the first element
+# removing up to the second element
 del cities1[:1]
 print("modified:", cities1)
+
+# removing a specific element
+cities1.remove("Lyon")
+print("modified:", cities1)
+
+# inserting an element at position 2
+cities1.insert(2, "Blois")
+print("modified:", cities1)
+
+# sorting the list
+cities1.sort()
+print("sorted:", cities1)
+
+# reversing the list
+cities1.reverse()
+print("reversed:", cities1)
+
+# counting elements
+print("number of 'Lausanne':", cities1.count("Lausanne"))
+
+# searching the positition in the list
+print("position of 'Blois' in the list:", cities1.index("Blois"))
