@@ -13,6 +13,7 @@ README
 * list-keys.py:					demonstrates how to extract the keys of a dictionary using keys()
 * list-operations.py:			various basic list operations
 * list-operations2.py:			extending, changing, and removing list items
+* list-pop.py:					show how to use the list as a stack
 * list-unique.py:				how to convert a list into a set with unique values
 * list-values.py:				demonstrates how to extract the values of a dictionary using values()
 * set-operations.py:			demonstrates how to work with sets (basic operations)
