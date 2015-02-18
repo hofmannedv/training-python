@@ -8,6 +8,7 @@ README
 * iterable-map2.py: 			show how to use the map function with an array
 * iterable-zip.py: 				show how to use the zip function with lists
 * list-comparing:				compare entire lists (Python 2.x, only)
+* list-comparing2:				compare entire lists (for all Python releases)
 * list-items.py:				demonstrates how to extract the items of a dictionary using items()
 * list-keys.py:					demonstrates how to extract the keys of a dictionary using keys()
 * list-operations.py:			various basic list operations
