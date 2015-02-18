@@ -19,7 +19,12 @@ capitals.add("Tokio")
 print("modified:", capitals)
 
 # remove an element
-capitals.discard("Bern")
+# - remove() raises error if element is not present
+capitals.remove("Bern")
+print("modified:", capitals)
+
+# - discard() does not rais an error if element is not present
+capitals.discard("Hamburg")
 print("modified:", capitals)
 
 # count the number of elements
