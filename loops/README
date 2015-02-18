@@ -21,3 +21,6 @@ README
 
 * while-continue.py: demonstrates the usage of continue in a while loop
   to skip the statements in the body of the loop
+
+* while-pass.py: demonstrates the usage of the pass statement in a while
+  loop
