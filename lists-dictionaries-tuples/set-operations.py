@@ -16,16 +16,16 @@ print("places:", places)
 
 # add an element
 capitals.add("Tokio")
-print("modified:", capitals)
+print("modified (add):", capitals)
 
 # remove an element
 # - remove() raises error if element is not present
 capitals.remove("Bern")
-print("modified:", capitals)
+print("modified (remove):", capitals)
 
-# - discard() does not rais an error if element is not present
+# - discard() does not raise an error if element is not present
 capitals.discard("Hamburg")
-print("modified:", capitals)
+print("modified (discard):", capitals)
 
 # count the number of elements
 print("number of elements:", len(capitals))
