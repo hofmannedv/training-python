@@ -10,6 +10,10 @@
 capitals = set(["Berlin", "Oslo", "Bern"])
 print("original:", capitals)
 
+# define set of other places
+places = {"Toronto", "Washington", "Berlin", "Oslo"}
+print("places:", places)
+
 # add an element
 capitals.add("Tokio")
 print("modified:", capitals)
@@ -20,6 +24,10 @@ print("modified:", capitals)
 
 # count the number of elements
 print("number of elements:", len(capitals))
+
+# union both set of places
+placesList = places.union(capitals)
+print("new places list:", placesList)
 
 # clear the set
 capitals.clear()
