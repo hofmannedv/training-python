@@ -22,5 +22,8 @@ print("sorted list:", sortedNumbers)
 # reversed returns an iterator object, so we have to use a loop
 print("reversed list:")
 for i in reversedNumbers:
+	# print the value, followed by a single space
 	print(i, end=" ")
+
+# output an empty line at the end
 print()
