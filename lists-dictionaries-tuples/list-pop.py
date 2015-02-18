@@ -13,10 +13,12 @@ print(stack)
 while True:
 	try:
 		# pop last element
-		print(stack.pop())
-		print(stack)
+		# retrieve the element
+		value = stack.pop()
+		print("taken from stack:", value)
+		print("current stack:", stack)
 	except:
-		# list is empty
+		# list is empty -- we cannot take more elements
 		print("at the end of list")
 		break
 
