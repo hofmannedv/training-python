@@ -23,20 +23,59 @@ if (numPara < 2):
 currentArg = 0
 for parameter in sys.argv:
 	if (currentArg > 0):
-		print ("file:", parameter)
+		#print ("file:", parameter)
 		if not (os.path.isfile(parameter)):
 			print ("file %s does not exist" % (parameter))
+			print ("ignoring file")
+		else:
+			print ("evaluating file:", parameter)
+			# open file for reading
+			handle = open(parameter, "r")
+
+			# read the whole file content
+			content = handle.readlines()
+			
+			# close file
+			handle.close()
+
+			# evaluate the first five lines starting at line 0
+			linesOfContent = len(content)
+			lines = 5
+			if (linesOfContent < 5):
+				lines = linesOfContent
+
+			# look for this comment: // filename
+			# assume: not found
+			alreadyWithComment = False
+
+			for currentLineId in range(0, lines):
+				if not alreadyWithComment:
+					currentLine = content[currentLineId]
+					print ("evaluating:", currentLine)
+					if (currentLine.startswith("// " + parameter)):
+						print ("comment found (file already marked properly)")
+						alreadyWithComment = True
+						break
+
+			if not alreadyWithComment:
+				# add comment to file content
+				newContent = ["// " + parameter]
+				for entry in content:
+					newContent.append(entry)
+
+				# open file for writing
+				handle = open(parameter, "w")
+
+				print (newContent)
+				for line in newContent:
+					handle.write(line)
+
+				print ("comment added (file marked properly)")
+
+				# close file
+				handle.close()
+
 	currentArg += 1
 
-# open file
-# - file has to be the first parameter (others are ignored)
-# evaluate the first five lines starting at line 0
-# look for this comment: // filename
-# if there: 
-# - done
-# - output: comment found (file marked properly)
-# if not there: 
-# - add the comment at line 0, and save file
-# - output: comment found (file marked properly)
 
 
