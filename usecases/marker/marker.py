@@ -11,6 +11,7 @@
 
 # include standard modules
 import sys
+import os.path
 
 # count number of parameters
 numPara = len(sys.argv)
@@ -23,6 +24,8 @@ currentArg = 0
 for parameter in sys.argv:
 	if (currentArg > 0):
 		print ("file:", parameter)
+		if not (os.path.isfile(parameter)):
+			print ("file %s does not exist" % (parameter))
 	currentArg += 1
 
 # open file
