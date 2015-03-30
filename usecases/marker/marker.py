@@ -67,7 +67,7 @@ for parameter in sys.argv:
 
 			if not alreadyWithComment:
 				# pattern not found -- so add comment to file content
-				newContent = ["// " + parameter]
+				newContent = ["// " + parameter + "\n"]
 				for entry in content:
 					newContent.append(entry)
 
@@ -89,5 +89,6 @@ for parameter in sys.argv:
 	currentArg += 1
 
 # quit 
+print ("Exiting.")
 sys.exit(0)
 
