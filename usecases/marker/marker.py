@@ -19,16 +19,19 @@ if (numPara < 2):
 	print ("called without further parameters. Exiting.")
 	sys.exit(1)
 
-# output every argument we were called with
+# evaluate every argument we were called with
 currentArg = 0
 for parameter in sys.argv:
 	if (currentArg > 0):
 		#print ("file:", parameter)
+		# does the given file exist?
 		if not (os.path.isfile(parameter)):
 			print ("file %s does not exist" % (parameter))
-			print ("ignoring file")
+			print ("ignoring given parameter %s" % (parameter))
 		else:
-			print ("evaluating file:", parameter)
+			# the file exists, so we can evaluate this file
+			print ("evaluating file: %s" % (parameter))
+
 			# open file for reading
 			handle = open(parameter, "r")
 
@@ -39,8 +42,8 @@ for parameter in sys.argv:
 			handle.close()
 
 			# evaluate the first five lines starting at line 0
-			linesOfContent = len(content)
 			lines = 5
+			linesOfContent = len(content)
 			if (linesOfContent < 5):
 				lines = linesOfContent
 
@@ -48,17 +51,22 @@ for parameter in sys.argv:
 			# assume: not found
 			alreadyWithComment = False
 
-			for currentLineId in range(0, lines):
+			currentLineId = 0
+			while currentLineId < lines:
 				if not alreadyWithComment:
 					currentLine = content[currentLineId]
-					print ("evaluating:", currentLine)
+					print ("evaluating: %s" % (currentLine))
+
+					# check the current line for the pattern
 					if (currentLine.startswith("// " + parameter)):
 						print ("comment found (file already marked properly)")
 						alreadyWithComment = True
-						break
+
+				# continue with the next line
+				currentLineId = currentLineId + 1
 
 			if not alreadyWithComment:
-				# add comment to file content
+				# pattern not found -- so add comment to file content
 				newContent = ["// " + parameter]
 				for entry in content:
 					newContent.append(entry)
@@ -66,16 +74,20 @@ for parameter in sys.argv:
 				# open file for writing
 				handle = open(parameter, "w")
 
-				print (newContent)
+				# output final file
+				#print (newContent)
 				for line in newContent:
 					handle.write(line)
 
+				# success message
 				print ("comment added (file marked properly)")
 
 				# close file
 				handle.close()
 
+	# continue with the next parameter
 	currentArg += 1
 
-
+# quit 
+sys.exit(0)
 
