@@ -11,9 +11,9 @@ import matplotlib.pyplot as plt
 
 # define example data
 # - names
-names = ('Tom', 'Joe', 'Reto', 'Peter', 'Hugh')
+names = ['Tom', 'Joe', 'Reto', 'Peter', 'Hugh']
 # - according value
-points = (3.5, 17.2, 6.3, 9.15, 4.2)
+points = [3.5, 17.2, 6.3, 9.15, 4.2]
 
 # define the bar positions (y axis) from 0 to 4
 yPos = range(5)
