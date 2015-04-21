@@ -1,0 +1,61 @@
+Useful tasks understanding Python
+=================================
+Frank Hofmann
+:subtitle:
+:doctype: book
+:copyright: Frank Hofmann
+:revnumber: 1.0
+:lang: en
+:date: 21 April 2015
+:numbered:
+
+= Graphs and Data Visualization =
+
+== Understanding and Improving the Code ==
+
+. Have a look at this file, first: 
++
+https://github.com/hofmannedv/training-python/blob/master/graphs/bars.py
++
+a) You would like to add further data to be displayed in the graph. Which lines of the code will have to be changed, then?
++
+b) In line 19, there is a fixed value which represents the number of
+bars. Which python function can you use to have always as many bars as
+entries, without changing the code next time you either add, or delete
+data?
+
+== Reading CSV Data ==
+
+. Have a look at this piece of python code, first:
++
+----
+import csv
+
+fileHandle = open("data.csv")
+
+for line in csv.reader(fileHandle):
+    print(line)
+----
++
+We assume that the file `data.csv` has the following content:
++
+----
+City, Region, Country
+Strasbourg, Alsace, France
+Potsdam, Brandenburg, Germany
+Brighton, East Sussex, United Kingdom
+----
++
+a) How many lines are printed?
++
+b) The string function `split()` can be used to separate a string into
+single pieces according to a given separator, for example `", "`. How
+does a split() function call would look like to receive single columns?
++
+c) Which python function can you use to count the number of columns?
+
+= Further Documents =
+
+TBD
+
+
