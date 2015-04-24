@@ -58,6 +58,24 @@ list.
 .. Rewite the code in such a way that the output is a sum of both
 according list entries like 50, 82, etc.
 
+. A map function can simplify list calculations. Have a look at the
+following code:
++
+----
+def powerValue(factor):
+	return factor * factor
+
+numbers = [5, 16, 1, 89, -2]
+result = map(powerValue, numbers)
+
+for i in range(len(numbers)):
+	print "%i: %i" % (numbers[i], result[i])
+----
++
+.. Add a second map function named `addFixedValue()` that adds a fixed
+integer value to all the products calculated before, and stored in the
+variable `result`.
+
 . `sys` is the name of a python standard module to access various data
 from the underlying operating system (see <<sys>> for a full list of
 functions). The pre-defined list `sys.argv[]` represents the command

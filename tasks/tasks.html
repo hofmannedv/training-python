@@ -801,7 +801,8 @@ Transform both lists <tt>numbers1</tt> and <tt>numbers2</tt> into a set using th
 </li>
 <li>
 <p>
-Both lists and sets can be grouped in a <tt>for</tt> loop, for example:
+Both lists and sets can be grouped as a parameter in a <tt>for</tt> loop, for
+example:
 </p>
 <div class="listingblock">
 <div class="content">
@@ -821,6 +822,32 @@ list.
 <p>
 Rewite the code in such a way that the output is a sum of both
 according list entries like 50, 82, etc.
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+A map function can simplify list calculations. Have a look at the
+following code:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>def powerValue(factor):
+        return factor * factor
+
+numbers = [5, 16, 1, 89, -2]
+result = map(powerValue, numbers)
+
+for i in range(len(numbers)):
+        print "%i: %i" % (numbers[i], result[i])</tt></pre>
+</div></div>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+Add a second map function named <tt>addFixedValue()</tt> that adds a fixed
+integer value to all the products calculated before, and stored in the
+variable <tt>result</tt>.
 </p>
 </li>
 </ol></div>
@@ -1032,7 +1059,7 @@ Extend the program to print both the before-last, and the last line, only.
 <div id="footer">
 <div id="footer-text">
 Version 1.1<br />
-Last updated 2015-04-24 13:49:44 CEST
+Last updated 2015-04-24 14:05:56 CEST
 </div>
 </div>
 </body>
