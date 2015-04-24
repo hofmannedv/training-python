@@ -9,6 +9,22 @@ Frank Hofmann
 :date: 24 April 2015
 :numbered:
 
+= Lists and list functions =
+
+. A python list is defined as follows:
++
+----
+myList = [11, 5, 16, 8, 3]
+----
++
+.. The list function `reverse()` reverses the order of the list elements
+in place. Add two statements to output the list content in reverse
+order, and output the new list.
+
+.. The list function `sort()` sorts the list in place in ascending
+order (see <<PythonSortingMiniHowTo>> for further details). Sort the
+list, and output the new list.
+
 = Graphs and Data Visualization =
 
 == Understanding and Improving the Code ==
