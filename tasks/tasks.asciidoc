@@ -4,9 +4,9 @@ Frank Hofmann
 :subtitle:
 :doctype: book
 :copyright: Frank Hofmann
-:revnumber: 1.0
+:revnumber: 1.1
 :lang: en
-:date: 21 April 2015
+:date: 24 April 2015
 :numbered:
 
 = Graphs and Data Visualization =
@@ -17,9 +17,9 @@ Frank Hofmann
 +
 https://github.com/hofmannedv/training-python/blob/master/graphs/bars.py
 +
-a) You would like to add further data to be displayed in the graph. Which lines of the code will have to be changed, then?
-+
-b) In line 19, there is a fixed value which represents the number of
+.. You would like to add further data to be displayed in the graph. Which lines of the code will have to be changed, then?
+
+.. In line 19, there is a fixed value which represents the number of
 bars. Which python function can you use to have always as many bars as
 entries, without changing the code next time you either add, or delete
 data?
@@ -46,16 +46,33 @@ Potsdam, Brandenburg, Germany
 Brighton, East Sussex, United Kingdom
 ----
 +
-a) How many lines are printed?
-+
-b) The string function `split()` can be used to separate a string into
+.. How many lines are printed?
+
+.. The string function `split()` can be used to separate a string into
 single pieces according to a given separator, for example `", "`. How
-does a split() function call would look like to receive single columns?
+does a `split()` function call would look like to receive single columns?
+
+.. Which python function can you use to count the number of columns?
+
+. Have a look at this piece of python code, first:
 +
-c) Which python function can you use to count the number of columns?
+----
+import csv
+
+fileHandle = open("data.csv")
+fileContent = csv.reader(fileHandle)
+----
++
+.. The function `csv.reader()` returns a list that contains the content
+of the opened file line by line. Which python function can you use to
+figure out the number of lines in that file?
+
+.. Extend the program to print every second line, only.
+
+.. Extend the program to print both the before-last, and the last line, only.
 
 = Further Documents =
 
-TBD
+- [[[PythonSortingMiniHowTo]]] Python Sorting Mini-How to, https://wiki.python.org/moin/HowTo/Sorting/
 
 

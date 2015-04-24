@@ -739,8 +739,8 @@ asciidoc.install();
 <div id="header">
 <h1>Useful tasks understanding Python</h1>
 <span id="author">Frank Hofmann</span><br />
-<span id="revnumber">version 1.0,</span>
-<span id="revdate">21 April 2015</span>
+<span id="revnumber">version 1.1,</span>
+<span id="revdate">24 April 2015</span>
 </div>
 <div id="content">
 <h1 id="_graphs_and_data_visualization">Graphs and Data Visualization</h1>
@@ -753,11 +753,21 @@ asciidoc.install();
 Have a look at this file, first:
 </p>
 <div class="paragraph"><p><a href="https://github.com/hofmannedv/training-python/blob/master/graphs/bars.py">https://github.com/hofmannedv/training-python/blob/master/graphs/bars.py</a></p></div>
-<div class="paragraph"><p>a) You would like to add further data to be displayed in the graph. Which lines of the code will have to be changed, then?</p></div>
-<div class="paragraph"><p>b) In line 19, there is a fixed value which represents the number of
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+You would like to add further data to be displayed in the graph. Which lines of the code will have to be changed, then?
+</p>
+</li>
+<li>
+<p>
+In line 19, there is a fixed value which represents the number of
 bars. Which python function can you use to have always as many bars as
 entries, without changing the code next time you either add, or delete
-data?</p></div>
+data?
+</p>
+</li>
+</ol></div>
 </li>
 </ol></div>
 </div>
@@ -787,23 +797,74 @@ Strasbourg, Alsace, France
 Potsdam, Brandenburg, Germany
 Brighton, East Sussex, United Kingdom</tt></pre>
 </div></div>
-<div class="paragraph"><p>a) How many lines are printed?</p></div>
-<div class="paragraph"><p>b) The string function <tt>split()</tt> can be used to separate a string into
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+How many lines are printed?
+</p>
+</li>
+<li>
+<p>
+The string function <tt>split()</tt> can be used to separate a string into
 single pieces according to a given separator, for example <tt>", "</tt>. How
-does a split() function call would look like to receive single columns?</p></div>
-<div class="paragraph"><p>c) Which python function can you use to count the number of columns?</p></div>
+does a <tt>split()</tt> function call would look like to receive single columns?
+</p>
+</li>
+<li>
+<p>
+Which python function can you use to count the number of columns?
+</p>
+</li>
+</ol></div>
+</li>
+<li>
+<p>
+Have a look at this piece of python code, first:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>import csv
+
+fileHandle = open("data.csv")
+fileContent = csv.reader(fileHandle)</tt></pre>
+</div></div>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+The function <tt>csv.reader()</tt> returns a list that contains the content
+of the opened file line by line. Which python function can you use to
+figure out the number of lines in that file?
+</p>
+</li>
+<li>
+<p>
+Extend the program to print every second line, only.
+</p>
+</li>
+<li>
+<p>
+Extend the program to print both the before-last, and the last line, only.
+</p>
+</li>
+</ol></div>
 </li>
 </ol></div>
 </div>
 </div>
 <h1 id="_further_documents">Further Documents</h1>
-<div class="paragraph"><p>TBD</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<a id="PythonSortingMiniHowTo"></a>[PythonSortingMiniHowTo] Python Sorting Mini-How to, <a href="https://wiki.python.org/moin/HowTo/Sorting/">https://wiki.python.org/moin/HowTo/Sorting/</a>
+</p>
+</li>
+</ul></div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0<br />
-Last updated 2015-04-21 21:53:19 CEST
+Version 1.1<br />
+Last updated 2015-04-24 10:34:15 CEST
 </div>
 </div>
 </body>
