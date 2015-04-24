@@ -773,6 +773,35 @@ list, and output the new list.
 </li>
 </ol></div>
 </li>
+<li>
+<p>
+<tt>sys</tt> is the name of a python standard module to access various data
+from the underlying operating system (see <a href="#sys">[sys]</a> for a full list of
+functions). The pre-defined list <tt>sys.argv[]</tt> represents the command
+line arguments a python script was called with:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>import sys
+
+fullCall = sys.argv
+scriptName = fullCall[0]
+parameter1 = fullCall[1]
+parameter2 = fullCall[2]</tt></pre>
+</div></div>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+Count the number of parameters the script was called with.
+</p>
+</li>
+<li>
+<p>
+Use the <tt>in</tt> operator to check if <tt>--help</tt> is one of the parameters.
+</p>
+</li>
+</ol></div>
+</li>
 </ol></div>
 </div>
 </div>
@@ -807,7 +836,7 @@ print "series' website:", sketchShow["website"]</tt></pre>
 <div class="olist loweralpha"><ol class="loweralpha">
 <li>
 <p>
-Output the roles of the single characters.
+Output the roles of the single characters using a <tt>for</tt> loop.
 </p>
 </li>
 <li>
@@ -940,13 +969,18 @@ Extend the program to print both the before-last, and the last line, only.
 <a id="PythonSortingMiniHowTo"></a>[PythonSortingMiniHowTo] Python Sorting Mini-How to, <a href="https://wiki.python.org/moin/HowTo/Sorting/">https://wiki.python.org/moin/HowTo/Sorting/</a>
 </p>
 </li>
+<li>
+<p>
+<a id="sys"></a>[sys] sys&#8201;&#8212;&#8201;System-specific parameters and functions (documentation), <a href="https://docs.python.org/2/library/sys.html#module-sys">https://docs.python.org/2/library/sys.html#module-sys</a>
+</p>
+</li>
 </ul></div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
 Version 1.1<br />
-Last updated 2015-04-24 11:24:12 CEST
+Last updated 2015-04-24 11:45:12 CEST
 </div>
 </div>
 </body>

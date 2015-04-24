@@ -27,6 +27,24 @@ order, and output the new list.
 order (see <<PythonSortingMiniHowTo>> for further details). Sort the
 list, and output the new list.
 
+. `sys` is the name of a python standard module to access various data
+from the underlying operating system (see <<sys>> for a full list of
+functions). The pre-defined list `sys.argv[]` represents the command
+line arguments a python script was called with:
++
+----
+import sys
+
+fullCall = sys.argv
+scriptName = fullCall[0]
+parameter1 = fullCall[1]
+parameter2 = fullCall[2]
+----
++
+.. Count the number of parameters the script was called with.
+
+.. Use the `in` operator to check if `--help` is one of the parameters.
+
 == Working with dictionaries ==
 
 . A dictionary belongs to highly structured data. Based on the British
@@ -123,4 +141,4 @@ figure out the number of lines in that file?
 
 - [[[PythonSortingMiniHowTo]]] Python Sorting Mini-How to, https://wiki.python.org/moin/HowTo/Sorting/
 
-
+- [[[sys]]] sys -- System-specific parameters and functions (documentation), https://docs.python.org/2/library/sys.html#module-sys
