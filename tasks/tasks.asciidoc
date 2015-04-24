@@ -27,6 +27,21 @@ order, and output the new list.
 order (see <<PythonSortingMiniHowTo>> for further details). Sort the
 list, and output the new list.
 
+. Lists can be joined using the `+` operator:
++
+----
+numbers1 = [5, 16, 1, 89, -2]
+numbers2 = [45, 66, 1, 3, 89]
+names = ["John", "Kate", "Matt", "Bill", "Amy"]
+----
++
+.. Merge the two lists `numbers1` and `numbers2`, and output the
+resulting list.
+
+.. Transform both lists `numbers1` and `numbers2` into a set using the
+`set()` function, and calculate the intersection of both sets using the
+`intersection()` function.
+
 . `sys` is the name of a python standard module to access various data
 from the underlying operating system (see <<sys>> for a full list of
 functions). The pre-defined list `sys.argv[]` represents the command
