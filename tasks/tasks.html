@@ -743,7 +743,10 @@ asciidoc.install();
 <span id="revdate">24 April 2015</span>
 </div>
 <div id="content">
-<h1 id="_lists_and_list_functions">Lists and list functions</h1>
+<h1 id="_data_structures">Data structures</h1>
+<div class="sect1">
+<h2 id="_lists_and_list_functions">1. Lists and list functions</h2>
+<div class="sectionbody">
 <div class="olist arabic"><ol class="arabic">
 <li>
 <p>
@@ -771,6 +774,52 @@ list, and output the new list.
 </ol></div>
 </li>
 </ol></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_working_with_dictionaries">2. Working with dictionaries</h2>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+A dictionary belongs to highly structured data. Based on the British
+comedy series Little Britain (see <a href="#LittleBritain">[LittleBritain]</a>) it can be defined
+as follows:
+</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>character1 = {"name": "Kenny Craig", "role": "hypnotist", "playedBy": "Matt Lucas"}
+character2 = {"name": "Linda Flint", "role": "teacher", "playedBy": "David Walliams"}
+character3 = {"name": "Daffyd Thomas", "role": "journalist", "playedBy": "Matt Lucas"}
+characters = [character1, character2, character3]
+sketchShow = {
+                "series":"Little Britain",
+                "cast": characters,
+                "website":"http://www.bbc.co.uk/comedy/littlebritain/"
+}</tt></pre>
+</div></div>
+<div class="paragraph"><p>To retrieve both the name of the sketch show, and its website you write:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt>print "name of the series:", sketchShow["series"]
+print "series' website:", sketchShow["website"]</tt></pre>
+</div></div>
+<div class="olist loweralpha"><ol class="loweralpha">
+<li>
+<p>
+Output the roles of the single characters.
+</p>
+</li>
+<li>
+<p>
+Output the names of the single characters that are played by Matt Lucas.
+</p>
+</li>
+</ol></div>
+</li>
+</ol></div>
+</div>
+</div>
 <h1 id="_graphs_and_data_visualization">Graphs and Data Visualization</h1>
 <div class="sect1">
 <h2 id="_understanding_and_improving_the_code">1. Understanding and Improving the Code</h2>
@@ -883,6 +932,11 @@ Extend the program to print both the before-last, and the last line, only.
 <div class="ulist"><ul>
 <li>
 <p>
+<a id="LittleBritain"></a>[LittleBritain] Little Britain, official website, <a href="http://www.bbc.co.uk/comedy/littlebritain/">http://www.bbc.co.uk/comedy/littlebritain/</a>
+</p>
+</li>
+<li>
+<p>
 <a id="PythonSortingMiniHowTo"></a>[PythonSortingMiniHowTo] Python Sorting Mini-How to, <a href="https://wiki.python.org/moin/HowTo/Sorting/">https://wiki.python.org/moin/HowTo/Sorting/</a>
 </p>
 </li>
@@ -892,7 +946,7 @@ Extend the program to print both the before-last, and the last line, only.
 <div id="footer">
 <div id="footer-text">
 Version 1.1<br />
-Last updated 2015-04-24 10:46:27 CEST
+Last updated 2015-04-24 11:24:12 CEST
 </div>
 </div>
 </body>

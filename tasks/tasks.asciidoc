@@ -9,7 +9,9 @@ Frank Hofmann
 :date: 24 April 2015
 :numbered:
 
-= Lists and list functions =
+= Data structures =
+
+== Lists and list functions ==
 
 . A python list is defined as follows:
 +
@@ -24,6 +26,34 @@ order, and output the new list.
 .. The list function `sort()` sorts the list in place in ascending
 order (see <<PythonSortingMiniHowTo>> for further details). Sort the
 list, and output the new list.
+
+== Working with dictionaries ==
+
+. A dictionary belongs to highly structured data. Based on the British
+comedy series Little Britain (see <<LittleBritain>>) it can be defined
+as follows:
++
+----
+character1 = {"name": "Kenny Craig", "role": "hypnotist", "playedBy": "Matt Lucas"}
+character2 = {"name": "Linda Flint", "role": "teacher", "playedBy": "David Walliams"}
+character3 = {"name": "Daffyd Thomas", "role": "journalist", "playedBy": "Matt Lucas"}
+characters = [character1, character2, character3]
+sketchShow = {
+		"series":"Little Britain", 
+		"cast": characters,
+		"website":"http://www.bbc.co.uk/comedy/littlebritain/"
+}
+----
++
+To retrieve both the name of the sketch show, and its website you write:
++
+----
+print "name of the series:", sketchShow["series"]
+print "series' website:", sketchShow["website"]
+----
++
+.. Output the roles of the single characters using a `for` loop.
+.. Output the names of the single characters that are played by Matt Lucas.
 
 = Graphs and Data Visualization =
 
@@ -88,6 +118,8 @@ figure out the number of lines in that file?
 .. Extend the program to print both the before-last, and the last line, only.
 
 = Further Documents =
+
+- [[[LittleBritain]]] Little Britain, official website, http://www.bbc.co.uk/comedy/littlebritain/
 
 - [[[PythonSortingMiniHowTo]]] Python Sorting Mini-How to, https://wiki.python.org/moin/HowTo/Sorting/
 
