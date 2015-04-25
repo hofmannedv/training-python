@@ -4,6 +4,7 @@ README
 * overview.py: 					demonstrates how to use lists, tuples, and dictionaries
 * dictionaries-operations.py:	demonstrates how to work with disctionaries
 * iterable-filter.py: 			show the filter function
+* iterable-join.py: 			show how to use the join function with a list of strings
 * iterable-map.py: 				show how to use the map function with lists
 * iterable-map2.py: 			show how to use the map function with an array
 * iterable-zip.py: 				show how to use the zip function with lists
