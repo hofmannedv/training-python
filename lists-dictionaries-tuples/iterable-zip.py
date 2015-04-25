@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # -----------------------------------------------------------
 # demonstrates how to use the zip function
 #o
@@ -15,4 +17,6 @@ address = zip(zipCode, place)
 
 # output address
 for item in address:
-	print (item)
+	print ("ZIP code: %s" % item[0])
+	print ("place   : %s" % item[1])
+	print (" ")
