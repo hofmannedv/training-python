@@ -1,0 +1,6 @@
+README
+------
+
+* find-file.py: demonstrates how to list the files in the current
+  directory according to a given pattern
+
