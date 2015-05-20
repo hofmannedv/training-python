@@ -1,28 +1,25 @@
 # -----------------------------------------------------------
-# demonstrates the usage of a for loop to interate through a list
+# demonstrates how to create and use a simple-linked list
 #o
-# (C) 2014 Frank Hofmann, Berlin, Germany
+# (C) 2015 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
 # -----------------------------------------------------------
 
-# define list
-shoppingCart = ["banana", "apple", "grapefruit"]
+class ListNode:
+	def __init__(self, data):
+		"constructor class to initiate this object"
 
-# output list content
-# - without index
-for item in shoppingCart:
-	print (item)
+		# store data
+		self.data = data
+		
+		# store reference (next item)
+		self.next = None
+		return
 
-# print empty line for decoration
-print ()
+# main program
 
-# - using an index
-# get the number of list items
-listItems = len(shoppingCart)
-for itemIndex in range(listItems):
-	print (itemIndex, shoppingCart[itemIndex])
-
-print ("----------------")
-print ("total:", listItems, "items")
-
+# create three single nodes
+node1 = ListNode(15)
+node2 = ListNode(8.2)
+node3 = ListNode("Berlin")
