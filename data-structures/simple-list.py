@@ -23,3 +23,23 @@ class ListNode:
 node1 = ListNode(15)
 node2 = ListNode(8.2)
 node3 = ListNode("Berlin")
+
+# link the objects
+node1.next = node2
+node2.next = node3
+
+# output the full node list
+# define start node
+startNode = node1
+
+# define currentNode
+currentNode = startNode
+
+# loop through the list of nodes up to the end
+while currentNode is not None:
+	# retrieve and output node data
+	data = currentNode.data
+	print ("node:", data)
+	
+	# jump to the linked node
+	currentNode = currentNode.next
