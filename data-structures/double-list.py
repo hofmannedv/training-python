@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# demonstrates how to create and use a simple-linked list
+# demonstrates how to create and use a double-linked list
 #o
 # (C) 2015 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
@@ -15,6 +15,8 @@ class ListNode:
 		
 		# store reference (next item)
 		self.next = None
+		# store reference (previous item)
+		self.previous = None
 		return
 
 # main program
@@ -26,7 +28,9 @@ node3 = ListNode("Berlin")
 
 # link the objects
 node1.next = node2
+node2.previous = node1
 node2.next = node3
+node3.previous = node2
 
 # output the full node list
 # define start node
