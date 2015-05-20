@@ -17,6 +17,28 @@ class ListNode:
 		self.next = None
 		return
 
+# traversing the linked list
+def traverseList (startNode):
+	"traverse the linked list, and output the node data"
+
+	# define currentNode
+	currentNode = startNode
+
+	# counted nodes
+	count = 0
+
+	while currentNode is not None:
+		# retrieve and output node data
+		print ("node:", currentNode.data)
+	
+		# jump to the linked node
+		currentNode = currentNode.next
+		
+		# increase counter by one
+		count = count + 1
+
+	return count
+
 # main program
 
 # create three single nodes
@@ -29,17 +51,7 @@ node1.next = node2
 node2.next = node3
 
 # output the full node list
-# define start node
-startNode = node1
-
-# define currentNode
-currentNode = startNode
-
 # loop through the list of nodes up to the end
-while currentNode is not None:
-	# retrieve and output node data
-	data = currentNode.data
-	print ("node:", data)
-	
-	# jump to the linked node
-	currentNode = currentNode.next
+count = traverseList(node1)
+
+print ("%i nodes visited" % count)
