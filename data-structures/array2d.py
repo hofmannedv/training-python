@@ -72,6 +72,37 @@ class Array2D:
 			arrayRow = self.arrayData.getElementValue(currentRow)
 			arrayRow.print()
 		return
+	
+	def getElementValue(self, column, row):
+		"get the element value at array position x,y"
+		
+		# select row
+		if row in range(self.arrayData.getLength()):
+			arrayRow = self.arrayData.getElementValue(row)
+			
+			# select column
+			if column in range(arrayRow.getLength()):
+				return arrayRow.getElementValue(column)
+			else:
+				return False
+		else:
+			return False
+
+	def setElementValue(self, column, row, value):
+		"set the element value at array position x,y"
+		
+		# select row
+		if row in range(self.arrayData.getLength()):
+			arrayRow = self.arrayData.getElementValue(row)
+			
+			# select column
+			if column in range(arrayRow.getLength()):
+				arrayRow.setElementValue(column, value)
+				return True
+			else:
+				return False
+		else:
+			return False
 
 # main program
 
@@ -88,4 +119,15 @@ array1.print()
 # define 2d array of size 3x3
 array2 = Array2D(3,3)
 print ("2D array size:", array2.getSize())
+
+# set value at [1,1] = 15
+array2.setElementValue(1, 1, 15)
+
+# set value at [1,0] = 7
+array2.setElementValue(0, 1, 7)
+
+# output array content
 array2.print()
+
+# output specific array value
+print ("value at 2,2:", array2.getElementValue(2,2))
