@@ -121,13 +121,17 @@ array2 = Array2D(3,3)
 print ("2D array size:", array2.getSize())
 
 # set value at [1,1] = 15
-array2.setElementValue(1, 1, 15)
+if array2.setElementValue(1, 1, 15) == False:
+	print("array index out of range")
 
-# set value at [1,0] = 7
-array2.setElementValue(0, 1, 7)
+# set value at [5,0] = 7
+if array2.setElementValue(0, 5, 7) == False:
+	print("array index out of range")
 
 # output array content
 array2.print()
 
 # output specific array value
 print ("value at 2,2:", array2.getElementValue(2,2))
+
+
