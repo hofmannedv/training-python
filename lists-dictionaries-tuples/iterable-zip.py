@@ -14,6 +14,7 @@ place = ["Berlin", "Dresden", "München", "Potsdam"]
 
 # combine both zipCode and place
 address = zip(zipCode, place)
+print (address)
 
 # output address
 for item in address:

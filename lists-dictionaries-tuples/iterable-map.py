@@ -12,7 +12,7 @@ def powerValue(operand):
 
 # define a list of operands
 operandList1 = [2.0, 4.0, 2.5]
-operandList2 = (1.0, 2.0, 3.5)
+operandList2 = (1.0, 2.0, 433.5)
 
 # output result
 for currentList in (operandList1, operandList2):
@@ -26,7 +26,7 @@ for currentList in (operandList1, operandList2):
 	# output results
 	for i in results:
 		# output a float value with 2 digits
-		print("%5.2f:%6.2f" % (currentList[currentPosition],i))
+		print("%8.2f:%10.2f" % (currentList[currentPosition],i))
 
 		# increase current position
 		currentPosition += 1
