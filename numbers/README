@@ -9,3 +9,13 @@ README
 
 * count-numbers.py: shows how to count numbers in a list (finding the
   elements that are numbers)
+
+* binary-search.py: do a binary search on a list of numbers
+
+* binary-search-strings.py: do a binary search on a list with strings
+
+* faculty.py: calculate the faculty of a number as a recursive function
+
+* primeNumbers.py: detect, and sum prime numbers
+
+* re.py: detect colour codes using regular expressions
