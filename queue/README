@@ -1,0 +1,6 @@
+README
+------
+
+* queue-multiprocessing.py: demonstrate the usage of a queue, and
+  multiple processes
+
