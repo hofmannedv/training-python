@@ -4,3 +4,6 @@ README
 * queue-multiprocessing.py: demonstrate the usage of a queue, and
   multiple processes
 
+* queue-multiprocessing-thread.py: demonstrate the usage of a queue,
+  multiple processes, and an asychronous thread
+
