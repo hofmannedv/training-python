@@ -19,4 +19,5 @@ README
 * list-values.py:				demonstrates how to extract the values of a dictionary using values()
 * set-operations.py:			demonstrates how to work with sets (basic operations)
 * sort-reverse.py:				sort and reverse lists
+* sorted-list.py:				create a sorted list using the python bisect module
 * subset-operations.py:			demonstrates how to work with subsets 
