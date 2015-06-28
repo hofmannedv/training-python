@@ -4,3 +4,6 @@ README
 * find-largest.py: find the largest number in a list of integers
   using a) a for loop, or b) the max function, and do time measurements
 
+* search-variants.py: measure the time to find items in a sorted list
+  using different search algorithms
+
