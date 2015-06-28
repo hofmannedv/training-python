@@ -1,0 +1,6 @@
+README
+------
+
+* readfile.py: find similar entries in /etc/passwd, and demonstrate the
+  definition and usage of classes
+
