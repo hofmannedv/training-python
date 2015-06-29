@@ -7,3 +7,5 @@ README
 * queue-multiprocessing-thread.py: demonstrate the usage of a queue,
   multiple processes, and an asychronous thread
 
+* queue-gevent.py: demonstrate the usage of a queue based on gevents
+
