@@ -7,3 +7,6 @@ README
 
 * order.py: do an order based on the barcodes, and the database
 
+* stock.txt: list of items that are in stock
+
+* reorder.py: check the stock list, and create an re-order list
