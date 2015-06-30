@@ -5,3 +5,5 @@ README
 
 * database.txt: csv file of model cars. used as a product example list
 
+* order.py: do an order based on the barcodes, and the database
+

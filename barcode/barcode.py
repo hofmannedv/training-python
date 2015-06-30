@@ -46,6 +46,9 @@ def validateBarcode(barcode):
 
 		# calculate validation bit according to the validation algorithm
 		validationBit = ((barcodeSum // 10) + 1) * 10 - barcodeSum
+		# adjust validation bit
+		if validationBit == 10:
+			validationBit = 0
 
 		# compare validation bit with the 8th number of the barcode
 		if validationBit == int(barcodeString[7]):
