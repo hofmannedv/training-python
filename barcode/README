@@ -1,0 +1,5 @@
+README
+------
+
+* barcode.py: module to validate an 8-digit barcode (GTIN-8)
+
