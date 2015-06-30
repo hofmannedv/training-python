@@ -7,7 +7,7 @@
 # -----------------------------------------------------------
 
 # import python modules
-import barcode,csv,sys
+import barcode,csv
 
 # define order, and product list
 orderList = []
@@ -73,10 +73,7 @@ while True:
 
 	# wait for user input
 	print(" ") 
-	print("your next action -- enter a new barcode, or type Q to quit:")
-
-	# read from stdin
-	action = sys.stdin.readline()
+	action = input("your next action -- enter a new barcode, or type Q to quit: ")
 
 	# validate action
 	action = action.strip()
@@ -97,10 +94,7 @@ while True:
 
 			# retrieve the product description
 			productDescription = productList[productBarcode]["description"]
-			print ("enter quantity for %s: " % productDescription)
-
-			# read quantity from stdin
-			productQuantity = sys.stdin.readline()
+			productQuantity = input("enter quantity for %s: " % productDescription)
 
 			# remove whitespaces and trailing characters
 			productQuantity = float(productQuantity.strip())
