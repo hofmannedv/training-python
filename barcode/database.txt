@@ -1,3 +1,4 @@
+barcode,description,price
 12345670, Austin Maxi model car (red), 3.45
 12345687, Austin Maxi model car (blue), 4.25
 12345694, Austin A40 Countryman model car (grey), 6.99
