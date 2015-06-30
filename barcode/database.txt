@@ -1,0 +1,6 @@
+12345670, Austin Maxi model car (red), 3.45
+12345687, Austin Maxi model car (blue), 4.25
+12345694, Austin A40 Countryman model car (grey), 6.99
+12345700, Bentley 8 Litre model car (silver), 5.75
+12345717, Lotus 77 model car (green), 5.75
+12345724, Lotus 99T model car (yellow), 5.75
