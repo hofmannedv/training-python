@@ -3,3 +3,7 @@ README
 
 * hello-world.py: basic flask application saying "Hello, world!"
 
+* hello-world-public.py: basic flask application saying "Hello, world!
+  Nice to see you!". Available for general public, debug mode enabled, 
+  and reloading automatically if code changes.
+
