@@ -12,7 +12,7 @@ from flask import Flask
 # define flask application
 application = Flask(__name__)
 
-# define application path
+# define application path: bind function to specific url path
 @application.route('/')
 def helloWorld():
 	# output welcome message
