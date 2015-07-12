@@ -132,6 +132,17 @@ def login():
 	# display login page with error message
 	return render_template("login.html", error=error)
 
+@application.route("/logout")
+def logout():
+	# logout procedure
+	session.pop("logged_in", None)
+	
+	# place message
+	flash("You were logged out")
+
+	# return message: redirect to the entries page
+	return redirect(url_for("show_entries"))
+
 # run application
 if __name__ == "__main__":
 	# initialize the database
