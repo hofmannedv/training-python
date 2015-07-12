@@ -107,6 +107,31 @@ def addEntry():
 		# return the rendered template / redirect url
 		return redirect(url_for("show_entries"))
 
+@application.route("/login", methods = ["GET", "POST"])
+def login():
+	# login procedure 
+	
+	# define error state: None
+	error = None
+
+	# check for POST requests
+	if request.method == "POST":
+		# check for the valid user name, and password
+		if request.form["username"] != application.config["USERNAME"]:
+			error = "Invalid user name"
+		elif request.form["password"] != application.config["PASSWORD"]:
+			error = "Invalid password"
+		else: 
+			# log in
+			session["logged_in"] = True
+			flash("You were logged in.")
+
+			# return message: redirect to the entries page
+			return redirect(url_for("show_entries"))
+
+	# display login page with error message
+	return render_template("login.html", error=error)
+
 # run application
 if __name__ == "__main__":
 	# initialize the database
