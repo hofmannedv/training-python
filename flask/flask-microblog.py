@@ -62,12 +62,13 @@ def showEntries():
 	# define sql command: all entries in descending order
 	sqlCommand = "select title, text from entries order by id desc"
 	
-	# action
+	# execute the sql command as defined above
 	current = database.execute(sqlCommand)
 
-	# fetch items
+	# fetch items from the database
 	entries = current.fetchall()
 
+	# return the rendered template
 	return renderTemplate("show_entries.html", entries=entries)
 
 @application.teardown_appcontext
@@ -79,4 +80,8 @@ def closeDb(error):
 
 # run application
 if __name__ == "__main__":
+	# initialize the database
+	initDb()
+
+	# run the application
 	application.run()
