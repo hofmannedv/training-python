@@ -35,17 +35,17 @@ def connectDb():
 	databaseHandle.row_factory = sqlite3.Row
 	return databaseHandle
 
-def initDb():
-	"initialize the sqlite database"
-	with application.app_context():
-		database = getDb()
-		# read sql command from file
-		with application.open_resource("schema.sql", mode="r") as f:
-			# execute sql command
-			database.cursor().executescript(f.read())
-		# commit sql action
-		database.commit()
-	return
+#def initDb():
+#	"initialize the sqlite database"
+#	with application.app_context():
+#		database = getDb()
+#		# read sql command from file
+#		with application.open_resource("schema.sql", mode="r") as f:
+#			# execute sql command
+#			database.cursor().executescript(f.read())
+#		# commit sql action
+#		database.commit()
+#	return
 
 def getDb():
 	"open a database connection if there is none yet for the current application context"
@@ -54,7 +54,7 @@ def getDb():
 
 	return g.sqlite_db
 
-@application.teardown_appcontext
+# @application.teardown_appcontext
 def closeDb(error):
 	"closes database connection"
 	if hasattr(g, "sqlite_db"):
@@ -76,7 +76,7 @@ def showEntries():
 	entries = current.fetchall()
 
 	# return the rendered template
-	return renderTemplate("show_entries.html", entries=entries)
+	return render_template("show_entries.html", entries=entries)
 
 @application.route("/add", methods=["POST"])
 def addEntry():
@@ -146,7 +146,7 @@ def logout():
 # run application
 if __name__ == "__main__":
 	# initialize the database
-	initDb()
+	#initDb()
 
 	# run the application
 	application.run()
