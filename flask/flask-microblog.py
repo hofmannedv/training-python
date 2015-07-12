@@ -54,6 +54,13 @@ def getDb():
 
 	return g.sqlite_db
 
+@application.teardown_appcontext
+def closeDb(error):
+	"closes database connection"
+	if hasattr(g, "sqlite_db"):
+		g.sqlite_db.close()
+	return
+
 @application.route("/")
 def showEntries():
 	# display the blog entries
@@ -71,12 +78,34 @@ def showEntries():
 	# return the rendered template
 	return renderTemplate("show_entries.html", entries=entries)
 
-@application.teardown_appcontext
-def closeDb(error):
-	"closes database connection"
-	if hasattr(g, "sqlite_db"):
-		g.sqlite_db.close()
-	return
+@application.route("/add", methods=["POST"])
+def addEntry():
+	# add a blog entry
+	
+	# if not logged in quit with error
+	if not session.get('logged_in'):
+		abort(401)
+	else:
+		# get database connection
+		database = getDb()
+
+		# define sql command: add data from the microblog input fields
+		sqlCommand = "insert into entries (title, text) values (?, ?)"
+
+		# retrieve data
+		insertData = [request.form["title"], request.form["text"]]
+
+		# execute sql command
+		database.execute(sqlCommand, insertData)
+
+		# commit action
+		database.commit()
+
+		# add message
+		flash("New entry was successfully posted")
+
+		# return the rendered template / redirect url
+		return redirect(url_for("show_entries"))
 
 # run application
 if __name__ == "__main__":
