@@ -18,6 +18,7 @@ application.config.from_object(__name__)
 # load default configuration and override configuration from an
 # environment variable
 application.config.update(dict(
+	#TEMPLATE_FOLDER=os.path.join(application.root_path, 'templates'),
 	DATABASE=os.path.join(application.root_path, 'flask-microblog.db'),
 	DEBUG=True,
 	SECRET_KEY='development key',
