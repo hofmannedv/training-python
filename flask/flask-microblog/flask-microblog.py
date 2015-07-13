@@ -106,7 +106,7 @@ def addEntry():
 		flash("New entry was successfully posted")
 
 		# return the rendered template / redirect url
-		return redirect(url_for("show_entries"))
+		return redirect(url_for("showEntries"))
 
 @application.route("/login", methods = ["GET", "POST"])
 def login():
@@ -128,7 +128,7 @@ def login():
 			flash("You were logged in.")
 
 			# return message: redirect to the entries page
-			return redirect(url_for("show_entries"))
+			return redirect(url_for("showEntries"))
 
 	# display login page with error message
 	return render_template("login.html", error=error)
@@ -142,7 +142,7 @@ def logout():
 	flash("You were logged out")
 
 	# return message: redirect to the entries page
-	return redirect(url_for("show_entries"))
+	return redirect(url_for("showEntries"))
 
 # run application
 if __name__ == "__main__":
