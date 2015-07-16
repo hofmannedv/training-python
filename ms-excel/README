@@ -1,0 +1,7 @@
+README
+------
+
+* ms-excel.py: demonstrates how to write ms excel files using
+  python-openpyxl (https://openpyxl.readthedocs.org/en/latest/index.html)
+
+
