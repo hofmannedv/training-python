@@ -17,4 +17,5 @@ README
 * http.py: demonstrates how to retrieve an mp3 file from a web resource,
   and save it as a file, locally
 
-* podcast.py 
+* podcast.py: demonstrates how to work with sax module to extract xml 
+  fields (extract fields in a data stream -- a podcast file)
