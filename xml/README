@@ -1,0 +1,19 @@
+README
+------
+
+* elements.py: extract xml node names using lxml (xml as a python list)
+  (http://lxml.de/)
+
+  example call: 
+  python elements.py ex1.xml
+
+* elements-hf.py
+
+* ex1.xml: example xml document for scientific documents
+
+* hackerfunkfeed.xml: rss feed file (xml) from Hackerfunk Zürich 
+  (http://www.hackerfunk.ch/)
+
+* http.py
+
+* podcast.py 
