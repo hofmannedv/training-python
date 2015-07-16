@@ -7,13 +7,14 @@ README
   example call: 
   python elements.py ex1.xml
 
-* elements-hf.py
+* elements-hf.py: the same as elements.py
 
 * ex1.xml: example xml document for scientific documents
 
 * hackerfunkfeed.xml: rss feed file (xml) from Hackerfunk Zürich 
   (http://www.hackerfunk.ch/)
 
-* http.py
+* http.py: demonstrates how to retrieve an mp3 file from a web resource,
+  and save it as a file, locally
 
 * podcast.py 
