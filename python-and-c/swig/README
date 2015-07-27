@@ -1,0 +1,9 @@
+README
+------
+
+* deepthought.h:        c header file for extension module
+* deepthought.c:        c extension module
+* deepthought.i:        interface description for c extension module
+* deepthought_setup.py: build module as shared object (SO) file
+* build_module.sh:      shell script to simplify building the SO file
+* example.py:           python example file that imports the module
