@@ -36,4 +36,15 @@ if capitals.has_key("Spain"):
 else:
 	print("There is no entry for Spain")
 
-# dict.get method
+# using the dict.get method
+# Version 1 (with default value)
+if capitals.get("Spain") == None:
+	print("There is no entry for Spain")
+else:
+	city = capitals["Spain"]
+	print("The capital of Spain is %s" % city)
+
+# Version 2 (with alternative value)
+city = capitals.get("Spain", "not in list")
+print("The capital of Spain is %s" % city)
+
