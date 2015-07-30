@@ -2,6 +2,7 @@ README
 ------
 
 * overview.py: 					demonstrates how to use lists, tuples, and dictionaries
+* dictionaries-error-handling.py: how to do error handling when accessing single elements
 * dictionaries-operations.py:	demonstrates how to work with disctionaries
 * iterable-filter.py: 			show the filter function
 * iterable-join.py: 			show how to use the join function with a list of strings
