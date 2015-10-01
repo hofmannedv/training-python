@@ -1,6 +1,8 @@
 README
 ------
 
+* passwd.py: reads /etc/passwd, and outputs the single fields
+
 * reading-csv.py: demonstrates how to read a csv file, and output
   desired columns
 
