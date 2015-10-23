@@ -1,0 +1,5 @@
+README
+------
+
+* character-statistics.py: 	stats for a text file
+* wc.py:					stats for a text file, similar to wc Unix command

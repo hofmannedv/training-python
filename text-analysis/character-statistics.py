@@ -12,6 +12,8 @@
 
 # import required python standard modules
 import sys,csv
+import codecs
+import os
 
 # define character count function
 def charStat (text):
@@ -21,6 +23,7 @@ def charStat (text):
 
 	# go through the characters one by one
 	for character in text:
+		#print (character)
 		# retrieve current value for a character, 
 		# and 0 if still not in list
 		# update the list
@@ -42,8 +45,17 @@ if numPara < 2:
 textfileName = sys.argv[1]
 # print ("reading text from", textfileName, "...")
 
+bytes = min(32, os.path.getsize(textfileName))
+raw = open(textfileName, 'rb').read(bytes)
+
+if raw.startswith(codecs.BOM_UTF8):
+    encoding = 'utf-8-sig'
+else:
+    result = chardet.detect(raw)
+    encoding = result['encoding']
+
 # open file for reading
-fileHandle = open(textfileName, "r")
+fileHandle = open(textfileName, "r", encoding=encoding)
 
 # read content
 data = fileHandle.read()
@@ -61,7 +73,19 @@ items = statistics.items()
 # sort the items
 sortedItems = sorted(items)
 
+lines = []
 # output sorted list as CSV data
-for item in sortedItems:
-	print ("%s,%i" % (item[0], item[1]))
+for singleItem in sortedItems:
+	lines.append(str(singleItem[0]) + "," + singleItem[1])
+	#print ("%s,%i" % (singleItem[0], singleItem[1]))
+
+# open file for writing
+fileHandle = open("s.txt", "w", encoding=encoding)
+
+# read content
+data = fileHandle.writelines(lines)
+
+# close file
+fileHandle.close()
+
 
