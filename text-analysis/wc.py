@@ -49,7 +49,7 @@ for singleLine in fileContent:
 	characters = characters + len(singleLine)
 	
 	# read the new words
-	newWords = re.split("\W+", singleLine)
+	newWords = singleLine.split()
 	# print (newWords)
 
 	for singleWord in newWords:
@@ -69,4 +69,3 @@ print (("number of words: %i") % (words))
 print (("number of different words: %i") % (differentWords))
 print (("number of chars: %i") % (characters))
 print ("word stat: ", wordList)
-
