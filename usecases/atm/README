@@ -1,0 +1,5 @@
+README
+------
+
+* atm.py: finds the best atm with the lowest fees from a list of atms
+
