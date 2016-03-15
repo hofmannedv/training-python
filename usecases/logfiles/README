@@ -1,0 +1,7 @@
+README
+------
+
+* logfile:    example logfile that holds various system messages
+* logfile.py: various functions to read from that logfile (by name, by
+              ip address)
+
