@@ -48,7 +48,31 @@ def findEntryByTimestamp(fileContent, timestamp):
 	# return the entry list
 	return entries
 
-# analyze log file
+def findEntryByTimestampRange(fileContent, fromTimestamp, toTimestamp):
+	# return all entries that are in the given timestamp range
+	# (fromTimestamp-toTimestamp)
+	# analyze log file
+
+	# define empty entry list
+	entries = []
+
+	# define timestamp patterns
+	# format: year-month-day hour:minute:second
+	fromTimestampPattern = fromTimestamp.strftime("%Y-%m-%d %H:%M:%S")
+	toTimestampPattern = toTimestamp.strftime("%Y-%m-%d %H:%M:%S")
+
+	pattern = re.compile('\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}')
+
+	# go through the file content line by line
+	for line in fileContent:
+		# if we find the pattern in the current line ...
+		if re.findall(pattern, line):
+			print (re.findall(pattern, line))
+			# ... add the line to the list of entries
+			entries.append(line)
+
+	return entries
+
 # read commandline parameters
 if len(sys.argv) > 1:
 	# assume that the first parameter is a file to read data from
@@ -73,7 +97,7 @@ fileContent = readFileContent(logfileName)
 # find entries by exact timestamp
 # - date
 currentDate = date(2016, 1, 10)
-# -time
+# - time
 currentTime = time(10, 45, 15)
 # - timestamp
 timestamp = datetime.combine(currentDate, currentTime)
@@ -82,3 +106,17 @@ print (("entries with timestamp for %s:") % (timestamp.ctime()))
 entries = findEntryByTimestamp(fileContent, timestamp)
 for singleEntry in entries:
 	print (singleEntry)
+
+# find entries within a timestamp range
+# - date
+fromDate = date(2016, 1, 10)
+toDate = date(2016, 1, 10)
+# - time
+fromTime = time(8, 0, 0)
+toTime = time(15, 0, 0)
+# - timestamp
+fromTimestamp = datetime.combine(fromDate, fromTime)
+toTimestamp = datetime.combine(toDate, toTime)
+
+print (("entries with timestamp from %s to %s:") % (fromTimestamp.ctime(), toTimestamp.ctime()))
+entries = findEntryByTimestampRange(fileContent, fromTimestamp, toTimestamp)
