@@ -128,7 +128,7 @@ fileContent = readFileContent(logfileName)
 #print(fileContent)
 
 # find all entries for user fho
-username = 'fho'
+username = 'fho logged in'
 print ("entries for user %s:" % (username))
 entries = findEntryByUser(fileContent, username)
 for singleEntry in entries:
