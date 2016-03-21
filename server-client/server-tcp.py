@@ -25,12 +25,14 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # bind host and port to the socket, set connection limit
 s.bind((host,port))
-s.listen(backlog)
+s.listen(maxConnections)
 
 print (("[server] started at %s:%i") % (host, port))
-print (("[server] waiting for requests ...")
+print (("[server] waiting for requests ..."))
 
-while 1:
+terminate = False
+
+while terminate == False:
 	# wait for connections, and accept
 	client, address = s.accept()
 
@@ -39,15 +41,17 @@ while 1:
 
 	# process data
 	if data:
-		print ("[server] accepted request")
+		print ("[server] accepted request: %s" % data)
 
 		# check for termination request
 		if data in ["quit", "exit", "halt"]:
 			print ("[server] received termination request")
 			# return result
 			client.send("0")
-			# end loop
-			break
+			terminate = True
+
+		elif data in ["Hello"]:
+			client.send("Hello, client :)")
 
 		else:
 			# evaluate command
@@ -59,4 +63,7 @@ while 1:
 	client.close() 
 	print ("[server] closing connection")
 
-print (("[server] terminated.")
+	if terminate == True:
+		break
+
+print (("[server] terminated."))
