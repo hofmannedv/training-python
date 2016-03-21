@@ -1,0 +1,9 @@
+README
+------
+
+* server-udp.py:	server that accepts incoming UDP messages
+* client-udp.py:	client that sends UDP messages to the server
+
+currently not working properly:
+* server-tcp.py:	server that accepts incoming TCP messages
+* client-tcp.py:	client that sends TCP messages to the server
