@@ -1,9 +1,14 @@
 # -----------------------------------------------------------
-# demonstrates a server with basic communication
-#o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# demonstrates a TCP client with basic communication
+#
+# (C) 2015,2016 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+#
+# based on: A Simple TCP Client and Server described in the 
+# book from Brandon Rhodes and John Goerzen: 
+# Foundations of Python Network Programming
+# apress, 2010, ISBN 978-1-4302-3003-8
 # -----------------------------------------------------------
 
 import socket
