@@ -4,11 +4,22 @@
 # (C) 2015,2016 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+#
+# based on: A Simple TCP Client and Server described in the book
+# Brandon Rhodes and John Goerzen: Foundations of Python Network
+# Programming, apress, ISBN 978-1-4302-3003-8
 # -----------------------------------------------------------
 
 import socket
 import sys
 import re
+
+def receiveAllData(socketId, length):
+	# receive all data for a request
+	# received data is empty
+	data = ''
+	while len(data) < length:
+		
 
 # use localhost
 host = ""
