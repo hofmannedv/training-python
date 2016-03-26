@@ -1,12 +1,14 @@
 # -----------------------------------------------------------
 # demonstrates a server with basic communication
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# (C) 2015,2016 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
 # -----------------------------------------------------------
 
 import socket
+import sys
+import re
 
 # use localhost
 host = ""
@@ -14,13 +16,10 @@ host = ""
 # define port to listen on
 port = 12345
 
-# define maximum number of parallel connections
-maxConnections = 5
-
 # define packet data size
 dataSize = 1024
 
-# init socket
+# init stream socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # bind host and port to the socket, set connection limit
