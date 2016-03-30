@@ -4,3 +4,4 @@ README
 * getaddr.py:			name resolution example for localhost, and domain
 * gethttpservice.py:	asks the domain for being a http server
 * getservicebyname.py:	lists the services by its port numbers
+* getservicebyport.py:	lists the port by its service name
