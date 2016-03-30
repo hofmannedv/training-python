@@ -1,4 +1,5 @@
 README
 ------
 
-* getaddr.py:		name resolution example for localhost, and domain
+* getaddr.py:			name resolution example for localhost, and domain
+* gethttpservice.py:	asks the domain for being a http server
