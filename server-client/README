@@ -8,4 +8,6 @@ UDP examples
 
 TCP examples
 * server-tcp.py:		server that accepts incoming TCP messages (with response)
+* server-tcp2.py:		server that accepts incoming TCP messages (with response)
+						based on socketserver class (Python 3.x required)
 * client-tcp.py:		client that sends TCP messages to the server (with response)
