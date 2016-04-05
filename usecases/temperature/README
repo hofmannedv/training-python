@@ -1,0 +1,5 @@
+README
+------
+
+* class-device.py: stores temperature, and the unit (C, F)
+
