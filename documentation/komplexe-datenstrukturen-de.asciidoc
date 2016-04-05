@@ -226,16 +226,34 @@ Bezeichner
 ----
 class Point:
 	def __init__(self, x,y):
+		"initialize the Point instance"
+		
 		self.xCoord = x
 		self.yCoord = y
 		return
 	
 	def setX(self, x):
+		"set the x coordinate"
+		
 		self.xCoord = x
 		return
 	
 	def getX(self):
+		"return the x coordinate"
+		
 		return self.xCoord
+	
+	def setY(self, y):
+		"set the y coordinate"
+		
+		self.yCoord = y
+		return
+	
+	def getY(self):
+		"return the y coordinate"
+		
+		return self.yCoord
+	
 ----
 
 === Überladen von Methoden ===
