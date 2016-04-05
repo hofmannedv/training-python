@@ -12,11 +12,11 @@
 # device class
 
 class Device:
-	def __init__(self, temp = 0, unit = True):
+	def __init__(self, temp = 0.0, unit = True):
 		"constructor for this object"
 		
 		# init the temperature
-		self.temperature = temp
+		self.temperature = float(temp)
 		
 		# unit: True (Celsius), False (Fahrenheit)
 		self.measurement = unit
@@ -29,7 +29,7 @@ class Device:
 	
 	def setTemperature (self, temp):
 		"set the temperature value"
-		self.temperature = temp
+		self.temperature = float(temp)
 		return
 	
 	def getUnit (self):
@@ -37,16 +37,35 @@ class Device:
 		
 		# unit: True (Celsius), False (Fahrenheit)
 		return self.measurement
+	
+	def getCelsius (self):
+		"transform the temperature value into Celsius"
+		
+		if self.getUnit():
+			return self.getTemperature ()
+		else:
+			celsius = (self.getTemperature - 32) * 5 / 9
+			return celsius
+		return
+
+	def getFahrenheit (self):
+		"transform the temperature value into Fahrenheit"
+		
+		if not self.getUnit():
+			return self.getTemperature ()
+		else:
+			fahrenheit = (self.getTemperature() * 9) / 5 + 32.0
+			return fahrenheit
+		return
 
 # main program
 if __name__ == "__main__":
 	# define a device
-	myDevice = Device(20, True)
+	myDevice = Device(20.5, True)
 	
-	temperature = myDevice.getTemperature()
-	unit = "°F"
-	if myDevice.getUnit:
-		unit = "°C"
+	temperatureCelsius = myDevice.getCelsius()
+	temperatureFahrenheit = myDevice.getFahrenheit()
 
-	print ("device: %i %s" % (temperature, unit))
+	print ("device: %.2f °C" % (temperatureCelsius))
+	print ("device: %.2f °F" % (temperatureFahrenheit))
 
