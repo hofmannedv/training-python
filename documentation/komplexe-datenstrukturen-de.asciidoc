@@ -280,14 +280,25 @@ der abgeleitet wird
 ----
 class Point3D (Point):
 	def __init__(self, x, y, z):
+		"initialize the Point3D instance"
+		
 		super().__init__(x,y)
 		self.zCoord = z
 		return
 	
 	def getX(self):
+		"rewrite the getX method"
+		
 		return super().getX()
 	
+	def getY(self):
+		"rewrite the getY method"
+		
+		return super().getY()
+		
 	def getZ(self):
+		"define an additional getZ method"
+		
 		return self.zCoord
 ----
 
