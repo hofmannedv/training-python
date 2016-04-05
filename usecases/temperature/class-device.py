@@ -1,7 +1,8 @@
 # -----------------------------------------------------------
 # a class to setup a temperature measurement device
 #
-# requires Python 3.x
+# requires Python 3.x:
+# python3 class-device.py
 #
 # (C) 2016 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
@@ -32,6 +33,11 @@ class Device:
 		self.temperature = float(temp)
 		return
 	
+	def setUnit (self, unit = True):
+		"set the measurement unit"
+		self.measurement = unit
+		return
+
 	def getUnit (self):
 		"return the measurement unit"
 		
@@ -46,7 +52,6 @@ class Device:
 		else:
 			celsius = (self.getTemperature - 32) * 5 / 9
 			return celsius
-		return
 
 	def getFahrenheit (self):
 		"transform the temperature value into Fahrenheit"
@@ -56,7 +61,6 @@ class Device:
 		else:
 			fahrenheit = (self.getTemperature() * 9) / 5 + 32.0
 			return fahrenheit
-		return
 
 # main program
 if __name__ == "__main__":
