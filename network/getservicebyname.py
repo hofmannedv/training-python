@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# demonstrates identifying services by its port name
+# demonstrates identifying ports by its service name
 #
 # (C) 2016 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
@@ -13,12 +13,12 @@
 
 import socket
 
-# define list of network protocols
-portList = [22, 80, 443]
+# define list of network services
+protocolList = ['www', 'ftp', 'ssh', 'pop3']
 
-for port in portList:
-	protocol = socket.getservbyport(port)
+for protocol in protocolList:
+	port = socket.getservbyname(protocol)
 
 	# print port and protocol as well-formatted output
-	print ('%4i: %s' % (port, protocol))
+	print ('%6s: %3i' % (protocol, port))
 
