@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.7" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>Programmieren mit Python. Komplexere Datenstrukturen.</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -87,9 +87,15 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
+}
+pre {
+  white-space: pre-wrap;
 }
 
 #author {
@@ -219,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -415,12 +421,6 @@ div.unbreakable { page-break-inside: avoid; }
  *
  * */
 
-tt {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
-
 div.tableblock {
   margin-top: 1.0em;
   margin-bottom: 1.5em;
@@ -453,12 +453,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -539,6 +533,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -731,7 +727,7 @@ install: function(toclevels) {
 }
 
 }
-asciidoc.install(3);
+asciidoc.install();
 /*]]>*/
 </script>
 </head>
@@ -741,10 +737,6 @@ asciidoc.install(3);
 <span id="author">Frank Hofmann</span><br />
 <span id="revnumber">version 1.1,</span>
 <span id="revdate">16. Juni 2015</span>
-<div id="toc">
-  <div id="toctitle">Inhaltsverzeichnis</div>
-  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
-</div>
 </div>
 <div id="content">
 <h1 id="_vorwort">Vorwort</h1>
@@ -753,7 +745,7 @@ Rückgrat vieler Projekte.</p></div>
 <div class="listingblock">
 <div class="title">Zen of Python</div>
 <div class="content">
-<pre><tt>    Beautiful is better than ugly.
+<pre><code>    Beautiful is better than ugly.
     Explicit is better than implicit.
     Simple is better than complex.
     Complex is better than complicated.
@@ -773,7 +765,7 @@ Rückgrat vieler Projekte.</p></div>
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
 
-    —Tim Peters</tt></pre>
+    —Tim Peters</code></pre>
 </div></div>
 <div class="sect1">
 <h2 id="_datentypen_überblick">1. Datentypen (Überblick)</h2>
@@ -787,8 +779,8 @@ Integer
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>betrag1 = 78
-betrag2 = -56</tt></pre>
+<pre><code>betrag1 = 78
+betrag2 = -56</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -799,8 +791,8 @@ Float
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>umsatzsteuer7 = 0.07
-umsatzsteuer19 = 0.19</tt></pre>
+<pre><code>umsatzsteuer7 = 0.07
+umsatzsteuer19 = 0.19</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -811,14 +803,14 @@ String
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># einzeiliger String
+<pre><code># einzeiliger String
 ort1 = "Berlin"
 ort2 = 'Hamburg'
 
 # mehrzeiliger String
 ort3 = """Büro 2.0
 Konferenzraum im 1. Stock
-Weigandufer 45, 12059 Berlin"""</tt></pre>
+Weigandufer 45, 12059 Berlin"""</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -829,8 +821,8 @@ Boolean
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>wahr = True
-falsch = False</tt></pre>
+<pre><code>wahr = True
+falsch = False</code></pre>
 </div></div>
 </div>
 </div>
@@ -868,10 +860,10 @@ tuple()
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>menge = set([1,2,3])
+<pre><code>menge = set([1,2,3])
 liste = list(menge)
 tupel1 = tuple('abc')   # gibt zurück ('a', 'b', 'c')
-tupel2 = tuple([1,2,3]) # gibt zurück [1, 2, 3]</tt></pre>
+tupel2 = tuple([1,2,3]) # gibt zurück [1, 2, 3]</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -882,10 +874,10 @@ Funktionen für den Zugriff auf Elemente und Schlüssel&#8201;&#8212;&#8201;Zugr
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>liste = [1,2,3,4]
+<pre><code>liste = [1,2,3,4]
 print (liste[1])        # Ausgabe des zweiten Elements: 2
 print (liste[-1])       # Ausgabe des letzten Elements: 4
-print (liste[1:3])      # ergibt: [2,3]</tt></pre>
+print (liste[1:3])      # ergibt: [2,3]</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -896,7 +888,7 @@ Ausgabe aller Indizes mit Hilfe von keys()
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>indizes = liste.keys() # ergibt [0,1,2,3]</tt></pre>
+<pre><code>indizes = liste.keys() # ergibt [0,1,2,3]</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -907,8 +899,8 @@ Ausgabe aller Werte mit Hilfe von values()
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>liste = [15, 34, 5]
-werte = liste.values() # ergibt [15, 34, 5]</tt></pre>
+<pre><code>liste = [15, 34, 5]
+werte = liste.values() # ergibt [15, 34, 5]</code></pre>
 </div></div>
 <div class="sect2">
 <h3 id="_funktionen_für_mengen_listen_tupel_und_disctionaries">2.1. Funktionen für Mengen, Listen, Tupel und Disctionaries</h3>
@@ -932,11 +924,11 @@ Funktion auf jedes Element der Aufzählung anwenden
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>def quadrat(wert):
+<pre><code>def quadrat(wert):
     return wert * wert
 
 liste = [1,2,3,4]
-print (map(quadrat, liste)) # ergibt [1,4,9,16]</tt></pre>
+print (map(quadrat, liste)) # ergibt [1,4,9,16]</code></pre>
 </div></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -958,7 +950,7 @@ Zahlenmenge (Iterator) erstellen
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>print (range(4)) # ergibt Bereich von 0 bis 3</tt></pre>
+<pre><code>print (range(4)) # ergibt Bereich von 0 bis 3</code></pre>
 </div></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -974,10 +966,10 @@ zip(): zwei Mengen oder Listen kombinieren
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>x = [1, 2, 3]
+<pre><code>x = [1, 2, 3]
 y = [4, 5, 6]
 zipped = zip(x, y)
-print (zipped) # ergibt [(1, 4), (2, 5), (3, 6)]</tt></pre>
+print (zipped) # ergibt [(1, 4), (2, 5), (3, 6)]</code></pre>
 </div></div>
 </div>
 </div>
@@ -1053,8 +1045,8 @@ führende und endende Leerzeichen entfernen
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>vorname = "  Felix Hauser  "
-print (vorname.strip())    # ergibt: "Felix Hauser"</tt></pre>
+<pre><code>vorname = "  Felix Hauser  "
+print (vorname.strip())    # ergibt: "Felix Hauser"</code></pre>
 </div></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -1068,9 +1060,9 @@ Strings aus der Liste miteinander verketten
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>a = ("Das", "ist", "ein", "Beispiel")
+<pre><code>a = ("Das", "ist", "ein", "Beispiel")
 b = " ".join(a)
-print(b)          # ergibt 'Das ist ein Beispiel'</tt></pre>
+print(b)          # ergibt 'Das ist ein Beispiel'</code></pre>
 </div></div>
 </div>
 </div>
@@ -1099,14 +1091,14 @@ einfach und mehrfach miteinander verkettete Listen
 <div class="ulist"><ul>
 <li>
 <p>
-Festlegung über einen Bezeichner und das Schlüsselwort <tt>class</tt>
+Festlegung über einen Bezeichner und das Schlüsselwort <code>class</code>
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>class Point:
-        # alle weiteren Elemente (Methoden und Attribute) gehören zur Klasse</tt></pre>
+<pre><code>class Point:
+        # alle weiteren Elemente (Methoden und Attribute) gehören zur Klasse</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1119,15 +1111,15 @@ keine Unterscheidung zwischen öffentlichen und privaten Attributen
 </li>
 <li>
 <p>
-implizite Unterscheidung durch spezielle Schreibweise mit <tt>_name</tt>
+implizite Unterscheidung durch spezielle Schreibweise mit <code>_name</code>
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>class Point:
+<pre><code>class Point:
         pointId = 0     # öffentliches Attribut
-        _zusatz = 42    # Attribute mit privatem Bezeichner</tt></pre>
+        _zusatz = 42    # Attribute mit privatem Bezeichner</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1135,7 +1127,7 @@ implizite Unterscheidung durch spezielle Schreibweise mit <tt>_name</tt>
 <div class="ulist"><ul>
 <li>
 <p>
-Nutzung einer Konstruktor-Methode namens <tt>__init__</tt>
+Nutzung einer Konstruktor-Methode namens <code>__init__</code>
 </p>
 </li>
 <li>
@@ -1146,23 +1138,23 @@ wird aufgerufen, wenn des Objekt instantiiert wird
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>class Point:
+<pre><code>class Point:
         def __init__(self, x,y):
                 self.xCoord = x
                 self.yCoord = y
-                return</tt></pre>
+                return</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
 <p>
-Erzeugung eines Objekts der Klasse <tt>Point</tt>
+Erzeugung eines Objekts der Klasse <code>Point</code>
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>pointA = Point(2,4)
-pointB = Point(17,-3)</tt></pre>
+<pre><code>pointA = Point(2,4)
+pointB = Point(17,-3)</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1170,25 +1162,42 @@ pointB = Point(17,-3)</tt></pre>
 <div class="ulist"><ul>
 <li>
 <p>
-Definition einer Funktion mit dem Schlüsselwort <tt>def</tt> und einem
+Definition einer Funktion mit dem Schlüsselwort <code>def</code> und einem
 Bezeichner
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>class Point:
+<pre><code>class Point:
         def __init__(self, x,y):
+                "initialize the Point instance"
+
                 self.xCoord = x
                 self.yCoord = y
                 return
 
         def setX(self, x):
+                "set the x coordinate"
+
                 self.xCoord = x
                 return
 
         def getX(self):
-                return self.xCoord</tt></pre>
+                "return the x coordinate"
+
+                return self.xCoord
+
+        def setY(self, y):
+                "set the y coordinate"
+
+                self.yCoord = y
+                return
+
+        def getY(self):
+                "return the y coordinate"
+
+                return self.yCoord</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1202,7 +1211,7 @@ Bezeichner
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>...
+<pre><code>...
 def __eq__ (self, referencePoint):
         return self.getX() == referencePoint.getX() and \
                 self.getY() == referencePoint.getY()
@@ -1210,7 +1219,7 @@ def __eq__ (self, referencePoint):
 pointA = Point(3,4)
 pointB = Point(4,5)
 if pointA == pointB:
-        print("beide Punkte sind identisch")</tt></pre>
+        print("beide Punkte sind identisch")</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1225,17 +1234,28 @@ der abgeleitet wird
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>class Point3D (Point):
+<pre><code>class Point3D (Point):
         def __init__(self, x, y, z):
+                "initialize the Point3D instance"
+
                 super().__init__(x,y)
                 self.zCoord = z
                 return
 
         def getX(self):
+                "rewrite the getX method"
+
                 return super().getX()
 
+        def getY(self):
+                "rewrite the getY method"
+
+                return super().getY()
+
         def getZ(self):
-                return self.zCoord</tt></pre>
+                "define an additional getZ method"
+
+                return self.zCoord</code></pre>
 </div></div>
 </div>
 </div>
@@ -1273,7 +1293,8 @@ ISBN 9780-47061829-5
 <div id="footer">
 <div id="footer-text">
 Version 1.1<br />
-Letzte Änderung 2015-06-16 15:23:07 CEST
+Letzte Änderung
+ 2016-04-05 17:10:50 CEST
 </div>
 </div>
 </body>
