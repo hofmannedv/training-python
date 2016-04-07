@@ -47,24 +47,38 @@ class Device:
 	def getCelsius (self):
 		"transform the temperature value into Celsius"
 		
-		if self.getUnit():
+		if self.isUnitCelsius ():
 			return self.getTemperature ()
 		else:
-			celsius = (self.getTemperature - 32) * 5 / 9
+			celsius = (self.getTemperature - 32.0) * 5.0 / 9.0
 			return celsius
+	
+	def isUnitFahrenheit (self):
+		"return True if the device unit is set to Fahrenheit"
+		if not self.getUnit():
+			return True
+		
+		return False
+
+	def isUnitCelsius (self):
+		"return True if the device unit is set to Celsius"
+		if self.getUnit():
+			return True
+		
+		return False
 
 	def getFahrenheit (self):
 		"transform the temperature value into Fahrenheit"
 		
-		if not self.getUnit():
+		if self.isUnitFahrenheit ():
 			return self.getTemperature ()
 		else:
-			fahrenheit = (self.getTemperature() * 9) / 5 + 32.0
+			fahrenheit = (self.getTemperature() * 9.0) / 5.0 + 32.0
 			return fahrenheit
 
 # main program
 if __name__ == "__main__":
-	# define a device
+	# define a device with 20.5 degree celsius
 	myDevice = Device(20.5, True)
 	
 	temperatureCelsius = myDevice.getCelsius()
