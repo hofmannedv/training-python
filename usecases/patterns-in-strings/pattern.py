@@ -12,6 +12,7 @@ import re
 
 text1 = "this is contract 14556-658, London, postcode SE30AF"
 text2 = "computer 2345-56, value EUR 255.18"
+text3 = "processor,pr1566,45.00,15"
 
 # digits with a hyphen
 pattern1 = re.compile('\d+-\d+')
@@ -35,3 +36,8 @@ print (pattern2.findall(text1))
 # float pattern
 pattern3 = re.compile('\d+\.\d+')
 print (pattern3.findall(text2))
+
+# split dataset by delimiter
+pattern4 = re.compile(',')
+description, productId, price, amount = pattern4.split(text3)
+print (description, productId, price, amount)
