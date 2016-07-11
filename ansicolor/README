@@ -1,6 +1,7 @@
 README
 ------
 
+* backgroundcolors.py: demonstrates the definition and usage of ansi background colors
 * basiccolors.py: demonstrates the definition and usage of ansi colors
 * brightcolors.py: demonstrates the definition and usage of bright ansi colors
 * fullcolors.py: demonstrates how to print text using 256 ansi colors
