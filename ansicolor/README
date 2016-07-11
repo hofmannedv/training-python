@@ -2,3 +2,4 @@ README
 ------
 
 * basiccolors.py: demonstrates the definition and usage of ansi colors
+* brightcolors.py: demonstrates the definition and usage of bright ansi colors
