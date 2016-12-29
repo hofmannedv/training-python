@@ -29,3 +29,6 @@ README
 
 * min-max.py: figure out the minimum, and the maximum value from a list
   of values.
+
+* min-max-numpy.py: figure out both the minimum, and the maximum value
+  from a list of values, and their array positions using the NumPy module
