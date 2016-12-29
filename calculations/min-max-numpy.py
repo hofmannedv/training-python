@@ -32,9 +32,10 @@ if items:
 	minimumValuePosition = np.argmin(valueList)
 	maximumValuePosition = np.argmax(valueList)
 
-	# output average value
+	# output the values and its positions
 	print ("The minimum value is %i at position %i." % (minimumValue, minimumValuePosition))
 	print ("The maximum value is %i at position %i." % (maximumValue, maximumValuePosition))
 else:
+
 	print ("The list is empty.")
 
