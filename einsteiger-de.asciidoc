@@ -308,4 +308,5 @@ print (ergebnisliste)
 * Dokumentation zu Python 3.4, https://docs.python.org/3.4/index.html
 * PEP 0008 -- Style Guide for Python Code, https://www.python.org/dev/peps/pep-0008/
 * Python Practice Book, http://anandology.com/python-practice-book/index.html
+* Python For Data Analysis, https://github.com/wesm/pydata-book
 * Frank Hofmann: GitHub-Repo mit ausführlichen Beispielen, https://github.com/hofmannedv/training-python
