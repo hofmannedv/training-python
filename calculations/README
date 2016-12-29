@@ -13,8 +13,12 @@ README
   For a list of built-in functions in Python 3.4 see:
   https://docs.python.org/3.4/library/functions.html
 
-* average.py: calculate the average for a list of values. Shows the
+* average.py: calculates the average for a list of values. Shows the
   output differences between Python 2.x, and 3.x, too.
+
+* average-numpy.py: calculates the average for a list of values using
+  the NumPy module. Shows the output differences between Python 2.x, 
+  and 3.x, too.
 
 * min-max.py: figure out the minimum, and the maximum value from a list
   of values.
