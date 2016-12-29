@@ -13,6 +13,10 @@ README
   For a list of built-in functions in Python 3.4 see:
   https://docs.python.org/3.4/library/functions.html
 
+* sum-numpy.py: Demonstrates how to sum a list of integer variables
+  using the sum method from the NumPy module. Also shows how to create 
+  a cumulative sum.
+
 * average.py: calculates the average for a list of values. Shows the
   output differences between Python 2.x, and 3.x, too.
 
