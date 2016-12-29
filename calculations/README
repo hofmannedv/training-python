@@ -17,6 +17,9 @@ README
   using the sum method from the NumPy module. Also shows how to create 
   a cumulative sum.
 
+* array-numpy.py: demonstrates various array calculations using the
+  NumPy module
+
 * average.py: calculates the average for a list of values. Shows the
   output differences between Python 2.x, and 3.x, too.
 
