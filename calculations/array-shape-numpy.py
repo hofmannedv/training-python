@@ -40,3 +40,16 @@ print (" ")
 
 print ("1 x 6 in Fortran-like order:")
 print (data2.reshape(6, order='F'))
+print (" ")
+
+# transposing the data
+print ("transposing the data2 (swapping the axes):")
+print (data2.T)
+print (" ")
+
+# swapping the axes
+print ("transposing the data3 (swapping the axes):")
+data3 = np.array([[[1,2,3], [4,5,6]]])
+print (data3)
+print (" ")
+print (data3.swapaxes(1,2))
