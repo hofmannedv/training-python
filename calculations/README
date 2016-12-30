@@ -38,3 +38,6 @@ README
 
 * array-shape-numpy.py: demonstrates how to reshape an array using the
   NumPy module
+
+* array-boolean-numpy.py: demonstrates the usage of boolean arrays using
+  NumPy
