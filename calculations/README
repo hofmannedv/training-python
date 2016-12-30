@@ -33,5 +33,8 @@ README
 * min-max-numpy.py: figure out both the minimum, and the maximum value
   from a list of values, and their array positions using the NumPy module
 
+* min-max-array-numpy.py: calculate the minimum, and maximum
+  element-wise between two list of values using the NumPy module
+
 * array-shape-numpy.py: demonstrates how to reshape an array using the
   NumPy module
