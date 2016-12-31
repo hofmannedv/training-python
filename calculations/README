@@ -46,3 +46,5 @@ README
   a list
 
 * array-stack-numpy.py: demonstrates how to stack arrays
+
+* array-split-numpy.py: demonstrates how to split arrays
