@@ -51,3 +51,15 @@ print (" ")
 print ("the union of data 1 and 2 is:")
 print (np.union1d(valueList1, valueList2))
 print (" ")
+
+# set difference -- elements that exist in data 1 but not 2
+print ("the elements that are in data 1 but not data 2 are:")
+print (np.setdiff1d(valueList1, valueList2))
+print (" ")
+
+# set xor difference -- elements that are in either of the data 
+# sets but not both
+print ("the elements that are either in data 1 or 2 but not both:")
+print (np.setxor1d(valueList1, valueList2))
+print (" ")
+
