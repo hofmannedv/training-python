@@ -1,6 +1,22 @@
 README
 ------
 
+Demonstrates how to use an external C module using the Simplified
+Wrapper and Interface Generator (SWIG). This requires the Swig package
+to be installed (http://www.swig.org/).
+
+To build the according shared object file, simply run 
+
+./build_module.sh
+
+first. Then, call
+
+python example.py
+
+to use the shared object file that we have created before.
+
+The archive/directory contains the following files:
+
 * deepthought.h:        c header file for extension module
 * deepthought.c:        c extension module
 * deepthought.i:        interface description for c extension module
