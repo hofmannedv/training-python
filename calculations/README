@@ -44,3 +44,5 @@ README
 
 * array-unique-numpy.py: demonstrates how to remove double entries from
   a list
+
+* array-stack-numpy.py: demonstrates how to stack arrays
