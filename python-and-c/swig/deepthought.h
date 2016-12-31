@@ -17,6 +17,6 @@
 #define THE_ANSWER 42
 
 // define external function interfaces
-extern int answer(void)
+extern int answer(void);
 
 #endif /* _DEEPTHOUGHT_H_ */

@@ -13,5 +13,8 @@
 # import external modules
 import deepthought
 
+# call the answer function from the deepthought module
 a = deepthought.answer()
+
+# print answer
 print ("the answer is %i" % a)
