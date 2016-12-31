@@ -27,6 +27,15 @@ print ("reshaped data 2 x 3:")
 print (reshapedData)
 print ("shape: ", reshapedData.shape)
 print ("dimension: ", reshapedData.ndim)
+print (" ")
+
+# flatten the array using the ravel method
+print ("flattened array:")
+flattenedArray = np.ravel(data)
+print (flattenedArray)
+print ("shape: ", flattenedArray.shape)
+print ("dimension: ", flattenedArray.ndim)
+print (" ")
 
 # changing the order
 data2 = np.array([[1,2,3], [4,5,6]])
