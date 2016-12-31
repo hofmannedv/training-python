@@ -41,3 +41,6 @@ README
 
 * array-boolean-numpy.py: demonstrates the usage of boolean arrays using
   NumPy
+
+* array-unique-numpy.py: demonstrates how to remove double entries from
+  a list
