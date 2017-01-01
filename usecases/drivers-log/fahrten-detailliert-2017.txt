@@ -1,0 +1,4 @@
+Zeitpunkt 1	Zeitpunkt 2	Von	Bis	Distanz	Verkehrsmittel	Kosten
+2017-01-01 10:00:00	2017-01-01 10:30:00	Berlin	Strausberg	30	S-Bahn	5.00
+2017-01-01 10:55:00	2017-01-01 11:25:00	Strausberg	Friedrichsfelde	25	S-Bahn	4.00
+2017-02-01 10:00:00	2017-02-01 11:25:00	Brandenburg (Havel)	Berlin	85	DB	5.20
