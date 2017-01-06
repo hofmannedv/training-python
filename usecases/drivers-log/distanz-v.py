@@ -53,28 +53,14 @@ for currentMonth in monthlyRanges:
 	mask = (fromColumn >= dateFromI) & (toColumn < dateToI)
 	
 	if mask.any():
-		row = 1
-		init = True
-		stripe = np.array([])
-		for entry in mask:
-			if entry == True:
-				if init:
-					stripe = np.array(data[row])
-					init = False
-				else:
-					stripe2 = data[row]
-					stripe = np.vstack((stripe, stripe2))
-			row += 1
-		
-		# print (stripe)
+		# convert mask into list
+		newFilter = mask.ravel()
+		stripe = np.compress(newFilter, data[1:], axis=0)
 		
 		# calculate the total travelling distance
 		# - select the 5th column except the 1st row
 		# - convert strings into 32bit integer
-		if np.ndim(stripe) > 1:
-			distanceColumn = np.array(stripe[:,4], dtype=np.int32)
-		else:
-			distanceColumn = np.array(stripe[4], dtype=np.int32)
+		distanceColumn = np.array(stripe[:,4], dtype=np.int32)
 		
 		# count the distances
 		total = np.sum(distanceColumn)
@@ -86,26 +72,15 @@ for currentMonth in monthlyRanges:
 		
 		# find shortest travel
 		shortest = np.argmin(distanceColumn)
-		if number > 1:
-			shortestFrom = stripe[shortest][2]
-			shortestTo = stripe[shortest][3]
-			shortestDistance = stripe[shortest][4]
-		else:
-			shortestFrom = stripe[2]
-			shortestTo = stripe[3]
-			shortestDistance = stripe[4]
+		shortestFrom = stripe[shortest][2]
+		shortestTo = stripe[shortest][3]
+		shortestDistance = stripe[shortest][4]
 		print ("Kürzeste Strecke: %s nach %s mit %s km" % (shortestFrom, shortestTo, shortestDistance))
 		
 		# find longest travel
 		longest = np.argmax(distanceColumn)
-		if number > 1:
-			longestFrom = stripe[longest][2]
-			longestTo = stripe[longest][3]
-			longestDistance = stripe[longest][4]
-		else:
-			longestFrom = stripe[2]
-			longestTo = stripe[3]
-			longestDistance = stripe[4]
-			
+		longestFrom = stripe[longest][2]
+		longestTo = stripe[longest][3]
+		longestDistance = stripe[longest][4]
 		print ("Längste Strecke : %s nach %s mit %s km" % (longestFrom, longestTo, longestDistance))
 
