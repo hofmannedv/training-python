@@ -3,11 +3,11 @@
 import fileinput
 import re
 from datetime import datetime
-import matplotlib.pyplot as plt
-import pandas as pd
 
 # import external NumPy module
 import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
 
 init = True
 
@@ -41,59 +41,74 @@ monthlyRanges = np.array([
 	['Dezember',    '2017-12-01 00:00:00', '2017-12-31 23:59:59']
 ])
 
+# define travel routes
 travelRoutes = np.array([])
 
 for entry in data[1:]:
 	route = np.array("%s->%s:%s" % (entry[2], entry[3], entry[4]))
 	travelRoutes = np.hstack((travelRoutes, route))
 
+# remove double entries
 travelRoutes = np.unique(travelRoutes)
-print (travelRoutes)
+# print (travelRoutes)
 
-monate = monthlyRanges[1:, 0:1]
+# extract descriptions for every month
+month = monthlyRanges[1:, 0:1]
+month = np.ravel(month)
+# print (month)
 
-anzahl = np.zeros((travelRoutes.size, monate.size), dtype = np.int32)
-print (anzahl)
+# define number of travels per month
+# - init with zeros
+numberOfTravels = np.zeros((travelRoutes.size, month.size), dtype = np.int32)
+# print (numberOfTravels)
 
 for entry in data[1:]:
+	# find list id for the travel route
 	route = np.array("%s->%s:%s" % (entry[2], entry[3], entry[4]))
 	travelRouteId = np.where(travelRoutes == route)[0][0]
 
+	# extract travel data
 	travelRouteDateFrom = entry[0]
 	travelRouteDateTo = entry[1]
 
 	monthId = 0
 	for entry in monthlyRanges[1:]:
+		# extract month data range
 		monthDateFrom = datetime.strptime(entry[1], '%Y-%m-%d %H:%M:%S')
 		monthDateTo = datetime.strptime(entry[2], '%Y-%m-%d %H:%M:%S')
 
+		# validate route for being in month range
 		if ((travelRouteDateFrom >= monthDateFrom) and (travelRouteDateFrom <= monthDateTo)):
 			if ((travelRouteDateTo >= monthDateFrom) and (travelRouteDateTo <= monthDateTo)):
-				anzahl[travelRouteId][monthId] += 1
+				numberOfTravels[travelRouteId][monthId] += 1
 				break
 		monthId += 1
-print (anzahl)
+# print (numberOfTravels)
 
+# define distance per entry
 distances = np.array([])
 entryId = 0
-pdi = []
+travelDescription = []
 for entry in travelRoutes:
-	kmx = np.zeros(12)
-	spalten = re.split(':', entry)
-	factor = int(spalten[1])
+	columns = re.split(':', entry)
+	factor = int(columns[1])
 	
-	for i in range(12):
-		kmx[i] = anzahl[entryId][i] * factor
-	distances = np.append(distances, [kmx])
+	distances = np.append(distances, [numberOfTravels[entryId] * factor])
 	entryId += 1
 
-	pdi.append(spalten[0])
+	travelDescription.append(columns[0])
 
-distances = np.reshape(distances, (travelRoutes.size,monate.size))
+# re-arrange the distances array
+distances = np.reshape(distances, (travelRoutes.size,month.size))
 distances = distances.swapaxes(1,0)
 
+# create data frame
 df = pd.DataFrame(distances,
-               index=monate,
-               columns=pd.Index(pdi))
+               index=month,
+               columns=pd.Index(travelDescription))
+
+# plot the data frame as stacked, horizontal bars
 df.plot(kind='barh', stacked=True)
+
+# display the data frame
 plt.show()
