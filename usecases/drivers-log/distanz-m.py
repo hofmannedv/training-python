@@ -13,16 +13,16 @@ init = True
 
 # preparing the data
 
-for zeile in fileinput.input():
-	zeile = re.sub('\n', '', zeile)
-	spalten = re.split('\t+', zeile)
+for line in fileinput.input():
+	line = re.sub('\n', '', line)
+	columns = re.split('\t+', line)
 	if init:
-		data = np.array([spalten])
+		data = np.array([columns])
 		init = False
 	else:
-		spalten[0] = datetime.strptime(spalten[0], '%Y-%m-%d %H:%M:%S')
-		spalten[1] = datetime.strptime(spalten[1], '%Y-%m-%d %H:%M:%S')
-		data2 = np.array([spalten])
+		columns[0] = datetime.strptime(columns[0], '%Y-%m-%d %H:%M:%S')
+		columns[1] = datetime.strptime(columns[1], '%Y-%m-%d %H:%M:%S')
+		data2 = np.array([columns])
 		data = np.vstack((data, data2))
 
 monthlyRanges = np.array([
