@@ -1,0 +1,6 @@
+README
+------
+
+* sensor.py:      validates sensor data using a Sensor class
+* sensorclass.py: the according Sensor class
+
