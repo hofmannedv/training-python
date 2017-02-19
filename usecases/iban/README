@@ -1,0 +1,6 @@
+README
+------
+
+* iban.py: validates an International Bank Account Number (IBAN) using 
+  a Regular Expression
+
