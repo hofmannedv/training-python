@@ -3,6 +3,8 @@ README
 
 These examples demonstrate the usage of the fileinput module
 
+* fi.py:    reads data from the files given as parameter, and outputs
+            the line number of the file, and the content of the line
 * stdin.py: reads data from stdin or files given as a parameter
   
 
