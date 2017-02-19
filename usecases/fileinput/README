@@ -1,0 +1,8 @@
+README
+------
+
+These examples demonstrate the usage of the fileinput module
+
+* stdin.py: reads data from stdin or files given as a parameter
+  
+
