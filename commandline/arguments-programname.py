@@ -12,5 +12,5 @@ import sys
 
 # evaluate the first argument, only
 program = sys.argv[0]
-print (("we are called as %s") % (program))
+print ("we are called as %s" % (program))
 
