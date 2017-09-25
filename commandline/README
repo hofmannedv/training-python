@@ -1,8 +1,11 @@
 README
 ------
 
-* arguments.py: how to count, and read commandline arguments
+* arguments.py: how to count, and read commandline arguments using the
+  sys module
+
+* arguments-programname.py: determine the program/script name, only
 
 * arguments-getopt.py: how to count, and read commandline arguments
-  using getopt
+  using getopt module
 
