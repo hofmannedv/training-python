@@ -3,6 +3,8 @@ README
 
 = using the sys module =
 
+  reference: https://docs.python.org/3/library/sys.html
+
 * arguments.py
   how to count, and read commandline arguments
 
@@ -14,6 +16,18 @@ README
 
 = using the getopt module =
 
+  reference: https://docs.python.org/3/library/getopt.html
+
 * arguments-getopt.py
   how to count, and read commandline arguments
 
+= using the argparse module =
+
+  reference: https://docs.python.org/3/library/argparse.html
+
+* arguments-argparse-basic.py
+  basic usage of the argparse module
+
+= using the docopt module =
+
+  reference: https://github.com/docopt/docopt
