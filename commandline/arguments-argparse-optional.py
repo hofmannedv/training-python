@@ -13,8 +13,8 @@ import argparse
 
 # initiate the parser
 parser = argparse.ArgumentParser()
-parser.add_argument("--version", help="show program version", action="store_true")
-parser.add_argument("-V", help="show program version", action="store_true")
+parser.add_argument("--version", "-V", help="show program version", action="store_true")
+#parser.add_argument("-V", help="show program version", action="store_true")
 parser.parse_args()
 
 # read arguments from the command line
