@@ -31,6 +31,9 @@ README
 * arguments-argparse-description.py
   adding a description to the help message
 
+* arguments-argparse-optional.py
+  adding an optional argument
+
 = using the docopt module =
 
   reference: https://github.com/docopt/docopt
