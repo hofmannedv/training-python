@@ -34,6 +34,9 @@ README
 * arguments-argparse-optional.py
   adding an optional argument
 
+* arguments-argparse-optional2.py
+  adding an optional argument plus value
+
 = using the docopt module =
 
   reference: https://github.com/docopt/docopt
