@@ -13,12 +13,13 @@ import argparse
 
 # initiate the parser
 parser = argparse.ArgumentParser()
+
+# add long and short argument
 parser.add_argument("--version", "-V", help="show program version", action="store_true")
-parser.parse_args()
 
 # read arguments from the command line
 args = parser.parse_args()
 
 # check for --version
-if args.version or args.V:
+if args.version:
     print("this is myprogram version 0.1")
