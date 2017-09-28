@@ -21,10 +21,14 @@ if __name__ == '__main__':
 
     # define the dataset
     dataset = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    print ("dataset:")
+    print (dataset)
 
     # run this with a pool of 5 agents having a chunksize of 3 until finished
     agents = 5
     chunksize = 3
     with Pool(agents) as p:
-        print(p.map(square, dataset, chunksize))
+        result = p.map(square, dataset, chunksize)
 
+    print ("result:")
+    print (result)
