@@ -8,3 +8,6 @@ README
 * multiprocessing-sub.py
   how to run two functions (subs) in parallel
 
+* multiprocessing-pool.py
+  how to run a pool of agents (subs) in parallel doing a calculation
+  on a dataset
