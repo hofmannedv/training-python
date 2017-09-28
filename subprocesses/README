@@ -1,0 +1,10 @@
+README
+------
+
+= using the multiprocessing module =
+
+  reference: https://docs.python.org/3/library/multiprocessing.html
+
+* multiprocessing-sub.py
+  how to run two functions (subs) in parallel
+
