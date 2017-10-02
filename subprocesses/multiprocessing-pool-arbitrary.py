@@ -21,7 +21,7 @@ def square(x):
 if __name__ == '__main__':
 
     # define a dataset of 50 numbers
-    dataset = range(50)
+    dataset = range(500)
 
     # run this with a pool of 5 agents having a chunksize of 3 until finished
     print ("result:")
@@ -29,4 +29,5 @@ if __name__ == '__main__':
     chunksize = 3
     with Pool(agents) as pool:
         for i in pool.imap_unordered(square, dataset, chunksize):
-            print (i)
+            pass
+            #print (i)
