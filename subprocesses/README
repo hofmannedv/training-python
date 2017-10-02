@@ -1,6 +1,11 @@
 README
 ------
 
+= basic usage (for reference purposes, only) =
+
+* linear-evaluation.py
+  demonstrates running a function (sub) on a dataset in linear order
+
 = using the multiprocessing module =
 
   reference: https://docs.python.org/3/library/multiprocessing.html
