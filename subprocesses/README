@@ -25,3 +25,7 @@ README
 
 * diskfree.py
   show the available disk space using an external call
+
+* diskfree-grab-output.py
+  show the available disk space using an external call, grab both the
+  return value, and the output
