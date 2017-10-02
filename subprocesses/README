@@ -21,4 +21,7 @@ README
   how to run a pool of agents (subs) in parallel doing a calculation
   on a dataset with output in arbitrary order
 
+= using the subprocess module =
 
+* diskfree.py
+  show the available disk space using an external call
