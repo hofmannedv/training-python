@@ -2,10 +2,11 @@ README
 ------
 
 * queue-multiprocessing.py: demonstrate the usage of a queue, and
-  multiple processes
+  multiple processes. Based on the multiprocessing, and time modules.
 
 * queue-multiprocessing-thread.py: demonstrate the usage of a queue,
-  multiple processes, and an asychronous thread
+  multiple processes, and an asychronous thread. Based on the
+  multiprocessing, and threading modules.
 
 * queue-gevent.py: demonstrate the usage of a queue based on gevents
 

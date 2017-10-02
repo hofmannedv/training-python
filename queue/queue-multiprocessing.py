@@ -1,13 +1,14 @@
 # -----------------------------------------------------------
 # basic implementation of a queue for multiprocessing
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# (C) 2015-2017 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
 # -----------------------------------------------------------
 
 # define basic module
 import multiprocessing
+from time import sleep
 
 # define worker function
 def calculate(processName, tasks, results):
@@ -28,6 +29,7 @@ def calculate(processName, tasks, results):
 
 			# compute result
 			compute = newValue * newValue
+			sleep(0.02*newValue)
 
 			# output received value, and calculation result
 			print("[%s] received value: %i" % (processName, newValue))
@@ -47,7 +49,7 @@ if __name__ == "__main__":
 	tasks = manager.Queue()
 	results = manager.Queue()
 
-	# define process pool with two processes
+	# define process pool with four processes
 	numberOfProcesses = 4
 	pool = multiprocessing.Pool(processes=numberOfProcesses)
 	processes = []
@@ -68,11 +70,12 @@ if __name__ == "__main__":
 		newProcess.start()
 
 	# fill task queue
-	taskList = [43, 1, 78, 56, 42, 8, 183, 334]
+	taskList = [43, 1, 780, 256, 142, 68, 183, 334, 325, 3]
 	for singleTask in taskList:
 		tasks.put(singleTask)
 
 	# meanwhile, do sth. else ...
+	sleep(5)
 
 	# quit the worker processes
 	for i in range(numberOfProcesses):
