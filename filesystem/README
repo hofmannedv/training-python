@@ -9,3 +9,5 @@ README
   directory using os.scandir()
   requires Python 3.6+
 
+* find-files2.py: demonstrates how to list the files in the current
+  directory using os.listdir and an iterator function
