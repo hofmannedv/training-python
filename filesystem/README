@@ -23,3 +23,13 @@ README
 * find-files4.py: demonstrates how to list the files in the current
   directory using the pathlib module
   works with Python 3
+
+  based on: Python module of the week: pathlib
+  https://pymotw.com/3/pathlib/
+
+* find-files5.py: demonstrates how to list the files in the current
+  directory using the pathlib module, and limit to specific files
+  works with Python 3
+
+  based on: Python module of the week: pathlib
+  https://pymotw.com/3/pathlib/
