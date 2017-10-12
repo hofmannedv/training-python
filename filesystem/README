@@ -11,3 +11,8 @@ README
 
 * find-files2.py: demonstrates how to list the files in the current
   directory using os.listdir and an iterator function
+  works with Python 2 and 3
+
+* find-files3.py: demonstrates how to list the files in the current
+  directory using the subprocess module
+  works with Python 2 and 3
