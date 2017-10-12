@@ -16,3 +16,10 @@ README
 * find-files3.py: demonstrates how to list the files in the current
   directory using the subprocess module
   works with Python 2 and 3
+
+  based on: Python module of the week: subprocess
+  https://pymotw.com/2/subprocess/
+
+* find-files4.py: demonstrates how to list the files in the current
+  directory using the pathlib module
+  works with Python 3
