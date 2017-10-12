@@ -5,3 +5,7 @@ README
   directory according to a given pattern
   uses os and fnmatch, works with Python 2 and 3
 
+* list-files.py: demonstrates how to list the files in the current
+  directory using os.scandir()
+  requires Python 3.6+
+
