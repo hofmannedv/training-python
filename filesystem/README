@@ -33,3 +33,6 @@ README
 
   based on: Python module of the week: pathlib
   https://pymotw.com/3/pathlib/
+
+* find-files6.py: uses os.walk to list the files
+  works with both Python 2 and 3
