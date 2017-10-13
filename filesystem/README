@@ -37,5 +37,9 @@ README
 * find-files6.py: uses os.walk to list the files
   works with both Python 2 and 3
 
+* find-files6t.py: uses os.walk to list the files, and includes timeit
+  to determine the execution time
+  works with both Python 2 and 3
+
 * find-test.sh: shell script to determine the execution time of a script
 
