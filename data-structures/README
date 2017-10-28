@@ -1,10 +1,28 @@
 README
 ------
 
-* array2d.py:       demonstrates how to create a class to use an 2d array
-* array2d-numpy.py: demonstrates how to create a class to use an 2d array using NumPy
-* class-device.py:  a class to setup a measurement device with GPS coordinates
-* constructor-destructor.py: a class to demonstrate object constructor and desctructor
-* double-list.py:   demonstrates how to create and use a double-linked list
-* simple-list.py:   demonstrates how to create and use a simple-linked list
-* stack.py      :   create a stack class
+* array2d.py:
+  demonstrates how to create a class to use an 2d array
+
+* array2d-numpy.py: 
+  demonstrates how to create a class to use an 2d array using NumPy
+
+* class-device.py:
+  a class to setup a measurement device with GPS coordinates
+
+* constructor-destructor.py: 
+  a class to demonstrate object constructor and desctructor
+
+* double-list.py:
+  demonstrates how to create and use a double-linked list
+
+* simple-list.py:
+  demonstrates how to create and use a simple-linked list
+
+* stack.py:
+  create a stack class
+
+* validate-object-instance.py:
+  demonstrates how to validate a variable for being an object inherited
+  from a certain class
+ 
