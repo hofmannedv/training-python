@@ -1,7 +1,7 @@
 # -----------------------------------------------------------
 # demonstrates how to create and use a simple-linked list
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# (C) 2015-2017 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
 # -----------------------------------------------------------
@@ -32,40 +32,118 @@ class ListNode:
 		else:
 			return False
 
-# traversing the linked list
-def traverseList (startNode):
-	"traverse the linked list, and output the node data"
+class SingleLinkedList:
+	def __init__(self):
+		"constructor to initiate this object"
 
-	# define currentNode
-	currentNode = startNode
+		self.head = None
+		self.tail = None
+		return
 
-	# counted nodes
-	count = 0
-
-	while currentNode is not None:
-		# retrieve and output node data
-		print ("node:", currentNode.getData())
-	
-		# jump to the linked node
-		currentNode = currentNode.getNext()
+	def listLength(self):
+		"returns the number of list items"
 		
-		# increase counter by one
-		count = count + 1
+		count = 0
+		currentNode = self.head
 
-	return count
-
-# search for a certain entry
-def unorderedSearch (startNode, value):
-	"search the linked list"
-	
-	# define currentNode
-	currentNode = startNode
-
-	while currentNode is not None and currentNode.getData() != value:
-		# jump to the linked node
-		currentNode = currentNode.getNext()
+		while currentNode is not None:
+			# increase counter by one
+			count = count + 1
 			
-	return currentNode is not None
+			# jump to the linked node
+			currentNode = currentNode.getNext()
+		
+		return count
+
+	def outputList(self):
+		"outputs the list (the value of the node, actually)"
+		currentNode = self.head
+
+		while currentNode is not None:
+			print (currentNode.getData())
+
+			# jump to the linked node
+			currentNode = currentNode.getNext()
+		
+		return
+
+	def addListitem(self, item):
+		"add an item at the end of the list"
+
+		if isinstance(item, ListNode):
+			if self.head is None:
+				self.head = item
+			else:
+				self.tail.next = item
+			self.tail = item
+		
+		return
+
+	def removeListitemById(self, itemId):
+		"remove the list item with the item id"
+		
+		currentId = 1
+		currentNode = self.head
+		previousNode = None
+
+		while currentNode is not None:
+			if currentId == itemId:
+				# if this is the first node (head)
+				if previousNode is not None:
+					previousNode.next = currentNode.next
+				else:
+					self.head = currentNode.next
+				# we don't have to look any further
+				return
+ 
+			# needed for the next iteration
+			previousNode = currentNode
+			currentNode = currentNode.next
+			currentId = currentId + 1
+				
+		return
+
+	def removeListitemByValue(self, value):
+		"remove the list items with the value"
+
+		currentNode = self.head
+		previousNode = None
+
+		while currentNode is not None:
+			if currentNode.hasValue(value):
+				# if this is the first node (head)
+				if previousNode is not None:
+					previousNode.next = currentNode.next
+				else:
+					self.head = currentNode.next
+ 
+			# needed for the next iteration
+			previousNode = currentNode
+			currentNode = currentNode.next
+
+		return
+
+	def unorderedSearch (self, value):
+		"search the linked list for the node that has this value"
+
+		# define currentNode
+		currentNode = self.head
+
+		# define position
+		nodeId = 1
+
+		# define list of results
+		results = []
+
+		while currentNode is not None:
+			if currentNode.hasValue(value):
+				results.append(nodeId)
+			
+			# jump to the linked node
+			currentNode = currentNode.getNext()
+			nodeId = nodeId + 1
+		
+		return results
 
 # main program
 
@@ -73,17 +151,36 @@ def unorderedSearch (startNode, value):
 node1 = ListNode(15)
 node2 = ListNode(8.2)
 node3 = ListNode("Berlin")
+node4 = ListNode(15)
 
-# link the objects
-node1.next = node2
-node2.next = node3
+track = SingleLinkedList()
+print ("track length: %i" % track.listLength())
 
-# output the full node list
-# loop through the list of nodes up to the end
-count = traverseList(node1)
+track.addListitem(node1)
+print ("track length: %i" % track.listLength())
+track.outputList()
 
-print ("%i nodes visited" % count)
+track.addListitem(node2)
+print ("track length: %i" % track.listLength())
+track.outputList()
+
+track.addListitem(node3)
+print ("track length: %i" % track.listLength())
+track.outputList()
+
+track.addListitem(node4)
+print ("track length: %i" % track.listLength())
+track.outputList()
 
 # search for a certain value in the list
-if unorderedSearch (node1, 15):
-	print ("node with value 15 is in list")
+results = track.unorderedSearch (15)
+if (len(results)):
+	print (results)
+
+# remove all the entries with value 15
+track.removeListitemByValue(15)
+track.outputList()
+
+# remove the first list item
+track.removeListitemById(1)
+track.outputList()
