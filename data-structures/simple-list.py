@@ -147,7 +147,7 @@ class SingleLinkedList:
 
 # main program
 
-# create three single nodes
+# create four single nodes
 node1 = ListNode(15)
 node2 = ListNode(8.2)
 node3 = ListNode("Berlin")
@@ -156,21 +156,10 @@ node4 = ListNode(15)
 track = SingleLinkedList()
 print ("track length: %i" % track.listLength())
 
-track.addListitem(node1)
-print ("track length: %i" % track.listLength())
-track.outputList()
-
-track.addListitem(node2)
-print ("track length: %i" % track.listLength())
-track.outputList()
-
-track.addListitem(node3)
-print ("track length: %i" % track.listLength())
-track.outputList()
-
-track.addListitem(node4)
-print ("track length: %i" % track.listLength())
-track.outputList()
+for currentNode in [node1, node2, node3, node4]:
+	track.addListitem(currentNode)
+	print ("track length: %i" % track.listLength())
+	track.outputList()
 
 # search for a certain value in the list
 results = track.unorderedSearch (15)
