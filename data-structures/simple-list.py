@@ -21,6 +21,11 @@ class ListNode:
 		"method to return the value of the node"
 		return self.data
 	
+	def setData(self, value):
+		"method to save or modify the node value"
+		self.data = value
+		return
+    
 	def getNext(self):
 		"method to return the node reference"
 		return self.next
