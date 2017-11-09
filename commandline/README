@@ -40,3 +40,7 @@ README
 = using the docopt module =
 
   reference: https://github.com/docopt/docopt
+
+* arguments-docopt.py
+  evaluating parameters in GNU style using docopt
+
