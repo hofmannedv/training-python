@@ -44,3 +44,6 @@ README
 * arguments-docopt.py
   evaluating parameters in GNU style using docopt
 
+* arguments-docopt-mixed.py
+  evaluating parameters in both GNU and UNIX style using docopt
+
