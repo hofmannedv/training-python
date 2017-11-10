@@ -13,11 +13,11 @@
 """Usage:
     ./arguments-docopt-mixed.py
     ./arguments-docopt-mixed.py [--help | -h]
-    ./arguments-docopt-mixed.py [--version | -v]
+    ./arguments-docopt-mixed.py [--verbose | -v]
    
    Options:
     --help -h     display help information
-    --version -v  increase the verbosity of output
+    --verbose -v  increase the verbosity of output
 """
 
 # include docopt module
