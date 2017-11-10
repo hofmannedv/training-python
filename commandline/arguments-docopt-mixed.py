@@ -27,5 +27,5 @@ if __name__ == '__main__':
 	arguments = docopt(__doc__)
 	print (arguments)
 	
-	if arguments["--version"]:
+	if arguments["--verbose"]:
 		print("enabling verbose output ")
