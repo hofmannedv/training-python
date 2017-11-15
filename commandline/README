@@ -50,3 +50,5 @@ README
 * fileinfo.py
   fileinfo example to use and evaluate commandline arguments
 
+* ust.py
+  calculates the tax for a given value
