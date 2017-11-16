@@ -24,3 +24,6 @@ README
 
 * while-pass.py: demonstrates the usage of the pass statement in a while
   loop
+
+* while-else.py: demonstrates a while-else-loop
+
