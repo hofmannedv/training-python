@@ -1,0 +1,6 @@
+Basic File IO in Python
+
+Being a great general purpose programming language, Python has a number
+of very useful file IO functionality in its standard library of built-in
+functions and modules. The built-in open() function is what you use to
+open a file object for either reading or writing purposes.
