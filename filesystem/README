@@ -45,3 +45,6 @@ README
 
 * read-file-basic.py: reading a file in C/C++ style, and output line by
   line
+
+* read-file-iterator.py: reading a file using iterator style, and output
+  line by line
