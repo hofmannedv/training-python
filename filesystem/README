@@ -48,3 +48,6 @@ README
 
 * read-file-iterator.py: reading a file using iterator style, and output
   line by line
+
+* read-file-with.py: reading a file using the with command, and output
+  line by line
