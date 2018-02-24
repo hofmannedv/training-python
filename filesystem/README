@@ -52,5 +52,10 @@ README
 * read-file-multiple-lines.py: reading a number of lines using the
   itertools module
 
+* read-file-specific-line-1.py: read a specific line from a file, only
+
+* read-file-specific-line-2.py: read a specific line from a file, only,
+  using the linecache module
+
 * read-file-with.py: reading a file using the with command, and output
   line by line
