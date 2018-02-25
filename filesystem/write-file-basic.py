@@ -9,7 +9,7 @@
 # define the name of the file to write to
 filename = "helloworld.txt"
 
-# open the file for reading
+# open the file for writing
 filehandle = open(filename, 'w')
 
 filehandle.write('Hello, world!\n')
