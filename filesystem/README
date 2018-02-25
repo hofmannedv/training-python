@@ -72,4 +72,8 @@ README
 * write-file-buffer.py: writing a file buffer with line terminators to a
   file
 
-* write-file-redirect.py: writing a line to a file via redirection
+* write-file-redirect.py: writing a line to a file via redirection (for
+  Python 2.x)
+
+* write-file-redirect2.py: writing a line to a file via redirection
+  using the sys module, for all Python versions
