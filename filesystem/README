@@ -68,3 +68,6 @@ README
 
 * write-file-basic-with.py: writing a line of text to a file using the
   with statement
+
+* write-file-buffer.py: writing a file buffer with line terminators to a
+  file
