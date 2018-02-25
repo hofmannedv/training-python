@@ -71,3 +71,5 @@ README
 
 * write-file-buffer.py: writing a file buffer with line terminators to a
   file
+
+* write-file-redirect.py: writing a line to a file via redirection
