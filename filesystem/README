@@ -65,3 +65,6 @@ README
   line by line
 
 * write-file-basic.py: writing a line of text to a file
+
+* write-file-basic-with.py: writing a line of text to a file using the
+  with statement
