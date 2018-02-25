@@ -13,11 +13,11 @@
 # define the name of the file to write to
 filename = "helloworld.txt"
 
-# open the file for writing
-filehandle = open(filename, 'w')
+# define content
+filecontent = ["Hello, world", "a second line", "and a third line"]
 
-# redirect the output of print to the file handle
-print >>filehandle, 'Hello, world!'
+with open(filename, 'w') as filehandle:
+	# redirect the output of print to the file handle
+	for line in filecontent:
+		print >>filehandle, line
 
-# close the connection to that file
-filehandle.close()
