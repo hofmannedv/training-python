@@ -3,6 +3,8 @@ README
 
 * cwd.py: prints the current working directory
 
+* cwdb.py: prints the current working directory as a binary string
+
 * find-files.py: demonstrates how to list the files in the current
   directory according to a given pattern
   uses os and fnmatch, works with Python 2 and 3
