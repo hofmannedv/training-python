@@ -76,6 +76,8 @@ README
 * read-file-with.py: reading a file using the with command, and output
   line by line
 
+* rmdir.py: removing a single directory
+
 * write-file-basic.py: writing a line of text to a file
 
 * write-file-basic-with.py: writing a line of text to a file using the
