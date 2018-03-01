@@ -47,6 +47,8 @@ README
 
 * find-test.sh: shell script to determine the execution time of a script
 
+* mkdir.py: create a directory
+
 * read-file-basic.py: reading a file in C/C++ style, and output line by
   line
 
