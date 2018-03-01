@@ -49,6 +49,8 @@ README
 
 * mkdir.py: create a directory
 
+* mkdir-ar.py: create a directory with specific access rights
+
 * read-file-basic.py: reading a file in C/C++ style, and output line by
   line
 
