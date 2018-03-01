@@ -53,6 +53,8 @@ README
 
 * mkdir-p.py: create a directory with an entire path
 
+* mkdir-temporary.py: create a temporary directory
+
 * read-file-basic.py: reading a file in C/C++ style, and output line by
   line
 
