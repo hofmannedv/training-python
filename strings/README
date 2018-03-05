@@ -9,3 +9,5 @@ README
 
 * comparing-strings-order.py: demonstrates how to compare strings
   according to lexicographical order based on the < and > operators
+
+* comparing-strings-re.py: compare strings using a Regular Expression
