@@ -4,5 +4,8 @@ README
 * comparing-strings.py: demonstrates how to compare strings using 
   the == operator
 
+* comparing-strings-case-insensitive.py: compare strings using
+  case-insensitive
+
 * comparing-strings-order.py: demonstrates how to compare strings
   according to lexicographical order based on the < and > operators
