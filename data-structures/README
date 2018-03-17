@@ -49,3 +49,6 @@ README
  
 * write-list-to-file2.py:
   write a list of strings to a file using writelines
+ 
+* write-list-to-file-pickle.py:
+  write a list of strings to a file using pickle
