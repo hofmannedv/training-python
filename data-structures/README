@@ -27,7 +27,12 @@ README
   read a file to create a list of strings
 
 * read-list-from-file2.py:
-  read a file to create a list of strings using readlines
+  read a file to create a list of strings using readlines. A traditional
+  approach.
+
+* read-list-from-file3.py:
+  read a file to create a list of strings using readlines. A more
+  Pythonic approach.
 
 * simple-list.py:
   demonstrates how to create and use a simple-linked list
