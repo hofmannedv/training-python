@@ -20,6 +20,9 @@ README
   demonstrates how to create and use a double-linked list using the
   deque class from the collections module
 
+* enumerate-list.py:
+  demonstrates how to output an enumerated list
+
 * simple-list.py:
   demonstrates how to create and use a simple-linked list
 
