@@ -23,6 +23,9 @@ README
 * enumerate-list.py:
   demonstrates how to output an enumerated list
 
+* read-list-from-file.py:
+  read a file to create a list of strings
+
 * simple-list.py:
   demonstrates how to create and use a simple-linked list
 
