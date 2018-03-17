@@ -34,6 +34,9 @@ README
   read a file to create a list of strings using readlines. A more
   Pythonic approach.
 
+* read-list-from-file-pickle.py:
+  read a list of strings from a file using pickle
+
 * simple-list.py:
   demonstrates how to create and use a simple-linked list
 
