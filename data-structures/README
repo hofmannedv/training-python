@@ -33,3 +33,5 @@ README
   demonstrates how to validate a variable for being an object inherited
   from a certain class
  
+* write-list-to-file.py:
+  write a list of strings to a file listitem by listitem
