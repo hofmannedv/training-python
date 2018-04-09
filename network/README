@@ -5,3 +5,5 @@ README
 * gethttpservice.py:	asks the domain for being a http server
 * getservicebyname.py:	lists the services by its port numbers
 * getservicebyport.py:	lists the port by its service name
+* echo-client.py:     	TCP client that sends data to the server
+* echo-server.py:		TCP server that outputs the received data
