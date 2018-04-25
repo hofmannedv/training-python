@@ -9,3 +9,6 @@ README
 
 * localscope.py: 
   demonstrates the definition and usage of local and global variables
+
+* variablelist.py:
+  shows the namespace a variable belongs to
