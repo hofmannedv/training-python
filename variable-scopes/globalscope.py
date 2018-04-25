@@ -1,20 +1,21 @@
 # -----------------------------------------------------------
-# demonstrates usage global variables (reading)
+# demonstrates how to modify global variables (reading and 
+# writing)
 #o
 # (C) 2018 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
 # -----------------------------------------------------------
 
-def info():
-	"use two global variables name and age"
+def location():
+	"redefine the current location"
 	
-	print("%s is %i years old." % (name, age))
-	return 
+	global place
+	place = "Cape Town"
+	
+	return
 
-# define name and age
-name = "Dominic"
-age = 42
-
-info()
-
+place = "Berlin"
+print(place)
+location()
+print(place)

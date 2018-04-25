@@ -1,7 +1,11 @@
 README
 ------
 
-* global.py: demonstrates the usage of global variables
+* global.py: 
+  demonstrates the usage of global variables (reading)
 
-* localscope.py: demonstrates the definition and usage of local 
-  and global variables
+* globalscope.py: 
+  demonstrates the usage of global variables (reading and writing)
+
+* localscope.py: 
+  demonstrates the definition and usage of local and global variables
