@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# demonstrates how to use hash functions
+# demonstrates how to use hash functions -- repeated hash
 #o
 # (C) 2018 Frank Hofmann, Berlin, Germany
 # Released under GNU Public License (GPL)
@@ -8,13 +8,14 @@
 
 import hashlib
 
-# print guaranteed hash functions
-methods = hashlib.algorithms_guaranteed
-for entry in methods:
-	print(entry)
-
 # create a hash
-message = b"example"
 mObject = hashlib.md5()
-mObject.update(message)
-print("md5 hash:" + mObject.hexdigest())
+initialMessage = "example".encode()[0:4]
+
+iteration = 1
+while iteration < 25:
+	mObject.update(initialMessage)
+	md5hash = mObject.hexdigest()
+	print("md5 hash for ", initialMessage, " on level ", iteration, ": ", md5hash)
+	iteration += 1
+	initialMessage = md5hash.encode()[0:4]
