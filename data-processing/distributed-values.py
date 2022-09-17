@@ -21,3 +21,8 @@ print(valueList)                # 10.0, 20.0, ... 100.0
 # 10 integer values
 valueList = np.linspace(10, 100, num=10, dtype=int)
 print(valueList)                # 10, 20, ... 100
+
+# value range from 10 to 100 (without the end point)
+# 10 integer values
+valueList = np.linspace(10, 110, num=10, dtype=int, endpoint=False)
+print(valueList)                # 10, 20, ... 100
