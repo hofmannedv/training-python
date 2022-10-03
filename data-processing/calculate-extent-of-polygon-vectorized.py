@@ -3,22 +3,20 @@
 # License: GNU Public License (GPL)
 
 # calculate the extent of a polygon (area)
-# use a map function to minimize calculation time
+# use a vectorization to minimize calculation time
 
-import math
+import numpy as np
 
-def distance(vertice):
+def distance(point1, point2):
     # geometric distance between two points is
     # sqr((x1 - x2)^2 + (y1 - y2)^2)
 
-    # extract the two points
-    point1 = vertice[0]
-    point2 = vertice[1]
+    print(point1, point2)
 
     # calculate length of the vertice
     a = (point1[0] - point2[0])**2
     b = (point1[1] - point2[1])**2
-    d = math.sqrt(a + b)
+    d = np.sqrt(a + b)
     print(point1, "to", point2, "is %.2f" % d)
 
     return d
@@ -26,11 +24,13 @@ def distance(vertice):
 def extent(vertices):
     size = 0
 
-    # apply the function distance() to all vertices
-    components = map(distance, vertices)
+    # vectorize distance
+    vdistance = np.vectorize(distance, signature='(n),(n)->()')
 
-    # result is an array of numbers that we can sum up
-    size = sum(components)
+    for vertice in vertices:
+        d = vdistance(vertice[0], vertice[1])
+        #print(components)
+        size += d
 
     return size
 
