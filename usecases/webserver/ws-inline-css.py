@@ -35,7 +35,7 @@ class MyServer(BaseHTTPRequestHandler):
         content = [
             "<html>\n",
             "<head>\n",
-            "<title>Titel</title>\n",
+            "<title>Fahrplanauskunft</title>\n",
             #"<link rel=\"stylesheet\" type=\"text/css\" href=\"http://localhost:8080/farbschema.css\"/>",
             "</head>\n",
             "<body>\n",
