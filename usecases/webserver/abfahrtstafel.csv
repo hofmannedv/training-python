@@ -1,0 +1,29 @@
+zeitpunkt;fahrtziel;linie;bahnsteig
+06:30;Paris Est über Strasbourg;TGV5;1
+07:00;Zürich HB über Basel SBB;IR32/NJ13;3
+08:00;Berlin Ostbahnhof über Frankfurt (Main) Hbf;ICE156;1
+08:30;Kiel über Hannover Hbf;FLIX;1
+09:00;Karlsruhe Hbf;RE7;1
+09:10;Basel SBB;ICE51;2
+09:20;Basel Badischer Bahnhof;RE7;3
+09:45;Breisach;RE2;6
+09:55;Donaueschingen;RE2;7
+10:00;Hamburg-Altona über Hannover;ICE12;1
+10:05;Interlaken-Ost über Basel SBB;ICE30;2
+10:30;Amsterdam Centraal über Köln Hbf;EC34;1
+12:05;Interlaken-Ost über Basel SBB;ICE32;2
+12:45;Breisach;RE2;6
+13:30;Kiel über Hannover Hbf;FLIX;1
+14:10;Basel SBB;ICE58;2
+14:25;Basel Bad Bf;RE9;2
+15:00;Hamburg-Altona über Hannover;ICE13;1
+16:00;Dortmund Hbf über Köln Hbf;ICE135;1
+16:30;Neuenburg am Rhein über Müllheim;RB156;3
+16:45;Breisach;RE3;6
+17:03;Berlin Ostbahnhof;ICE275;1
+17:33;Donaueschingen;S3;7
+18:06;Karlsruhe Hbf;RE8;1
+18:45;Breisach;RE4;6
+19:05;Strasbourg;IC155;1
+19:45;Zürich HB über Basel SBB;ICE45;2
+22:05;Hamburg-Altona;NJ23;1
