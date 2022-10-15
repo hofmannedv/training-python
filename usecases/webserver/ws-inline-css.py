@@ -4,9 +4,9 @@
 
 # import required Python modules
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
 import datetime
 import pandas as pd
+import re
 
 # define webserver and port the service is provided
 hostName = "localhost"
@@ -53,7 +53,7 @@ class MyServer(BaseHTTPRequestHandler):
             "<hr>\n"
         ]
 
-        # define data file with train schedule
+        # define data file with train schedule as csv file
         datendatei = "abfahrtstafel.csv"
 
         # define read mode
@@ -64,7 +64,32 @@ class MyServer(BaseHTTPRequestHandler):
             inhalt = pd.read_csv(datendatei, delimiter=";")
 
             # convert the content into an HTML table
-            tabelle = inhalt.to_html(classes='fahrplan')
+            # - apply CSS class fahrplan
+            # - do not show index column
+            tabelle = inhalt.to_html(classes='fahrplan', index=False)
+
+            # optimize generated HTML output table
+            # - remove unnecessary spaces, and tabulators using a RegEx pattern
+            muster = re.compile("\s{2,}")
+            tabelle = re.sub(muster, r"", tabelle)
+
+            # - remove leading spaces, and tabulators between ">", and cell content
+            muster = re.compile("(>)\s(\S)")
+            tabelle = re.sub(muster, r"\1\2", tabelle)
+
+            # - remove trailing spaces, and tabulators between cell content, and "<"
+            muster = re.compile("(\S)\s(<)")
+            tabelle = re.sub(muster, r"\1\2", tabelle)
+
+            # - add linebreak after each </tr>, </thead>, and </tbody> tag
+            muster = re.compile("</(tr|thead|tbody)>")
+            tabelle = re.sub(muster, r"</\1>\n", tabelle)
+
+            # - add linebreak before each <tr>, <thead>, and <tbody> tag
+            muster = re.compile("<(tr|thead|tbody)>")
+            tabelle = re.sub(muster, r"\n<\1>", tabelle)
+
+            #print(tabelle)
 
             # extend the content list
             content.extend(tabelle)
@@ -73,7 +98,7 @@ class MyServer(BaseHTTPRequestHandler):
 
         except IOError:
             # print error message: cannot open file
-            print("Kann", datendatei, "nicht oeffnen")
+            print("Cannot open data file: ", datendatei)
 
         # extend content: end of body, and html content
         content.append("</body>\n")
