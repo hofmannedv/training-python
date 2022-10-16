@@ -48,6 +48,8 @@ class MyServer(BaseHTTPRequestHandler):
             ".fahrplan td {padding: 5px; padding-left: 5px; text-align: left}\n",
             ".fahrplan tr:nth-child(even) {background-color: #EEEFFF;}\n",
             ".fahrplan tr:hover {background: silver; cursor: pointer;}\n",
+            ".schnellzug {color: red; font-weight: bold;}\n",
+            ".flixtrain {color: darkgreen; font-weight: bold;}\n",
             "</style>\n",
             #"<p>Request: %s</p>" % self.path,
             "<h1>Fahrplanauskunft Freiburg (Breisgau) Hbf am " + datumStr + "</h1>\n",
@@ -90,9 +92,23 @@ class MyServer(BaseHTTPRequestHandler):
             muster = re.compile("<(tr|thead|tbody)>")
             tabelle = re.sub(muster, r"\n<\1>", tabelle)
 
+            # emphasize international, and high-speed trains (IC, ICE,
+            # EC, TGV, NJ) in red
+            muster = re.compile("<td>(IC|ICE|EC|TGV|NJ)(\d+)</td>");
+            tabelle = re.sub(muster, r'<td><span class="schnellzug">\1\2</span></td>', tabelle)
+
+            # emphasize trains from FLIXTRANS in dark-green
+            muster = re.compile("<td>(FLIX)</td>");
+            tabelle = re.sub(muster, r'<td><span class="flixtrain">\1</span></td>', tabelle)
             #print(tabelle)
 
-            # extend the content list
+            # right-align text in the right-most column
+            muster = re.compile("<td>(\d+)(</td></tr>)");
+            tabelle = re.sub(muster, r'<td style="text-align: right;">\1\2', tabelle)
+
+            #print(tabelle)
+
+             # extend the content list
             content.extend(tabelle)
             content.append("\n")
             content.append("<hr>\n")
