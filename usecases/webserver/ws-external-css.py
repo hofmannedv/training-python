@@ -101,8 +101,8 @@ class MyServer(BaseHTTPRequestHandler):
 
             # emphasize international, and high-speed trains (IC, ICE,
             # EC, TGV, NJ) in red
-            muster = re.compile("<td>(IC|ICE|EC|TGV|NJ)(\d+)</td>");
-            tabelle = re.sub(muster, r'<td><span class="schnellzug">\1\2</span></td>', tabelle)
+            muster = re.compile("(IC|ICE|EC|TGV|NJ)(\d+)");
+            tabelle = re.sub(muster, r'<span class="schnellzug">\1\2</span>', tabelle)
 
             # emphasize trains from FLIXTRANS in dark-green
             muster = re.compile("<td>(FLIX)</td>");
