@@ -66,6 +66,9 @@ class MyServer(BaseHTTPRequestHandler):
             # read data file using built-in Pandas function
             inhalt = pd.read_csv(datendatei, delimiter=";")
 
+            # sort values by the departure time column
+            inhalt.sort_values(by=['zeitpunkt'], inplace=True)
+
             # convert the content into an HTML table
             # - apply CSS class fahrplan
             # - do not show index column
