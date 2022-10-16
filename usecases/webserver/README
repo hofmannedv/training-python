@@ -1,18 +1,40 @@
 Examples for using a webserver
 
-Example 1: train schedule as static website
+Example 1: train schedule as static website (display all trains per day)
 
-* ws-inline-css.py:   webserver with CSS defined inline
-                      webserver: localhost on port 8080
-                      reads train schedule from abfahrtstafel.csv
+* ws-inline-css.py:
+  webserver with CSS defined inline
+  webserver: localhost on port 8080
+  reads train schedule from abfahrtstafel.csv
 
   call: python3 ws-inline-css.py
   quit: press CTRL+C
 
-* ws-external-css.py: webserver with CSS defined in an external file
-                      webserver: localhost on port 8080
-                      reads train schedule from abfahrtstafel.csv
-                      reads CSS from farbschema.css
+* ws-external-css.py:
+  webserver with CSS defined in an external file
+  webserver: localhost on port 8080
+  reads train schedule from abfahrtstafel.csv
+  reads CSS from farbschema.css
 
   call: python3 ws-external-css.py
+  quit: press CTRL+C
+
+Example 2: train schedule as dynamic website (remove trains from the
+displayed schedule that run in the past)
+
+* ws-inline-css-dynamic.py:
+  webserver with CSS defined inline
+  webserver: localhost on port 8080
+  reads train schedule from abfahrtstafel.csv
+
+  call: python3 ws-inline-css-dynamic.py
+  quit: press CTRL+C
+
+* ws-external-css-dynamic.py:
+  webserver with CSS defined in an external file
+  webserver: localhost on port 8080
+  reads train schedule from abfahrtstafel.csv
+  reads CSS from farbschema.css
+
+  call: python3 ws-external-css-dynamic.py
   quit: press CTRL+C
