@@ -1,0 +1,9 @@
+Examples for using a webserver
+
+Example 1: train schedule as static website
+
+* ws-inline-css.py: webserver with CSS defined inline
+                    webserver: localhost on port 8080
+                    reads train schedule from abfahrtstafel.csv
+
+  call: python3 ws-inline-css.py
