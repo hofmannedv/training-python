@@ -206,6 +206,18 @@ def main():
         c4 = "yellow"
         gradient([p1, p2, p3, p4], [c1, c2, c3, c4])
 
+        # show yellow-blue-green gradient (square)
+        p1 = (-0.5, 0.5, 0)
+        p2 = (-1.5, 0.5, 0)
+        p3 = (-1.5, 1.5, 0)
+        p4 = (-0.5, 1.5, 0)
+
+        c1 = "blue"
+        c2 = "yellow"
+        c3 = "green"
+        c4 = "yellow"
+        gradient([p1, p2, p3, p4], [c1, c2, c3, c4])
+
         pygame.display.flip()
 
         # wait for 10 ms
