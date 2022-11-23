@@ -1,0 +1,6 @@
+Debian packages:
+- libglfw3
+- python3-pip
+
+Python packages via pip:
+- glumpy
