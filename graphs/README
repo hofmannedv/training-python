@@ -1,5 +1,12 @@
 README
 ------
 
-* bars.py: how to display bars in a graph
-
+* bars.py					how to display bars as a graph
+* plot-simple-graph.py				plot a simple graph
+* plot-simple-graph-red.py			... red colour
+* plot-simple-graph-red-stars.py		... red colour, data points as stars
+* plot-simple-graph-red-decoration.py		... red colour, decorate plot, default values
+* plot-simple-graph-red-decoration-mix.py	... red colour, decorate plot, customized
+* plot-simple-graph-blue-o.py			... blue colour, data points as circles
+* plot-simple-graph-green-dotted.py		... green colour, dotted line
+* plot-simple-graph-as-subplot.py		plot two graphs as separate graphs
