@@ -60,7 +60,7 @@ position = 0
 while position < len(columnNames) - 1:
     nameP1 = columnNames[position]
     nameP2 = columnNames[position + 1]
-    print("track from", nameP1, "to", nameP2)
+    print("reading track from", nameP1, "to", nameP2)
     position = position + 1
 
     # generate new vertex, and add it to the list of vertices
