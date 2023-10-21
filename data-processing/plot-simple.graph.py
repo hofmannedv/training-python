@@ -17,7 +17,7 @@ g = 9.81
 t = np.linspace(0,1,1001)	# create 1001 time points
 y = v0*t - 0.5*g*t**2     	# calculate each value per data point
 
-plt.plot(t,y)			# plot t vs. y coordinates
+plt.plot(t,y)			# plot t vs. y coordinates with default colour
 plt.xlabel('t (s)')		# define label for x axis
 plt.ylabel('y (m)')		# define label for y axis
 plt.show()			# display plot
