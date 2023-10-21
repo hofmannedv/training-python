@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 v0 = 5
 g = 9.81
 
-t = np.linspace(0,1,21)		# create 11 time points
+t = np.linspace(0,1,21)		# create 21 time points
 y = v0*t - 0.5*g*t**2     	# calculate each value per data point
 
 plt.plot(t,y,'r*')		# plot t vs. y coordinates, red stars
