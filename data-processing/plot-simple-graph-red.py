@@ -1,3 +1,4 @@
+# -----------------------------------------------------------
 # Python Data Science examples
 # (C) 2023 Frank Hofmann <frank.hofmann@efho.de>
 # License: GNU Public License (GPL) v.3.0 or later
@@ -8,6 +9,7 @@
 # Svein Linge, Hans Petter Langtangen:
 # Programming for Computations - Python
 # 2nd Edition, Springer Open
+# -----------------------------------------------------------
 
 import numpy as np
 import matplotlib.pyplot as plt
