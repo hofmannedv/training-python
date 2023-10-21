@@ -1,9 +1,11 @@
 # -----------------------------------------------------------
-# demonstrates how to create bars in a graph
+# Python Data Science examples
+# demonstrates how to create bars as a graph
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
-# Released under GNU Public License (GPL)
+# (C) 2015-2023 Frank Hofmann, Germany
 # email frank.hofmann@efho.de
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # include standard modules from matplotlib
@@ -18,7 +20,7 @@ points = [3.5, 17.2, 6.3, 9.15, 4.2]
 # define the bar positions (y axis) from 0 to 4
 yPos = range(5)
 
-# display a horizontal bar based on y-Positions, the points, with a bar
+# display a horizontal bar based on y-positions, the points, with a bar
 # height of 80%, and centered alignment
 plt.barh(yPos, points, height=0.8, align='center')
 
