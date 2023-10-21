@@ -1,9 +1,10 @@
 # Python Data Science examples
 # (C) 2023 Frank Hofmann <frank.hofmann@efho.de>
-# License: GNU Public License (GPL)
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 
-# plot a 2D curve
-# example originates from this book:
+# Plot a 2D curve using various parameters.
+# Code based on examples from this book:
 # Svein Linge, Hans Petter Langtangen:
 # Programming for Computations - Python
 # 2nd Edition, Springer Open
