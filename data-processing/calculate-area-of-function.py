@@ -106,4 +106,4 @@ def calculateTrapezoidFunction(xStart, xEnd, step):
 calculateSingleTrapezoid()
 calculateListOfTrapezoids()
 for step in range(1, 51, 1):
-    calculateTrapezoidFunction(0, 50, step)
+   calculateTrapezoidFunction(0, 50, step)
