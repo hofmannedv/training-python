@@ -1,7 +1,7 @@
 README
 ------
 
-* bars.py					how to display bars as a graph
+* bars-horizontal.py				how to display bars as a graph
 * plot-simple-graph.py				plot a simple graph
 * plot-simple-graph-red.py			... red colour
 * plot-simple-graph-red-stars.py		... red colour, data points as stars
