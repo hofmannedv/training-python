@@ -1,6 +1,6 @@
 # -----------------------------------------------------------
 # Python Data Science examples
-# demonstrates how to create bars as a graph
+# demonstrates how to create horizontal bars as a graph
 #o
 # (C) 2015-2023 Frank Hofmann, Germany
 # email frank.hofmann@efho.de
