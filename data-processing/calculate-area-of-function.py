@@ -29,12 +29,13 @@ def trapezoid(coordinates):
 
     return size
 
-# example data for a trapezoid
+# example data for a single trapezoid
+# coordinates: (0.0, 0.0) - (0.0, 2.0) - (1.0, 2.0) - (1.0, 0.0) 
 area = [
     [0.0, 2.0],
     [1.0, 2.0]
 ]
 
-# calculate size of triangle
+# calculate size of the trapezoid
 size = trapezoid(area)
 print("The area has a size of %.2f cm^2" % size)
