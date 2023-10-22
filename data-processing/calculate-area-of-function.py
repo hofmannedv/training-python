@@ -39,3 +39,29 @@ area = [
 # calculate size of the trapezoid
 size = trapezoid(area)
 print("The area has a size of %.2f cm^2" % size)
+
+# example data for a list of data points
+data = [
+    [0.0, 2.0],
+    [1.0, 2.0],
+    [2.0, 2.5],
+    [3.0, 3.0],
+    [4.0, 3.5],
+    [5.0, 2.0]
+]
+
+# define range (start-end) to be evaluated
+xStart = 1.0
+xEnd = 4.0
+
+# initialize the total size
+totalSize = 0.0
+
+# calculate each trapezoid, and the total size
+for position in range(len(data) - 1):
+    area = data[position:position + 2]
+    size = trapezoid(area)
+    print("area between", area, "has a size of", size, "cm^2")
+    totalSize += size
+
+print("The area has a size of %.2f cm^2" % totalSize)
