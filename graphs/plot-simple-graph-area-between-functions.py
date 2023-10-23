@@ -15,12 +15,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # define the range in which the data shall be plotted
-x = [0.0, 1.0, 2.0, 3.0] 
-y = [2.0, 2.0, 2.5, 3.0]
+x = (0.0, 1.0, 2.0, 3.0) 
+y = (2.0, 2.0, 2.5, 3.0)
 
 # define datapoints for a second graph to be taken into account
-x2 = [0.0, 1.0, 2.0, 3.0] 
-y2 = [0.25, 1.0, 0.5, 0.75]
+x2 = (0.0, 1.0, 2.0, 3.0) 
+y2 = (0.25, 1.0, 0.5, 0.75)
 
 fig, ax = plt.subplots()
 
@@ -66,13 +66,13 @@ plt.legend([
 plt.axis([-1,4,-1,5])			# define axis size
 
 # define the boundaries: left, and draw it as a blue dashed line
-xLeftBoundary = [0.0, 0.0]
-yLeftBoundary = [0.0, 2.0]
+xLeftBoundary = (0.0, 0.0)
+yLeftBoundary = (0.0, 2.0)
 # plt.plot(xLeftBoundary, yLeftBoundary, 'b--')
 
 # define the boundaries: right, and draw it as a blue dashed line
-xRightBoundary = [3.0, 3.0]
-yRightBoundary = [0.0, 3.0]
+xRightBoundary = (3.0, 3.0)
+yRightBoundary = (0.0, 3.0)
 # plt.plot(xRightBoundary, yRightBoundary, 'b--')
 
 # define black line with arrow for x coordinate axis
