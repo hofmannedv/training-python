@@ -35,9 +35,10 @@ def calculateSingleTrapezoid():
        (0.0, 0.0) - (0.0, 2.0) - (1.0, 2.0) - (1.0, 0.0)
     """
 
+    # define area as list of tuples of x-y-coordinates
     area = [
-        [0.0, 2.0],
-        [1.0, 2.0]
+        (0.0, 2.0),
+        (1.0, 2.0)
     ]
 
     # calculate size of the trapezoid
@@ -49,13 +50,14 @@ def calculateSingleTrapezoid():
 def calculateListOfTrapezoids():
     """calculate the area for a list of data points"""
 
+    # define data as list of tuples of x-y-coordinates
     data = [
-        [0.0, 2.0],
-        [1.0, 2.0],
-        [2.0, 2.5],
-        [3.0, 3.0],
-        [4.0, 3.5],
-        [5.0, 2.0]
+        (0.0, 2.0),
+        (1.0, 2.0),
+        (2.0, 2.5),
+        (3.0, 3.0),
+        (4.0, 3.5),
+        (5.0, 2.0)
     ]
 
     # initialize the total size
