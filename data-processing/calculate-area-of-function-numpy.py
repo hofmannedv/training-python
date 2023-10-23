@@ -13,8 +13,9 @@ import numpy as np
 def calculateListOfTrapezoids():
     """calculate the area for a list of data points"""
 
-    x = [0.0, 1.0, 2.0, 3.0] 
-    y = [2.0, 2.0, 2.5, 3.0]
+    # define x and y coordinates as tuples
+    x = (0.0, 1.0, 2.0, 3.0) 
+    y = (2.0, 2.0, 2.5, 3.0)
 
     # initialize distance dx
     dx = 1
