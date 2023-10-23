@@ -24,7 +24,8 @@ fig, ax = plt.subplots()
 ax.plot(
   x,y,					# plot the x and y data
   'r',					# colour red
-  linestyle='--'			# set dashed linestyle
+  linestyle='--',			# set dashed linestyle
+  marker='o'				# show datapoints as dots
 )
 
 # fill/colourize the area between the data points, and the x axis
