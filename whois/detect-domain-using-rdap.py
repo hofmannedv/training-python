@@ -10,7 +10,6 @@
 #
 # -----------------------------------------------------------
 
-import pprint
 import sys
 
 # add path to site-packages
@@ -29,23 +28,17 @@ rdapc = RdapClient()
 # send RDAP request
 reply = rdapc.get_domain(domainName)
 
-# evaluate output
-# for entry in reply.data.keys():
-#     print (entry)
-#     print (reply.data[entry])
-#     print (" ")
+# extract domain name
+print("Name:", reply.data["ldhName"].lower())
 
 # extract expiration date
 events = reply.data["events"]
 # print(events)
 for entry in events:
-    if entry['eventAction'] == 'expiration':
-        expirationTimestamp = entry['eventDate']
+    if entry["eventAction"] == "expiration":
+        expirationTimestamp = entry["eventDate"]
         expirationDate = expirationTimestamp.split("T")[0]
         print("Ablaufdatum:", expirationDate)
-
-# extract domain name
-print("Name:", reply.data["ldhName"].lower())
 
 # extract registrar
 registrar = reply.data["entities"][0]["vcardArray"][1][1][3]
