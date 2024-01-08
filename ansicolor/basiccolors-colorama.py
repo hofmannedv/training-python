@@ -1,29 +1,30 @@
 # -----------------------------------------------------------
 # demonstrates the definition and usage of ansi colors
-#o
-# (C) 2016-2024 Frank Hofmann, Freiburg, Germany
+# using the colorama library
+# https://pypi.org/project/colorama/
+#
+# (C) 2024 Frank Hofmann, Freiburg, Germany
 # email frank.hofmann@efho.de
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
-#
-# follows the techniques as described in Haoyi's Programming Blog:
-# http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
 # -----------------------------------------------------------
+
+from colorama import Fore, Back, Style
 
 # define color set
 basicColorSet = {
-	"black": "\u001b[30m",
-	"red": "\u001b[31m",
-	"green": "\u001b[32m",
-	"yellow": "\u001b[33m",
-	"blue": "\u001b[34m",
-	"magenta": "\u001b[35m",
-	"cyan": "\u001b[36m",
-	"white": "\u001b[37m"
+	"black": Fore.BLACK,
+	"red": Fore.RED,
+	"green": Fore.GREEN,
+	"yellow": Fore.YELLOW,
+	"blue": Fore.BLUE,
+	"magenta": Fore.MAGENTA,
+	"cyan": Fore.CYAN,
+	"white": Fore.WHITE
 }
 
 # define reset code
-resetCode = "\u001b[0m"
+resetCode = Style.RESET_ALL
 
 # print text in the corresponding colour
 for item in basicColorSet:
