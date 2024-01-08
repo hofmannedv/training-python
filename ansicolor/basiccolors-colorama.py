@@ -9,7 +9,7 @@
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 
 # define color set
 basicColorSet = {
