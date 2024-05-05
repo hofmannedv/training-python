@@ -68,7 +68,7 @@ class Strecke1d (Strecke):
       laenge = wegpunkt2.getPositionX() - wegpunkt1.getPositionX()
       result = laenge
 
-    return laenge
+    return result
 
 if __name__ == '__main__':
   startpunkt = Punkt1d("Startpunkt", 5)
