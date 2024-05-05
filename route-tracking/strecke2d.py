@@ -1,5 +1,6 @@
 from strecke1d import Strecke1d
 from punkt2d import Punkt2d
+import math
 
 class Strecke2d (Strecke1d):
   bezeichnung = ""
@@ -69,13 +70,13 @@ class Strecke2d (Strecke1d):
       wegpunkt2 = self.getWegpunkt2()
       laengeX = wegpunkt2.getPositionX() - wegpunkt1.getPositionX()
       laengeY = wegpunkt2.getPositionY() - wegpunkt1.getPositionY()
-      result = (laengeX*laengeX + laengeY*laengeY) / 2
+      result = math.sqrt(math.pow(laengeX,2) + math.pow(laengeY,2))
 
     return result
 
 if __name__ == '__main__':
-  startpunkt = Punkt2d("Startpunkt", 5, 2)
-  endpunkt = Punkt2d("Endpunkt", 10, 4)
+  startpunkt = Punkt2d("Startpunkt", 1, 1)
+  endpunkt = Punkt2d("Endpunkt", 2, 2)
   abschnitt = Strecke2d("Strecke 1", startpunkt, endpunkt)
 
   abschnitt.info()
