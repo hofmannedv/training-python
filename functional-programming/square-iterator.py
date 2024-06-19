@@ -20,6 +20,6 @@ while True:
         square = value * value
         print("the square of number", value, "is", square)
     except StopIteration:
-        print("end if iterator reached")
+        print("end of iterator reached")
         break
 
