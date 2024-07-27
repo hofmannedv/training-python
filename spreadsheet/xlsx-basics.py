@@ -9,11 +9,14 @@
 
 from openpyxl import Workbook
 
+# define workbook, and switch to the active spreadsheet
 workbook = Workbook()
 sheet = workbook.active
 
+# store data in cells A1, and B1 (first rows of the first, and second column)
 sheet["A1"] = "hello"
 sheet["B1"] = "world!"
 
+# store the file as hello_world.xlsx
 workbook.save(filename="hello_world.xlsx")
 
