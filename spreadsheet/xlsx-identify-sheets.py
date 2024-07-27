@@ -8,8 +8,12 @@
 # https://realpython.com/openpyxl-excel-spreadsheets-python/
 
 from openpyxl import Workbook, load_workbook
-filename = "hello_world.xlsx"
 
+# define Excel file to read, and load it
+filename = "hello_world.xlsx"
 workbook = load_workbook(filename)
-print(workbook.sheetnames)
+
+print("This file contains the following sheets:")
+for sheet in workbook.sheetnames:
+    print(sheet)
 
