@@ -1,0 +1,24 @@
+{
+    "Name": {
+       "0": "Anne", 
+       "1": "Felix", 
+       "2": "George", 
+       "3": "Peter", 
+       "4": "Sebastian"
+    },
+    "Age": {
+       "0": 41, 
+       "1": 23, 
+       "2": 31, 
+       "3": 34, 
+       "4": 27
+    },
+    "Origin": {
+       "0": "Lausanne", 
+       "1": "Sofia", 
+       "2": "Birmingham", 
+       "3": "Berlin", 
+       "4": "Madrid"
+    }
+}
+
