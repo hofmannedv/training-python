@@ -14,5 +14,5 @@ data = "data.json"
 # load data into dataframe
 df = pd.read_json(data)
 
-# output dataframe 
-print(df)
+# sort dataframe by age, and output dataframe 
+print(df.sort_values("Age"))
