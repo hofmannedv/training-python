@@ -1,0 +1,6 @@
+README
+------
+
+* data.json: dataset as JSON file
+
+* process-json-as-pandas-dataframe.py: load dataset as JSON file into a dataframe
