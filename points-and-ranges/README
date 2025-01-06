@@ -10,3 +10,6 @@ README
 * detect-point-range-1d-oop.py: find smallest, and biggest value in a 
   dictionary of Point objects
 
+* detect-point-range-2d.py: find smallest, and biggest value in a
+  two-dimensional, regular list of tuples containing floats
+
