@@ -4,3 +4,6 @@ README
 * detect-point-range-1d.py: find smallest, and biggest value in a
   one-dimensional, regular list of floats
 
+* detect-point-range-1d-data-structure.py: find smallest, and biggest 
+  value in a dictionary 
+
