@@ -9,7 +9,7 @@
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
-# define example data: points
+# define example data: points as a regular list
 points = [3.5, 17.2, 6.3, 9.15, 4.2]
 
 # determine the minimal value
