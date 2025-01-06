@@ -7,3 +7,6 @@ README
 * detect-point-range-1d-data-structure.py: find smallest, and biggest 
   value in a dictionary 
 
+* detect-point-range-1d-oop.py: find smallest, and biggest value in a 
+  dictionary of Point objects
+
