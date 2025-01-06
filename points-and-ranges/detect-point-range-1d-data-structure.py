@@ -10,7 +10,7 @@
 # -----------------------------------------------------------
 
 def createEntry(xData):
-    "create a 1d data structure as dictionary"
+    """create a 1d data structure as dictionary"""
     entry = {
         "x": xData
     }
