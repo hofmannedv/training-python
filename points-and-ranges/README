@@ -16,3 +16,6 @@ README
 * detect-point-range-2d-oop.py: find smallest, and biggest value in a 
   dictionary of Point objects
 
+* detect-point-range-2d-pandas.py: find smallest, and biggest value in 
+  a dictionary of Point objects using Pandas library
+
