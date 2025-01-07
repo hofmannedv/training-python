@@ -13,6 +13,10 @@ README
 * detect-point-range-2d.py: find smallest, and biggest value in a
   two-dimensional, regular list of tuples containing floats
 
+* detect-point-range-2d-lambda.py: find smallest, and biggest value 
+  in a two-dimensional, regular list of tuples containing floats with
+  the help of a lambda function
+
 * detect-point-range-2d-oop.py: find smallest, and biggest value in a 
   dictionary of Point objects
 
