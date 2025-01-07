@@ -1,5 +1,5 @@
 # Python Data Science examples
-# (C) 2022 Frank Hofmann <frank.hofmann@efho.de>
+# (C) 2022-2025 Frank Hofmann <frank.hofmann@efho.de>
 # License: GNU Public License (GPL)
 
 # calculate the extent of a polygon (area)
@@ -46,7 +46,7 @@ point5 = [1.5, 1.5]
 points = [point1, point2, point3, point4, point5]
 print(points)
 
-# calulate extend using ConvexHull class
+# calulate extent using ConvexHull class
 hull = ConvexHull(points)
 
 # define list of vertices for extent
