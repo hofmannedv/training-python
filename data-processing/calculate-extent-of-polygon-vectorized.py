@@ -1,9 +1,13 @@
+# -----------------------------------------------------------
 # Python Data Science examples
-# (C) 2022 Frank Hofmann <frank.hofmann@efho.de>
-# License: GNU Public License (GPL)
-
+# (C) 2022-2025 Frank Hofmann, Germany
+# email frank.hofmann@efho.de
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
+#
 # calculate the extent of a polygon (area)
 # use a vectorization to minimize calculation time
+# -----------------------------------------------------------
 
 import numpy as np
 
@@ -29,7 +33,6 @@ def extent(vertices):
 
     for vertice in vertices:
         d = vdistance(vertice[0], vertice[1])
-        #print(components)
         size += d
 
     return size
