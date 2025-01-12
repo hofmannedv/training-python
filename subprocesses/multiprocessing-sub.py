@@ -17,13 +17,13 @@ import os
 
 def func1(cycles):
   print ('func1: starting with %i cycles' % cycles)
-  for i in xrange(cycles): pass
-  print 'func1: finishing'
+  for i in range(cycles): pass
+  print ('func1: finishing')
 
 def func2(cycles):
   print ('func2: starting with %i cycles' % cycles)
-  for i in xrange(cycles): pass
-  print 'func2: finishing'
+  for i in range(cycles): pass
+  print ('func2: finishing')
 
 if __name__ == '__main__':
   # getting the process ids
