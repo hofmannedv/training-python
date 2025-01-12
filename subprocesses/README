@@ -21,6 +21,10 @@ README
   how to run a pool of agents (subs) in parallel doing a calculation
   on a dataset with output in arbitrary order
 
+* multiprocessing-threadpool.py
+  how to run a pool of threads in parallel doing a calculation on a 
+  dataset
+
 = using the subprocess module =
 
 * diskfree.py
