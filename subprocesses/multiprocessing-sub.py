@@ -5,9 +5,10 @@
 # idea taken from this post:
 # https://stackoverflow.com/questions/7207309/python-how-can-i-run-python-functions-in-parallel
 #o
-# (C) 2017 Frank Hofmann, Berlin, Germany
-# Released under GNU Public License (GPL)
+# (C) 2017-2025 Frank Hofmann, Berlin, Germany
 # email frank.hofmann@efho.de
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # include standard modules
