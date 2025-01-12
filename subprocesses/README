@@ -40,4 +40,5 @@ README
   how to run a pool of threads in parallel doing a calculation on a 
   dataset
 
-
+* threading-queue.py
+  how to invoke two threads, and store the result in a queue
