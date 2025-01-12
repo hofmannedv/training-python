@@ -29,3 +29,11 @@ README
 * diskfree-grab-output.py
   show the available disk space using an external call, grab both the
   return value, and the output
+
+= using the threading module = 
+
+* threading-example.py
+  how to run a pool of threads in parallel doing a calculation on a 
+  dataset
+
+
