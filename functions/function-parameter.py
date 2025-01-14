@@ -1,8 +1,9 @@
 # -----------------------------------------------------------
 # demonstrates how to use a function name as parameter
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
-# Released under GNU Public License (GPL)
+# (C) 2015-2025 Frank Hofmann, Berlin, Germany
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # email frank.hofmann@efho.de
 # -----------------------------------------------------------
 

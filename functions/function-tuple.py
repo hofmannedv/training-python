@@ -1,8 +1,9 @@
 # -----------------------------------------------------------
 # demonstrates how to write and call a function returning a tuple
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
-# Released under GNU Public License (GPL)
+# (C) 2015-2025 Frank Hofmann, Berlin, Germany
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # email frank.hofmann@efho.de
 # -----------------------------------------------------------
 
@@ -16,5 +17,7 @@ def functionTuple(operand1, operand2):
 
 # main program
 returnValue = functionTuple(1,5)
+
+# output result
 print("return value:", returnValue)
 
