@@ -12,3 +12,6 @@ README
 
 * function-parameter.py
   writing a function with a function name as a parameter
+
+* inner-function.py
+  how to write, and call an inner function, or closure
