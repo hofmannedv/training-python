@@ -48,3 +48,6 @@ README
 * array-stack-numpy.py: demonstrates how to stack arrays
 
 * array-split-numpy.py: demonstrates how to split arrays
+
+* calculate-square-root-multicore.py: calculate the square root for a
+  list of integers using 8 cpu cores in parallel
