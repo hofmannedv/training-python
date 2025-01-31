@@ -17,6 +17,8 @@
 import math
 from threading import Thread
 import queue
+import random
+import pickle
 
 def findDistance(p1, p2, testpoint, recursionLevel = 0, verbosity = False):
     """
@@ -69,22 +71,23 @@ def isPointInTriangle(p1, p2, p3, testpoint, recursionLevel = 0, verbosity = Fal
     or not
     """
 
+    # define default return value: False
+    result = False
+
     if verbosity:
         print(f"[IP1] [{recursionLevel}] Determine {testpoint} being in triangle ({p1}, {p2}, {p3})")
 
     # Calculate the barycentric coordinates of point testpoint with 
     # respect to the triangle 
     denominator = ((p2[1] - p3[1]) * (p1[0] - p3[0]) + (p3[0] - p2[0]) * (p1[1] - p3[1]))
-    a = ((p2[1] - p3[1]) * (testpoint[0] - p3[0]) + (p3[0] - p2[0]) * (testpoint[1] - p3[1])) / denominator
-    b = ((p3[1] - p1[1]) * (testpoint[0] - p3[0]) + (p1[0] - p3[0]) * (testpoint[1] - p3[1])) / denominator
-    c = 1 - a - b
+    if denominator > 0:
+        a = ((p2[1] - p3[1]) * (testpoint[0] - p3[0]) + (p3[0] - p2[0]) * (testpoint[1] - p3[1])) / denominator
+        b = ((p3[1] - p1[1]) * (testpoint[0] - p3[0]) + (p1[0] - p3[0]) * (testpoint[1] - p3[1])) / denominator
+        c = 1 - a - b
  
-    # define default return value: False
-    result = False
-
-    # Check if all barycentric coordinates are non-negative
-    if a >= 0 and b >= 0 and c >= 0:
-        result = True
+        # Check if all barycentric coordinates are non-negative
+        if a >= 0 and b >= 0 and c >= 0:
+            result = True
 
     return result
 
@@ -240,22 +243,9 @@ if __name__ == '__main__':
     # define level of recursion depth
     recursionLevel = 0
 
-    # define cloud of points as a list of tuples
-    points = [
-        (0, 3),
-        (3.1, 3),
-        (1, 1),
-        (2, 2),
-        (2, 3),
-        (4, 4),
-        (2, 4),
-        (0, 0),
-        (1, 2),
-        (1.5, 2.5),
-        (3, 1),
-        (3, 4.1),
-        (3, 3)
-    ]
+    # read data points from previously generated data file
+    with open('points.data', 'rb') as fp:
+        points = pickle.load(fp)
 
     hull = quickHull(points, recursionLevel, verbosity)
     if verbosity:
