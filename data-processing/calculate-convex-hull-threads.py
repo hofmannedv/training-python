@@ -195,17 +195,9 @@ def quickHull(points = [], recursionLevel = 0, verbosity = False):
     thread1 = Thread(target=calculateHull, args=(minimalPoint, maximalPoint, leftPoints, recursionLevel + 1, verbosity, output1))
     thread1.start()
 
-    # part1 = calculateHull(minimalPoint, maximalPoint, leftPoints, recursionLevel + 1, verbosity)
-    #if verbosity:
-    #    print(f"[QH9] [{recursionLevel}] Calculated hull part 1: {part1}")
-
     # calculate the hull for the right points
     thread2 = Thread(target=calculateHull, args=(minimalPoint, maximalPoint, rightPoints, recursionLevel + 1, verbosity, output2))
     thread2.start()
-
-    #part2 = calculateHull(minimalPoint, maximalPoint, rightPoints, recursionLevel + 1, verbosity)
-    #if verbosity:
-    #    print(f"[QH10] [{recursionLevel}] Calculated hull part 2: {part2}")
 
     # end thread 1 and 2
     thread1.join()
