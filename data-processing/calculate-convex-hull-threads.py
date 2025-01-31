@@ -149,7 +149,7 @@ def quickHull(points = [], recursionLevel = 0, verbosity = False):
             # - between the farthest point and point 2
             part2 = calculateHull(farthestPoint, p2, nextPoints, recursionLevel + 1, verbosity, dataQueue)
             if verbosity:
-                print(f"[CH7] [{recursionLevel}] Calculated hull part 3: {part2}")
+                print(f"[CH7] [{recursionLevel}] Calculated hull part 2: {part2}")
 
             # combine the results
             result = sorted(set(part1 + part2))
