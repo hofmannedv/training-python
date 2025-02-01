@@ -15,7 +15,7 @@ import pickle
 if __name__ == '__main__':
 
     # define number of data points
-    number = 1000
+    number = 500
 
     # define output file
     outputFile = "points.data"
