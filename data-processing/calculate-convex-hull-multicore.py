@@ -11,17 +11,23 @@
 # inspired by buggy code from:
 # Quickhull for Convex hull in Python
 # https://www.geeksforgeeks.org/quickhull-for-convex-hull-in-python/
+#
+# inspired by code for multiple cores by Jason Brownlee:
+# How to Use 100% of All CPU Cores in Python
+# https://superfastpython.com/python-use-all-cpu-cores/
 # -----------------------------------------------------------
 
 import math
 import random
 import pickle
+from multiprocessing import Pool
 
-def findDistance(p1, p2, testpoint, recursionLevel = 0, verbosity = False):
+def findDistance(p1, p2, testpoint, recursionLevel, verbosity):
     """
     Calculate the perpendicular distance between a point testpoint 
     and the line formed by the points p1 and p2.
     """
+
 
     if verbosity:
         print(f"[FD1] [{recursionLevel}] Calculating distance between {p1} - {p2} and {testpoint}")
@@ -62,11 +68,13 @@ def findPosition(p1, p2, testpoint, recursionLevel = 0, verbosity = False):
         return -1
     return 1
 
-def isPointInTriangle(p1, p2, p3, testpoint, recursionLevel = 0, verbosity = False):
+def isPointInTriangle(testData): 
     """
     Determine if point testpoint is within the triangle (p1,p2,p3),
     or not
     """
+
+    p1, p2, p3, testpoint, recursionLevel, verbosity = testData
 
     # define default return value: False
     result = False
@@ -86,7 +94,7 @@ def isPointInTriangle(p1, p2, p3, testpoint, recursionLevel = 0, verbosity = Fal
         if a >= 0 and b >= 0 and c >= 0:
             result = True
 
-    return result
+    return (testpoint, result)
 
 def quickHull(points = [], recursionLevel = 0, verbosity = False):
     """
@@ -110,22 +118,38 @@ def quickHull(points = [], recursionLevel = 0, verbosity = False):
                 print(f"[CH1] [{recursionLevel}] Cannot work on an empty list")
             return []
 
-        # calculate the farthest point
+        # calculate the farthest point 
         farthestPoint = max(pointsList, key=lambda p: findDistance(p1, p2, p, recursionLevel, verbosity))
         if verbosity:
             print(f"[CH2] [{recursionLevel}] Farthest point: {farthestPoint}")
 
         # calculate the remaining points
         nextPoints = []
+        testData = []
         for testpoint in pointsList:
             if testpoint != farthestPoint:
-                result = isPointInTriangle(p1, p2, farthestPoint, testpoint, recursionLevel, verbosity)
+                testData.append([p1, p2, farthestPoint, testpoint, recursionLevel, verbosity])
+
+        if verbosity:
+            print(f"[CH2a] [{recursionLevel}] testdata: {testData}")
+
+        with Pool(8) as pool:
+            results = pool.map(isPointInTriangle, testData)
+
+        if verbosity:
+            print(f"[CH2b] [{recursionLevel}] results: {results}")
+
+        for entry in results:
+            testpoint, testResult = entry
+            if verbosity:
+                print(f"[CH3] [{recursionLevel}] Testing point {testpoint}: {testResult}")
+            if not testResult:
+                #if testpoint != farthestPoint:
+                nextPoints.append(testpoint)
                 if verbosity:
-                    print(f"[CH3] [{recursionLevel}] Testing point: {result}")
-                if not result:
-                    if verbosity:
-                        print(f"[CH4] [{recursionLevel}] Appending point: {testpoint}")
-                    nextPoints.append(testpoint)
+                    print(f"[CH4] [{recursionLevel}] Appending point: {testpoint}")
+            #print(nextPoints)
+
         if verbosity:
             print(f"[CH5] [{recursionLevel}] Next points: {nextPoints}")
             
@@ -212,7 +236,6 @@ if __name__ == '__main__':
     with open('points.data', 'rb') as fp:
         points = pickle.load(fp)
 
-    # points = [(0,0), (0,5), (5,0), (5,5), (1,1), (2,6)]
     # points = [(0,0), (0,5), (5,0), (5,5), (1,1), (2,6), (1,2), (4,3)]
 
     hull = quickHull(points, recursionLevel, verbosity)

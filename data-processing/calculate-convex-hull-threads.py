@@ -239,6 +239,8 @@ if __name__ == '__main__':
     with open('points.data', 'rb') as fp:
         points = pickle.load(fp)
 
+    # points = [(0,0), (0,5), (5,0), (5,5), (1,1), (2,6)]
+
     hull = quickHull(points, recursionLevel, verbosity)
     if verbosity:
         print(f"[MA] [{recursionLevel}] Output: {hull}")
