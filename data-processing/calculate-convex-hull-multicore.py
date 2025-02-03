@@ -104,11 +104,11 @@ def quickHull(points = [], recursionLevel = 0, verbosity = False):
     # define default result: empty
     hull = []
 
-    # check for more than one data point
-    if len(points) < 2:
+    # check for less than three data points
+    if len(points) < 3:
         if verbosity:
             print(f"[QH1] [{recursionLevel}] Less than two data points")
-        return points		# nothing (more) to do
+        return sorted(set(points))		# nothing (more) to do
 
     def calculateHull(p1, p2, pointsList, recursionLevel = 0, verbosity = False):
 
