@@ -1,0 +1,7 @@
+README
+------
+
+* observe-directory.py
+  use the Inotify interface to watch a directory for changes
+
+  call: python3 observe-directory.py name-of-directory
