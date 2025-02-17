@@ -12,9 +12,13 @@ README
   solve the "too much milk" problem as independent threads (ends up in
   having too much milk in the fridge, unfortunately)
 
-* threading-sync.py
+* threading-with-sync.py
   solve the "too much milk" problem as cooperative threads using global
   variables (ends up in having the right amount of milk in the fridge)
+
+* threading-with-lock.py
+  solve the "too much milk" problem as independent threads using a lock
+  (ends up in having the right amount of milk in the fridge)
 
 = using the multiprocessing module =
 
