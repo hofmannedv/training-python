@@ -37,6 +37,7 @@ def buyMilk(threadName):
             pause = random.random()
             time.sleep(pause)
             print("[%s] bought milk" % (threadName))
+            milk = True
     return
 
 # define thread 1
