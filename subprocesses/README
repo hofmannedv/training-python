@@ -6,6 +6,16 @@ README
 * linear-evaluation.py
   demonstrates running a function (sub) on a dataset in linear order
 
+= using the threading module =
+
+* threading-without-sync.py
+  solve the "too much milk" problem as independent threads (ends up in
+  having too much milk in the fridge, unfortunately)
+
+* threading-sync.py
+  solve the "too much milk" problem as cooperative threads using global
+  variables (ends up in having the right amount of milk in the fridge)
+
 = using the multiprocessing module =
 
   reference: https://docs.python.org/3/library/multiprocessing.html
