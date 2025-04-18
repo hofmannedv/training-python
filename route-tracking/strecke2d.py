@@ -60,7 +60,7 @@ class Strecke2d (Strecke1d):
       print("Von %s (%i,%i)" % (wegpunkt1.getBezeichnung(), wegpunkt1.getPositionX(), wegpunkt1.getPositionY()))
     wegpunkt2 = self.getWegpunkt2()
     if self.hasWegpunkt2():
-      print("Von %s (%i,%i)" % (wegpunkt2.getBezeichnung(), wegpunkt2.getPositionX(), wegpunkt2.getPositionY()))
+      print("Nach %s (%i,%i)" % (wegpunkt2.getBezeichnung(), wegpunkt2.getPositionX(), wegpunkt2.getPositionY()))
     return
 
   def getLaenge(self):
