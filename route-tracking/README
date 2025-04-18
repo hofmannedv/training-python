@@ -1,0 +1,25 @@
+README
+------
+
+* punkt.py
+  Modul mit Klasse Punkt im eindimensionalen Raum
+
+* punkt1d.py
+  Modul mit Klasse Punkt1d im eindimensionalen Raum
+  basiert auf Klasse Punkt
+
+* punkt2d.py
+  Modul mit Klasse Punkt2d im zweidimensionalen Raum
+  basiert auf Klasse Punkt1d
+
+* strecke.py
+  Modul mit Klasse Strecke im eindimensionalen Raum
+
+* strecke1d.py
+  Modul mit Klasse Strecke1d im eindimensionalen Raum
+  basiert auf den Klassen Strecke und Punkt1d
+
+* strecke2d.py
+  Modul Klasse Strecke2d im zweidimensionalen Raum
+  basiert auf den Klassen Strecke1d und Punkt2d
+  benötigt Modul math

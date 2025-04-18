@@ -77,17 +77,17 @@ class Strecke2d (Strecke1d):
 if __name__ == '__main__':
   startpunkt = Punkt2d("Startpunkt", 1, 1)
   endpunkt = Punkt2d("Endpunkt", 2, 2)
-  abschnitt = Strecke2d("Strecke 1", startpunkt, endpunkt)
+  route = Strecke2d("Strecke 1", startpunkt, endpunkt)
 
-  abschnitt.info()
+  route.info()
 
   print("prüfe Bezeichnung auf Vorhandensein ... ")
-  if abschnitt.hasBezeichnung():
+  if route.hasBezeichnung():
     print("Bezeichnung ist vorhanden")
 
   for bezeichnung in ("Hauptstrecke", "Nebenstrecke", "Strecke 1"):
     print("teste Bezeichnung auf %s ... " % bezeichnung)
-    if abschnitt.compareBezeichnung(bezeichnung):
+    if route.compareBezeichnung(bezeichnung):
       print("Bezeichnung stimmt überein:", bezeichnung)
 
-  print("Länge der Strecke:", abschnitt.getLaenge())
+  print("Länge der Strecke:", route.getLaenge())
