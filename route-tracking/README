@@ -21,6 +21,11 @@ README
   basiert auf den Klassen Strecke und Punkt1d
 
 * strecke2d.py
-  Modul Klasse Strecke2d im zweidimensionalen Raum
+  Modul mit Klasse Strecke2d im zweidimensionalen Raum
   basiert auf den Klassen Strecke1d und Punkt2d
+  benötigt Modul math
+
+* route2d.py
+  Modul mit Klasse Route2d im zweidimensionalen Raum
+  basiert auf den Klassen Strecke2d und Punkt2d
   benötigt Modul math
