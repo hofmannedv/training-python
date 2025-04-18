@@ -32,4 +32,5 @@ README
 
 * route-berechnen.py
   Anwendungsbeispiel zur Ermittlung der Länge einer Route
-  auf der Basis von Wegpunkten als Punktliste
+  auf der Basis von Wegpunkten als Punktliste; vergleiche
+  zwei Routen und gib die kürzere Route aus
