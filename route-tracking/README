@@ -14,6 +14,7 @@ README
 
 * strecke.py
   Modul mit Klasse Strecke im eindimensionalen Raum
+  basiert auf Klasse Punkt
 
 * strecke1d.py
   Modul mit Klasse Strecke1d im eindimensionalen Raum
