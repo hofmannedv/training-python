@@ -35,7 +35,7 @@ def ermittleWegpunkte(listeDerWegpunkte):
         wegpunkte.append(name)
     return wegpunkte
 
-def ermittleRouten(streckenliste, ausgangspunkt, zielpunkt):
+def ermittleGraphstruktur(streckenliste, ausgangspunkt, zielpunkt):
     ergebnis = []
     weitereRouten = []
 
@@ -58,17 +58,26 @@ def ermittleRouten(streckenliste, ausgangspunkt, zielpunkt):
         for teilstrecke in testliste:
             startpunkt = teilstrecke[0]
             endpunkt = teilstrecke[1]
-            if endpunkt != zielpunkt:
+            if endpunkt == zielpunkt:
+                ergebnis.append(teilstrecke)
+                break
+            else:
                 print("suche nach Teilstrecken beginnend mit", endpunkt)
-                weitereRouten = ermittleRouten(bereinigteStreckenliste, endpunkt, zielpunkt)
+                weitereRouten = ermittleGraphstruktur(bereinigteStreckenliste, endpunkt, zielpunkt)
                 print("gefunden: ", weitereRouten)
 
-                if weitereRouten == []:
-                    ergebnis.append([teilstrecke])  
-                else:
+                if weitereRouten:
                     ergebnis.append([teilstrecke] + weitereRouten)
-            else:
-                ergebnis.append(teilstrecke)
+
+    return ergebnis
+
+def ermittleRouten(graphstruktur, streckenliste):
+    ergebnis = []
+
+    for eintrag in graphstruktur:
+        if isinstance(eintrag, list):
+            if eintrag in streckenliste:
+                ergebnis.append(eintrag)
 
     return ergebnis
 
@@ -112,4 +121,7 @@ listeDerRouten = []
 # if distanz2 < distanz1:
 #     kuerzesteRoute = 2
 # print("die kürzeste Route ist Route", kuerzesteRoute)
-print(ermittleRouten(listeDerTeilstrecken, "A", "F"))
+graph = ermittleGraphstruktur(listeDerTeilstrecken, "A", "F")
+print(graph)
+
+print(ermittleRouten(graph, listeDerTeilstrecken))
