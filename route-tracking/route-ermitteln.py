@@ -60,12 +60,13 @@ def ermittleRouten(streckenliste, ausgangspunkt, zielpunkt):
             endpunkt = teilstrecke[1]
             if endpunkt != zielpunkt:
                 print("suche nach Teilstrecken beginnend mit", endpunkt)
-                weitereRouten = [teilstrecke] + ermittleRouten(bereinigteStreckenliste, endpunkt, zielpunkt)
+                weitereRouten = ermittleRouten(bereinigteStreckenliste, endpunkt, zielpunkt)
                 print("gefunden: ", weitereRouten)
+
                 if weitereRouten == []:
-                    ergebnis.append(teilstrecke)  
+                    ergebnis.append([teilstrecke])  
                 else:
-                    ergebnis.append(weitereRouten)
+                    ergebnis.append([teilstrecke] + weitereRouten)
             else:
                 ergebnis.append(teilstrecke)
 
