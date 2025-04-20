@@ -72,12 +72,20 @@ def ermittleGraphstruktur(streckenliste, ausgangspunkt, zielpunkt):
     return ergebnis
 
 def ermittleRouten(graphstruktur, streckenliste):
+    print("aufgerufen mit Graphstruktur:", graphstruktur)
+    print("aufgerufen mit Streckenliste:", streckenliste)
     ergebnis = []
 
     for eintrag in graphstruktur:
         if isinstance(eintrag, list):
+            print("vergleiche", eintrag, "mit", streckenliste)
             if eintrag in streckenliste:
                 ergebnis.append(eintrag)
+            else:
+                for untereintrag in eintrag:
+                    print("prüfe Untereintrag:", untereintrag)
+                    gefundeneRouten = ermittleRouten(untereintrag, streckenliste)
+                    print("gefundene Routen:", gefundeneRouten)
 
     return ergebnis
 
@@ -121,7 +129,9 @@ listeDerRouten = []
 # if distanz2 < distanz1:
 #     kuerzesteRoute = 2
 # print("die kürzeste Route ist Route", kuerzesteRoute)
-graph = ermittleGraphstruktur(listeDerTeilstrecken, "A", "F")
+graph = ermittleGraphstruktur(listeDerTeilstrecken, "A", "B")
 print(graph)
 
-print(ermittleRouten(graph, listeDerTeilstrecken))
+listeDerRouten = ermittleRouten(graph, listeDerTeilstrecken)
+for einzelneRoute in listeDerRouten:
+    print("gefundene Route:", einzelneRoute)
