@@ -22,10 +22,14 @@ class Punkt1d (Punkt):
 
     return False
 
+  def info(self):
+    print("Name des Punkts:", self.getBezeichnung())
+    print("Position des Punkts:", self.getPositionX())
+    return
+
 if __name__ == '__main__':
   p1 = Punkt1d("Startpunkt", 5)
-  print ("Name des Punkts:", p1.getBezeichnung())
-  print ("Position des Punkts:", p1.getPositionX())
+  p1.info()
 
   p1.setBezeichnung("Endpunkt")
   p1.setPositionX(6)
@@ -44,4 +48,4 @@ if __name__ == '__main__':
   for position in (4, 5, 6):
     print("teste Position auf %i ... " % position)
     if p1.comparePositionX(position):
-      print("X-Position stimmt überein:", position)
+      print("Position stimmt überein:", position)
