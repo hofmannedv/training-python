@@ -21,14 +21,17 @@ class Punkt2d (Punkt1d):
   def comparePositionY(self, positionY):
     if self.positionY == positionY:
       return True
-
     return False
 
+  def info(self):
+    print("Name des Punkts:", self.getBezeichnung())
+    print("X-Position des Punkts:", self.getPositionX())
+    print("Y-Position des Punkts:", self.getPositionY())
+    return
+    
 if __name__ == '__main__':
   p1 = Punkt2d("Startpunkt", 5, 10)
-  print ("Name des Punkts:", p1.getBezeichnung())
-  print ("X-Position des Punkts:", p1.getPositionX())
-  print ("Y-Position des Punkts:", p1.getPositionY())
+  p1.info()
 
   p1.setBezeichnung("Endpunkt")
   p1.setPositionX(6)
