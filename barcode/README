@@ -5,8 +5,18 @@ README
 
 * database.txt: csv file of model cars. used as a product example list
 
+* flowchart-barcode.dot: barcode evaluation process as Dot file
+
+* flowchart-barcode.png: barcode evaluation process as PNG file
+
+* flowchart-order.dot: barcode order process as Dot file
+
+* flowchart-order.png: barcode order process as PNG file
+
 * order.py: do an order based on the barcodes, and the database
 
 * stock.txt: list of items that are in stock
 
 * reorder.py: check the stock list, and create an re-order list
+
+* reorder.txt: generated re-order list
