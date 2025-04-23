@@ -1,9 +1,11 @@
 # -----------------------------------------------------------
 # enter a barcode to order an item from a list of products
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
-# Released under GNU Public License (GPL)
+# (C) 2015-2025 Frank Hofmann, Berlin/Freiburg, Germany
 # email frank.hofmann@efho.de
+# 
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # import python modules
