@@ -1,9 +1,12 @@
 # -----------------------------------------------------------
 # reads the given data file, and imports it as csv file
 #o
-# (C) 2014 Frank Hofmann, Berlin, Germany
+# (C) 2014-2025 Frank Hofmann, Berlin/Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+#
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # call the program this way:
