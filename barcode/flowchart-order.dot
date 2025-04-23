@@ -1,0 +1,33 @@
+digraph {
+
+	node [fill=cornflowerblue, fontcolor=white, shape=diamond, style=filled];
+
+	start [color=darkgoldenrod2, fontcolor=navy, label=start, shape=box];
+
+	End [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	"read product database" [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	"display order" [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	"request quantity" [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	"update order list" [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	start -> "read product database";
+
+	"read product database" -> "display order";
+
+	"display order" -> action;
+
+	action -> End;
+
+	action -> "validate barcode";
+
+	"validate barcode" -> "request quantity";
+	"validate barcode" -> "display order";
+
+	"request quantity" -> "update order list";
+
+	"update order list" -> "display order";
+}

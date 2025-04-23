@@ -1,0 +1,28 @@
+digraph {
+
+	node [fill=cornflowerblue, fontcolor=white, shape=diamond, style=filled];
+
+	start [color=darkgoldenrod2, fontcolor=navy, label=start, shape=box];
+
+	End [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	"string conversion" [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	"calculate barcode sum" [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	"verify validation bit" [shape=rectangle, color=darkgoldenrod2, fontcolor=navy];
+
+	start -> "string conversion";
+
+	"string conversion" -> "length check";
+
+	"length check" -> "digits check";
+	"length check" -> End;
+
+	"digits check" -> End;
+	"digits check" -> "calculate barcode sum";
+
+	"calculate barcode sum" -> "verify validation bit";
+
+	"verify validation bit" -> End;
+}
