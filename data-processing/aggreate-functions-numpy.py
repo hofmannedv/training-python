@@ -1,9 +1,16 @@
+# -----------------------------------------------------------
 # Python Data Science examples
-# (C) 2022 Frank Hofmann <frank.hofmann@efho.de>
-# License: GNU Public License (GPL)
-
 # demonstrate the power of aggregate functions
 # (so-called universal functions)
+#o
+# (C) 2022-2025 Frank Hofmann, Freiburg, Germany
+# email frank.hofmann@efho.de
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
+#
+# follows the techniques as described in Haoyi's Programming Blog:
+# http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
+# -----------------------------------------------------------
 
 # use numpy module under the local name np
 import numpy as np
@@ -12,7 +19,7 @@ import numpy as np
 a = np.random.rand(10)
 print(a)
 
-# total
+# calculate the total
 t = np.add.reduce(a)
 print("sum of the elements:", t)
 
