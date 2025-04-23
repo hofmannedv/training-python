@@ -1,3 +1,13 @@
+# -----------------------------------------------------------
+# demonstriert die Berechnung der Weglänge für einen Weg im 
+# zweidimensionalen Raum
+#o
+# (C) 2025 Frank Hofmann, Freiburg, Germany
+# email frank.hofmann@efho.de
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
+# -----------------------------------------------------------
+
 from route2d import Route2d
 from strecke2d import Strecke2d
 from punkt2d import Punkt2d
