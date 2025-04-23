@@ -38,3 +38,11 @@ print (("output3: %s") % (output3))
 # print a partial string from index position 2 up to, but not including 4
 partialString = output2[2:4]
 print ("partialString:", partialString)		# output: gh
+
+# print a partial string, the last four letters
+partialString = output2[-4:]
+print ("partialString:", partialString)		# output: blue
+
+# print a partial string from index position 2 up to the end 
+partialString = output2[2:]
+print ("partialString:", partialString)		# output: ghtblue
