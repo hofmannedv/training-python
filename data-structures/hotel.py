@@ -51,36 +51,38 @@ class Hotel:
         "print a short info about the Hotel"
         return ("the %s in %s has %i rooms" % (self.getHotelName(), self.getPlace(), self.getRooms()))
 
-hotel1 = Hotel ("Grand Hotel", 200, "Paris")
-hotel2 = Hotel ("Chateau Rouge", 15, "Dijon")
-hotel3 = Hotel ("Auberge de la Marine", 15, "Bordeaux")
-hotel4 = Hotel ("Chateau Rouge", 15, "Dijon")
+# main program
+if __name__ == '__main__':
+	hotel1 = Hotel ("Grand Hotel", 200, "Paris")
+	hotel2 = Hotel ("Chateau Rouge", 15, "Dijon")
+	hotel3 = Hotel ("Auberge de la Marine", 15, "Bordeaux")
+	hotel4 = Hotel ("Chateau Rouge", 15, "Dijon")
 
-currentList = [hotel1, hotel2, hotel3, hotel4]
+	currentList = [hotel1, hotel2, hotel3, hotel4]
 
-print ("original hotel list:")
-for entry in currentList:
-    print (entry)
+	print ("original hotel list:")
+	for entry in currentList:
+		print (entry)
 
-adjustedList = []
+	adjustedList = []
 
-for entry in currentList:
-    if adjustedList == []:
-        adjustedList.append(entry)
-        print("added:")
-        print(entry)
-    else:
-        notFound = True
-        for item in adjustedList:
-            if entry == item:
-                notFound = False
-                break
-        if notFound:
-            adjustedList.append(entry)
-            print("added:")
-            print(entry)
+	for entry in currentList:
+		if adjustedList == []:
+			adjustedList.append(entry)
+			print("added:")
+			print(entry)
+		else:
+			notFound = True
+			for item in adjustedList:
+				if entry == item:
+					notFound = False
+					break
+			if notFound:
+				adjustedList.append(entry)
+				print("added:")
+				print(entry)
 
-print ("adjusted hotel list:")
-for entry in adjustedList:
-    print (entry)
+	print ("adjusted hotel list:")
+	for entry in adjustedList:
+		print (entry)
 
