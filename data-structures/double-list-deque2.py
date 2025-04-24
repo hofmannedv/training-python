@@ -21,6 +21,10 @@ class ListNode:
 		
 		return
 
+#class DoubleLinkedList(deque):
+#	def outputData(self, data):
+#		print 
+
 # main program
 
 # create three single nodes
