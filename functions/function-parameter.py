@@ -1,10 +1,11 @@
 # -----------------------------------------------------------
 # demonstrates how to use a function name as parameter
 #o
-# (C) 2015-2025 Frank Hofmann, Berlin, Germany
+# (C) 2015-2025 Frank Hofmann, Berlin/Freiburg, Germany
+# email frank.hofmann@efho.de
+# 
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
-# email frank.hofmann@efho.de
 # -----------------------------------------------------------
 
 # define a square function
