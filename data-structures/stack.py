@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# create a stack class
+# create a stack class named Stack
 #o
 # (C) 2015-2025 Frank Hofmann, Berlin/Freiburg, Germany
 # Released under GNU Public License (GPL)
