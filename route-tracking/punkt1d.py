@@ -2,7 +2,7 @@
 # demonstriert eine Klasse Punkt1d für einen Punkt im 
 # eindimensionalen Raum
 #o
-# (C) 2024-2025 Frank Hofmann, Freiburg, Germany
+# (C) 2024-2026 Frank Hofmann, Freiburg, Germany
 # email frank.hofmann@efho.de
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
@@ -14,10 +14,10 @@ class Punkt1d (Punkt):
   bezeichnung = ""
   positionX = 0
 
-  def __init__(self, bezeichnung, position):
+  def __init__(self, bezeichnung, positionX):
     """ initialisiere das Objekt mit den übergebenen Werten """
-    self.bezeichnung = bezeichnung
-    self.positionX = position
+    self.setBezeichnung(bezeichnung)
+    self.setPositionX(positionX)
     return
 
   def setPositionX(self, positionX):
@@ -33,6 +33,14 @@ class Punkt1d (Punkt):
     """ prüfe, ob der übergebene Wert mit dem gespeicherten Wert 
         des Punktes übereinstimmt """
     if self.positionX == positionX:
+      return True
+
+    return False
+
+  def compareBezeichnung(self, bezeichnung):
+    """ prüfe, ob die übergebene Bezeichnung mit der gespeicherten 
+        Bezeichnung des Punktes übereinstimmt """
+    if self.bezeichnung == bezeichnung:
       return True
 
     return False
