@@ -2,7 +2,7 @@
 # demonstriert eine Klasse Route2d für ein Weg im 
 # zweidimensionalen Raum
 #o
-# (C) 2024-2025 Frank Hofmann, Freiburg, Germany
+# (C) 2024-2026 Frank Hofmann, Freiburg, Germany
 # email frank.hofmann@efho.de
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
@@ -17,28 +17,35 @@ class Route2d:
   strecken = []
 
   def __init__(self, bezeichnung, strecken):
-    self.bezeichnung = bezeichnung
-    self.strecken = strecken
+    """ initialisiere das Objekt mit den übergebenen Werten """
+    setBezeichnung(bezeichnung)
+    setStrecken(strecken)
     return
 
   def setBezeichnung(self, bezeichnung):
+    """ setze die Bezeichnung der Strecke auf den übergebenen Wert """
     self.bezeichnung = bezeichnung
     return
     
   def getBezeichnung(self):
+    """ gib die Bezeichnung der Strecke zurück """
     return self.bezeichnung
     
   def hasBezeichnung(self):
+    """ prüfe, on die Strecke eine Bezeichnung hat """
     return self.bezeichnung != ""
     
   def setStrecken(self, strecken):
+    """ setze die Strecken auf den übergebenen Wert """
     self.strecken = strecken
     return
     
   def getStrecken(self):
+    """ liefere die hinterlegten Strecken """
     return self.strecken
     
   def info(self):
+    """ liefere die hinterlegten Informationen zur Strecke zurück """
     print("Name der Route:", self.getBezeichnung())
 
     for strecke in self.strecken:
@@ -47,6 +54,7 @@ class Route2d:
     return
 
   def getLaenge(self):
+    """ ermittle die Gesamtlänge der Strecke """
     result = 0 #  default value
     for strecke in self.strecken:
         result = result + strecke.getLaenge()
