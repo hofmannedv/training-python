@@ -2,7 +2,7 @@
 # demonstriert eine Klasse Punkt2d für einen Punkt im 
 # zweidimensionalen Raum
 #o
-# (C) 2024-2025 Frank Hofmann, Freiburg, Germany
+# (C) 2024-2026 Frank Hofmann, Freiburg, Germany
 # email frank.hofmann@efho.de
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
@@ -16,24 +16,30 @@ class Punkt2d (Punkt1d):
   positionY = 0
 
   def __init__(self, bezeichnung, positionX, positionY):
-    self.bezeichnung = bezeichnung
-    self.positionX = positionX
-    self.positionY = positionY
+    """ initialisiere das Objekt mit den übergebenen Werten """
+    self.setBezeichnung(bezeichnung)
+    self.setPositionX(positionX)
+    self.setPositionY(positionY)
     return
 
   def setPositionY(self, positionY):
+    """ setze die Y-Position des Punkts auf den übergebenen Wert """
     self.positionY = positionY
     return
     
   def getPositionY(self):
+    """ gebe den gespeicherten Y-Wert des Punkts zurück """
     return self.positionY
 
   def comparePositionY(self, positionY):
+    """ prüfe, ob der übergebene Wert mit dem gespeicherten Y-Wert 
+        des Punktes übereinstimmt """
     if self.positionY == positionY:
       return True
     return False
 
   def info(self):
+    """ gib Informationen zum Punkt aus -- Name sowie X- und Y-Position """
     print("Name des Punkts:", self.getBezeichnung())
     print("X-Position des Punkts:", self.getPositionX())
     print("Y-Position des Punkts:", self.getPositionY())
