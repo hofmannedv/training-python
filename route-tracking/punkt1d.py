@@ -15,24 +15,30 @@ class Punkt1d (Punkt):
   positionX = 0
 
   def __init__(self, bezeichnung, position):
+    """ initialisiere das Objekt mit den übergebenen Werten """
     self.bezeichnung = bezeichnung
     self.positionX = position
     return
 
   def setPositionX(self, positionX):
+    """ setze die Position des Punkts x auf den übergebenen Wert """
     self.positionX = positionX
     return
     
   def getPositionX(self):
+    """ gebe den gespeicherten Wert des Punkts zurück """
     return self.positionX
 
   def comparePositionX(self, positionX):
+    """ prüfe, ob der übergebene Wert mit dem gespeicherten Wert 
+        des Punktes übereinstimmt """
     if self.positionX == positionX:
       return True
 
     return False
 
   def info(self):
+    """ gib Informationen zum Punkt aus -- Name und Position """
     print("Name des Punkts:", self.getBezeichnung())
     print("Position des Punkts:", self.getPositionX())
     return
