@@ -37,14 +37,6 @@ class Punkt1d (Punkt):
 
     return False
 
-  def compareBezeichnung(self, bezeichnung):
-    """ prüfe, ob die übergebene Bezeichnung mit der gespeicherten 
-        Bezeichnung des Punktes übereinstimmt """
-    if self.bezeichnung == bezeichnung:
-      return True
-
-    return False
-
   def info(self):
     """ gib Informationen zum Punkt aus -- Name und Position """
     print("Name des Punkts:", self.getBezeichnung())
