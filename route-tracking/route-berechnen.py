@@ -49,22 +49,11 @@ wegpunkt4 = Punkt2d("D", 2, 3)
 route1 = [wegpunkt1, wegpunkt2, wegpunkt3]
 route2 = [wegpunkt1, wegpunkt4, wegpunkt3]
 
-listeDerWegpunkte1 = [
-    ["A", 1, 1],
-    ["B", 2, 2],
-    ["C", 3, 2]
-]
-listeDerWegpunkte2 = [
-    ["A", 1, 1],
-    ["D", 2, 3],
-    ["C", 3, 2]
-]
-
-# Länge der Routen berechnen
+# Länge der beiden Routen berechnen
 distanz1 = berechneDistanz(route1)
 distanz2 = berechneDistanz(route2)
 
-# Wegpunkte der Routen ermitteln
+# Wegpunkte der beiden Routen ermitteln
 wegpunkte1 = ermittleWegpunkte(route1)
 wegpunkte2 = ermittleWegpunkte(route2)
 
