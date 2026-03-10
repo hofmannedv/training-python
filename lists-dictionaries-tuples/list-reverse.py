@@ -4,6 +4,10 @@
 # (C) 2026 Frank Hofmann, Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+#
+# based on:
+# Python Slicing – How to Slice an Array and What Does [::-1] Mean?
+# https://www.freecodecamp.org/news/python-slicing-how-to-slice-an-array/
 # -----------------------------------------------------------
 
 # define a list
