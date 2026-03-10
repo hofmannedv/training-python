@@ -1,16 +1,19 @@
 # -----------------------------------------------------------
 # demonstrates how to work with dictionaries (basic operations)
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# (C) 2015-2026 Frank Hofmann, Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+# 
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # define a dictionary of capitals
 capitals = {
-	"Norway": "Oslo",
-	"Germany": "Berlin",
-	"France": "Paris"
+    "Norway": "Oslo",
+    "Germany": "Berlin",
+    "France": "Paris"
 }
 print("original:", capitals)
 
@@ -24,10 +27,10 @@ print("modified:", capitals)
 
 # is capital in dictionary?
 if "France" in capitals:
-	print("France is in capitals:", capitals["France"])
+    print("France is in capitals:", capitals["France"])
 
 if "Spain" not in capitals:
-	print("Spain is not in capitals")
+    print("Spain is not in capitals")
 
 # count the number of capitals
 print("number of elements:", len(capitals))
