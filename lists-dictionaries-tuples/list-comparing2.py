@@ -1,9 +1,12 @@
 # -----------------------------------------------------------
 # demonstrates how to compare lists element by element
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# (C) 2015-2026 Frank Hofmann, Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+# 
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # works for all Python releases 
@@ -12,14 +15,14 @@
 # http://stackoverflow.com/questions/1388818/how-can-i-compare-two-lists-in-python-and-return-matches
 
 def compareLists1(list1, list2):
-	# binary comparison
-	result = set(list1) & set(list2)
-	return result
+    # binary comparison
+    result = set(list1) & set(list2)
+    return result
 
 def compareLists2(list1, list2):
-	# set intersection
-	result = set(list1).intersection(list2)
-	return result
+    # set intersection
+    result = set(list1).intersection(list2)
+    return result
 
 # define three lists
 numbers1 = [23, 61, 82]
