@@ -1,8 +1,14 @@
+# -----------------------------------------------------------
 # Python Data Science examples
-# (C) 2022 Frank Hofmann <frank.hofmann@efho.de>
-# License: GNU Public License (GPL)
-
-# create an array with specific values
+# Create an array with specific values
+#
+# (C) 2022-2026 Frank Hofmann, Freiburg, Germany
+# Released under GNU Public License (GPL)
+# email frank.hofmann@efho.de
+# 
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
+# -----------------------------------------------------------
 
 # use numpy module under the local name np
 import numpy as np
@@ -24,5 +30,4 @@ print(valueList)
 #  [10 10 10 10 10]]
 valueList = np.full((5,5), 10, dtype='int')
 print(valueList)
-
 
