@@ -2,3 +2,4 @@ README
 ------
 
 * bubble-sort-modified.py:		sorting a list using modified bubble sort
+* quicksort.py:				sorting a list using quicksort, and recursion
