@@ -4,6 +4,7 @@
 # (C) 2026 Frank Hofmann, Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+# 
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
