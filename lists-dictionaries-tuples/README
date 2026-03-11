@@ -6,6 +6,7 @@ README
 * dictionaries-items.py:		demonstrates how to extract the items of a dictionary using items()
 * dictionaries-keys.py:			demonstrates how to extract the keys of a dictionary using keys()
 * dictionaries-operations.py:		demonstrates how to work with disctionaries
+* dictionaries-values.py:		demonstrates how to extract the values of a dictionary using values()
 * iterable-filter.py: 			show the filter function
 * iterable-join.py: 			show how to use the join function with a list of strings
 * iterable-map.py: 			show how to use the map function with lists
@@ -19,7 +20,6 @@ README
 * list-pop.py:				show how to use the list as a stack
 * list-reverse.py:			how to reverse a list 
 * list-unique.py:			how to convert a list into a set with unique values
-* list-values.py:			demonstrates how to extract the values of a dictionary using values()
 * set-operations.py:			demonstrates how to work with sets (basic operations)
 * sort-reverse.py:			sort and reverse lists
 * sorted-list.py:			create a sorted list using the python bisect module
