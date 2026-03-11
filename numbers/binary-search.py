@@ -1,9 +1,12 @@
 # -----------------------------------------------------------
 # demonstrates a binary search in a list of numbers
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# (C) 2015-2026 Frank Hofmann, Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+# 
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 number = 23
