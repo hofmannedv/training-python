@@ -22,5 +22,6 @@ README
 * list-unique.py:			how to convert a list into a set with unique values
 * set-operations.py:			demonstrates how to work with sets (basic operations)
 * sort-reverse.py:			sort and reverse lists
-* sorted-list-bisect.py:		create a sorted list using the python bisect module
+* sorted-list-bisect.py:		sorting a list using the python bisect module
+* sorted-list-bubble.py:		sorting a list using bubble sort
 * subset-operations.py:			demonstrates how to work with subsets 
