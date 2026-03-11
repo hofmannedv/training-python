@@ -1,26 +1,26 @@
 README
 ------
 
-* overview.py: 					demonstrates how to use lists, tuples, and dictionaries
-* dictionaries-error-handling.py: how to do error handling when accessing single elements
-* dictionaries-operations.py:	demonstrates how to work with disctionaries
+* overview.py: 				demonstrates how to use lists, tuples, and dictionaries
+* dictionaries-error-handling.py: 	how to do error handling when accessing single elements
+* dictionaries-items.py:		demonstrates how to extract the items of a dictionary using items()
+* dictionaries-keys.py:			demonstrates how to extract the keys of a dictionary using keys()
+* dictionaries-operations.py:		demonstrates how to work with disctionaries
 * iterable-filter.py: 			show the filter function
 * iterable-join.py: 			show how to use the join function with a list of strings
-* iterable-map.py: 				show how to use the map function with lists
+* iterable-map.py: 			show how to use the map function with lists
 * iterable-map2.py: 			show how to use the map function with an array
-* iterable-sort.py:				sort a dictionary by its keys using iterators
-* iterable-zip.py: 				show how to use the zip function with lists
-* list-comparing:				compare entire lists (Python 2.x, only)
-* list-comparing2:				compare entire lists (for all Python releases)
-* list-items.py:				demonstrates how to extract the items of a dictionary using items()
-* list-keys.py:					demonstrates how to extract the keys of a dictionary using keys()
+* iterable-sort.py:			sort a dictionary by its keys using iterators
+* iterable-zip.py: 			show how to use the zip function with lists
+* list-comparing:			compare entire lists (Python 2.x, only)
+* list-comparing2:			compare entire lists (for all Python releases)
 * list-operations.py:			various basic list operations
 * list-operations2.py:			extending, changing, and removing list items
-* list-pop.py:					show how to use the list as a stack
-* list-reverse.py:				how to reverse a list 
-* list-unique.py:				how to convert a list into a set with unique values
-* list-values.py:				demonstrates how to extract the values of a dictionary using values()
+* list-pop.py:				show how to use the list as a stack
+* list-reverse.py:			how to reverse a list 
+* list-unique.py:			how to convert a list into a set with unique values
+* list-values.py:			demonstrates how to extract the values of a dictionary using values()
 * set-operations.py:			demonstrates how to work with sets (basic operations)
-* sort-reverse.py:				sort and reverse lists
-* sorted-list.py:				create a sorted list using the python bisect module
+* sort-reverse.py:			sort and reverse lists
+* sorted-list.py:			create a sorted list using the python bisect module
 * subset-operations.py:			demonstrates how to work with subsets 
