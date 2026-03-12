@@ -15,6 +15,7 @@ README
 * iterable-zip.py: 			show how to use the zip function with lists
 * list-comparing:			compare entire lists (Python 2.x, only)
 * list-comparing2:			compare entire lists (for all Python releases)
+* list-extend:				extend a list by multiple items
 * list-operations.py:			various basic list operations
 * list-operations2.py:			extending, changing, and removing list items
 * list-pop.py:				show how to use the list as a stack
