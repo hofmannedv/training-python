@@ -1,5 +1,7 @@
 README
 ------
 
-* linear-search.py:			search a value in a list using linear seach using a while loop
+* binary-search-strings.py:		search a value in a list using binary search using a while loop
+* binary-search-strings-recursive.py:	search a value in a list using binary search using recursion
+* linear-search.py:			search a value in a list using linear search using a while loop
 * search-using-in-operator.py:		search a value in a list using in operator
