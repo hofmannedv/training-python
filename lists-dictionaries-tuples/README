@@ -5,7 +5,7 @@ README
 * dictionaries-error-handling.py: 	how to do error handling when accessing single elements
 * dictionaries-items.py:		demonstrates how to extract the items of a dictionary using items()
 * dictionaries-keys.py:			demonstrates how to extract the keys of a dictionary using keys()
-* dictionaries-operations.py:		demonstrates how to work with disctionaries
+* dictionaries-operations.py:		demonstrates how to work with dictionaries
 * dictionaries-values.py:		demonstrates how to extract the values of a dictionary using values()
 * iterable-filter.py: 			show the filter function
 * iterable-join.py: 			show how to use the join function with a list of strings
