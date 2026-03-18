@@ -6,3 +6,6 @@ README
   
 * knapsack-sorted-ascending.py: solve the knapsack problems using a sorted list
   (smallest items first)
+  
+* knapsack-sorted-recursive.py: solve the knapsack problems using a sorted list
+  and recursion (smallest items first)
