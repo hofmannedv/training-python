@@ -6,6 +6,9 @@
 # see: Knapsack Problem Algorithm (Wikipedia)
 # https://en.wikipedia.org/wiki/Knapsack_problem
 #
+# Thanks to Jessica Ries for the inspiration to implement this 
+# approach.
+#
 # (C) 2026 Frank Hofmann, Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
