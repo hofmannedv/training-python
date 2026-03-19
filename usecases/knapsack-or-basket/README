@@ -2,10 +2,15 @@ README
 ------
 
 * knapsack-combinations.py: solve the knapsack problem using combinations from 
-  itertools
+  itertools. Store as many items as possible in the knapsack.
   
+* knapsack-partition-greedy.py: solve the knapsack problem by dividing the items 
+  equally between the participants according to the article's weights. Based on 
+  a greedy approach.
+
 * knapsack-sorted-ascending.py: solve the knapsack problem using a sorted list
-  (smallest items first)
+  (smallest items first). Store as many items as possible in the knapsack.
   
 * knapsack-sorted-recursive.py: solve the knapsack problem using a sorted list
-  and recursion (smallest items first)
+  and recursion (smallest items first). Store as many items as possible in the 
+  knapsack.
