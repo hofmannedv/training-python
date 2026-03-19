@@ -4,6 +4,10 @@ README
 * knapsack-combinations.py: solve the knapsack problem using combinations from 
   itertools. Store as many items as possible in the knapsack.
   
+* knapsack-partition-average.py: solve the knapsack problem by dividing the 
+  items equally between the participants according to the article's weights. 
+  Based on the average weight per participant.
+
 * knapsack-partition-greedy.py: solve the knapsack problem by dividing the items 
   equally between the participants according to the article's weights. Based on 
   a greedy approach.
