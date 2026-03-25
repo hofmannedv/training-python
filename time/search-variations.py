@@ -1,9 +1,12 @@
 # -----------------------------------------------------------
 # time measurements: search in a list of numbers
 #o
-# (C) 2015 Frank Hofmann, Berlin, Germany
+# (C) 2015-2026 Frank Hofmann, Berlin/Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+# 
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # define python standard module
@@ -96,5 +99,3 @@ endTime1 = time.time()
 # calculate and output interval time
 seconds = endTime1 - startTime1
 print ("binary search took %.8f seconds" % seconds)
-
-
