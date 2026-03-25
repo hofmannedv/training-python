@@ -8,3 +8,5 @@ README
   using different search algorithms
 
 * sorted-list.py: creating a sorted list with 200000 elements
+
+* time-comparison.py: compare timestamps
