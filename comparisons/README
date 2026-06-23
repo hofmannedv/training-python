@@ -2,3 +2,6 @@ README
 ------
 
 * basic-comparisons.py: demonstrates basic if-elif-else comparisons
+
+* match-comparisons.py: demonstrates comparisons using match-case
+                        (requires Python 3.10)
