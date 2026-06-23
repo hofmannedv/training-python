@@ -1,7 +1,7 @@
 # -----------------------------------------------------------
 # demonstrates different kind of assignments
 #o
-# (C) 2014-2025 Frank Hofmann, Berlin/Freiburg, Germany
+# (C) 2014-2026 Frank Hofmann, Berlin/Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
 #
