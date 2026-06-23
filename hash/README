@@ -1,0 +1,9 @@
+README
+------
+
+* calculate-sha256.py: demonstrates how to use hash functions:
+  calculate sha256 hash for the contents of a file
+
+* hash-chain.py: demonstrates how to use hash functions -- hash chain
+
+* hash-field.py: demonstrates how to use hash functions -- repeated hash
