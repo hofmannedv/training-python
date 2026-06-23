@@ -1,7 +1,7 @@
 # -----------------------------------------------------------
 # demonstrates how to compare strings case-insensitive
 #o
-# (C) 2018 Frank Hofmann, Berlin, Germany
+# (C) 2018-2026 Frank Hofmann, Berlin/Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
 #
