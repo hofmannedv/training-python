@@ -5,3 +5,5 @@ README
 
 * match-comparisons.py: demonstrates comparisons using match-case
                         (requires Python 3.10)
+
+* ternary-operator.py:  demonstrates comparisons using the ternary operator
