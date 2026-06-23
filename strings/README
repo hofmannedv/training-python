@@ -9,6 +9,9 @@ README
 
 * comparing-strings-difflib.py: compare multi-line strings using difflib
 
+* comparing-strings-hash.py: compare two strings using a hash value 
+  note: work in progress
+
 * comparing-strings-order.py: demonstrates how to compare strings
   according to lexicographical order based on the < and > operators
 
