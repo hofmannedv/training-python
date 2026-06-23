@@ -1,9 +1,12 @@
 # -----------------------------------------------------------
 # demonstrates how to compare strings (== operator)
 #o
-# (C) 2018 Frank Hofmann, Berlin, Germany
+# (C) 2018-2026 Frank Hofmann, Berlin/Freiburg, Germany
 # Released under GNU Public License (GPL)
 # email frank.hofmann@efho.de
+#
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # using the == operator
@@ -11,4 +14,4 @@ listOfPlaces = ["Berlin", "Paris", "Lausanne"]
 currentCity = "Lausanne"
 
 for place in listOfPlaces:
-	print ("comparing %s with %s: %s" % (place, currentCity, place == currentCity))
+    print ("comparing %s with %s: %s" % (place, currentCity, place == currentCity))
