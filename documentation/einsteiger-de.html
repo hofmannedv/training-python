@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.7" />
+<meta name="generator" content="AsciiDoc 10.2.0" />
 <title>Programmieren mit Python. Erste Schritte.</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -87,9 +88,15 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
+}
+pre {
+  white-space: pre-wrap;
 }
 
 #author {
@@ -219,7 +226,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -415,12 +422,6 @@ div.unbreakable { page-break-inside: avoid; }
  *
  * */
 
-tt {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
-
 div.tableblock {
   margin-top: 1.0em;
   margin-bottom: 1.5em;
@@ -435,7 +436,7 @@ thead, p.table.header {
 p.table {
   margin-top: 0;
 }
-/* Because the table frame attribute is overriden by CSS in most browsers. */
+/* Because the table frame attribute is overridden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -453,12 +454,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -539,6 +534,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -731,7 +728,7 @@ install: function(toclevels) {
 }
 
 }
-asciidoc.install(3);
+asciidoc.install();
 /*]]>*/
 </script>
 </head>
@@ -739,12 +736,8 @@ asciidoc.install(3);
 <div id="header">
 <h1>Programmieren mit Python. Erste Schritte.</h1>
 <span id="author">Frank Hofmann</span><br />
-<span id="revnumber">version 1.1,</span>
-<span id="revdate">20. Mai 2015</span>
-<div id="toc">
-  <div id="toctitle">Inhaltsverzeichnis</div>
-  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
-</div>
+<span id="revnumber">version 1.2,</span>
+<span id="revdate">23. Juni 2026</span>
 </div>
 <div id="content">
 <h1 id="_vorwort">Vorwort</h1>
@@ -753,7 +746,7 @@ mächtig und flexibel für den Alltag.</p></div>
 <div class="listingblock">
 <div class="title">Zen of Python</div>
 <div class="content">
-<pre><tt>    Beautiful is better than ugly.
+<pre><code>    Beautiful is better than ugly.
     Explicit is better than implicit.
     Simple is better than complex.
     Complex is better than complicated.
@@ -773,7 +766,7 @@ mächtig und flexibel für den Alltag.</p></div>
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
 
-    —Tim Peters</tt></pre>
+    —Tim Peters</code></pre>
 </div></div>
 <div class="sect1">
 <h2 id="_entwicklungsumgebung">1. Entwicklungsumgebung</h2>
@@ -783,11 +776,11 @@ sind ein Texteditor mit Syntaxhervorhebung und eine Shell. Mehr
 Möglichkeiten eröffnen die Python Shell, eine IDE oder das iPython Notebook.</p></div>
 <div class="sect2">
 <h3 id="_python_shell">1.1. Python Shell</h3>
-<div class="paragraph"><p>Die Python Shell wird mitgeliefert und ist über den Aufruf <tt>python</tt> (für
-Python 2.x) bzw. <tt>python3</tt> (ab Python 3.x) erreichbar.</p></div>
+<div class="paragraph"><p>Die Python Shell wird mitgeliefert und ist über den Aufruf <code>python</code> (für
+Python 2.x) bzw. <code>python3</code> (ab Python 3.x) erreichbar.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>user@rechner:~$ python3
+<pre><code>user@rechner:~$ python3
 Python 3.2.3 (default, Feb 20 2013, 17:02:41)
 [GCC 4.7.2] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
@@ -798,7 +791,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 50
 &gt;&gt;&gt;
 quit()
-user@rechner:~$</tt></pre>
+user@rechner:~$</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -828,24 +821,24 @@ jedoch nicht gemischt
 </li>
 <li>
 <p>
-kein Sonderzeichen für das Zeilenende (wie bspw. <tt>;</tt> in C)
+kein Sonderzeichen für das Zeilenende (wie bspw. <code>;</code> in C)
 </p>
 </li>
 <li>
 <p>
-Kommentare beginnen mit einem <tt>#</tt>
+Kommentare beginnen mit einem <code>#</code>
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="title">Hello World! in Python</div>
 <div class="content">
-<pre><tt>#!/usr/bin/env/python
+<pre><code>#!/usr/bin/env/python
 
 # -*- coding: utf-8 -*-
 
 message = "Hello, world!"
-print (message)</tt></pre>
+print (message)</code></pre>
 </div></div>
 <div class="sect2">
 <h3 id="_übersetzung_und_ausführung">2.1. Übersetzung und Ausführung</h3>
@@ -869,8 +862,8 @@ Ausführung über die Shell
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>$ python3 programm.py
-$</tt></pre>
+<pre><code>$ python3 programm.py
+$</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -881,9 +874,9 @@ Verwendung als ausführbares Programm
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>$ chmod +x programm.py
+<pre><code>$ chmod +x programm.py
 $ ./programm.py
-$</tt></pre>
+$</code></pre>
 </div></div>
 </div>
 </div>
@@ -900,7 +893,7 @@ Programms, einer Funktion oder Klasse
 </li>
 <li>
 <p>
-als Bezeichner sind Buchstaben, Ziffern und Sonderzeichen wie <tt>_</tt> erlaubt
+als Bezeichner sind Buchstaben, Ziffern und Sonderzeichen wie <code>_</code> erlaubt
 </p>
 </li>
 <li>
@@ -911,7 +904,7 @@ dynamische Typisierung, d.h. keine besondere Kennung für Datentypen
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Zahlenwert (Integer)
+<pre><code># Zahlenwert (Integer)
 anzahl = 15
 
 # Zahlenwert (Gleitkommazahl)
@@ -919,7 +912,7 @@ umsatzsteuer_7 = 1.07
 umsatzsteuer_19 = 1.19
 
 # Zeichenkette
-bezeichnung = "Zahnbürste"</tt></pre>
+bezeichnung = "Zahnbürste"</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
@@ -930,11 +923,11 @@ Zuweisung (Einzel- und Mehrfachzuweisung)
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Einzelzuweisung
+<pre><code># Einzelzuweisung
 ort = "Berlin"
 
 # Mehrfachzuweisung
-ort, postleitzahl = "Berlin", 10247</tt></pre>
+ort, postleitzahl = "Berlin", 10247</code></pre>
 </div></div>
 </div>
 </div>
@@ -953,7 +946,7 @@ Menge von Werten beliebigen Inhalts und Typs
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>artikelListe = [1, 4.5, "Berlin"]</tt></pre>
+<pre><code>artikelListe = [1, 4.5, "Berlin"]</code></pre>
 </div></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -967,7 +960,7 @@ Liste von Zeichen im Encoding UTF-8
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># einzeilige Zeichenketten
+<pre><code># einzeilige Zeichenketten
 stadt1 = "Berlin"
 stadt2 = 'Potsdam'
 
@@ -976,7 +969,7 @@ mitteilung = """
 Text (Zeile 1)
 Text (Zeile 2)
 Text (Zeile 3)
-"""</tt></pre>
+"""</code></pre>
 </div></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -990,25 +983,25 @@ wie eine Liste, aber der Inhalt ist unveränderlich
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>herkunft = ("Europa", "USA", "Australien")</tt></pre>
+<pre><code>herkunft = ("Europa", "USA", "Australien")</code></pre>
 </div></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
-Set (Menge)
+Menge (Set)
 </dt>
 <dd>
 <p>
-wie eine Liste, jedoch kein Element darf mehrfach vorkommen
+wie eine Liste, jedoch kein Element kommt mehrfach darin vor
 </p>
 </dd>
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>stadt = {"Oslo", "Berlin", "Lausanne"}</tt></pre>
+<pre><code>stadt = {"Oslo", "Berlin", "Lausanne"}</code></pre>
 </div></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Liste
+<pre><code># Liste
 artikelListe = [anzahl, umsatzsteuer_19, bezeichner]
 
 # Menge
@@ -1019,11 +1012,11 @@ if "blau" in farben:
         print ("blau ist in der Farbmenge enthalten")
 
 if "gelb" not in farben:
-        print ("gelb ist nicht in der Farbmenge enthalten")</tt></pre>
+        print ("gelb ist nicht in der Farbmenge enthalten")</code></pre>
 </div></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
-assoziatives Array
+assoziatives Array (Dictionary)
 </dt>
 <dd>
 <p>
@@ -1034,14 +1027,14 @@ In anderen Programmiersprachen bekannt als Hashtabelle.
 </dl></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>artikel = {
+<pre><code>artikel = {
         "menge": anzahl,
         "ust": umsatzsteuer_19,
         "bezeichner": bezeichner
 }
 
 # Ausgabe der Artikelmenge
-print (artikel["menge"])</tt></pre>
+print (artikel["menge"])</code></pre>
 </div></div>
 </div>
 </div>
@@ -1051,13 +1044,13 @@ print (artikel["menge"])</tt></pre>
 <div class="ulist"><ul>
 <li>
 <p>
-<tt>for</tt>-Schleife
+<code>for</code>-Schleife
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Mengen definieren
+<pre><code># Mengen definieren
 farben = ("rot", "grün", "blau")
 rgb = {
         "rot" : "#F00",
@@ -1067,18 +1060,18 @@ rgb = {
 
 for eintrag in farben:
         print ("Farbe:%s" % eintrag)
-        print ("RGB-Code:", rgb[eintrag])</tt></pre>
+        print ("RGB-Code:", rgb[eintrag])</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
 <p>
-<tt>while</tt>-Schleife
+<code>while</code>-Schleife
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># mit while-Schleife
+<pre><code># mit while-Schleife
 farben = ("rot", "grün", "blau")
 
 # Anzahl der Mengenelemente ermitteln
@@ -1087,7 +1080,7 @@ anzahlFarben = len(farben)
 i = 0
 while i &lt; anzahlFarben:
     print ("%i: %s" % (i, farben[i]))
-    i = i + 1</tt></pre>
+    i = i + 1</code></pre>
 </div></div>
 </div>
 </div>
@@ -1097,35 +1090,53 @@ while i &lt; anzahlFarben:
 <div class="ulist"><ul>
 <li>
 <p>
-Modul vollständig benutzen
+ein Modul vollständig benutzen
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>import Modulname</tt></pre>
+<pre><code>import Modulname</code></pre>
 </div></div>
 <div class="ulist"><ul>
 <li>
 <p>
-nur einen Teil davon benutzen
+nur einen Teil eines Moduls benutzen
 </p>
 </li>
 </ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>from Modulname import Funktion</tt></pre>
+<pre><code>from Modulname import Funktion</code></pre>
 </div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+ein Modul unter einem anderen Namen einbinden
+</p>
+</li>
+</ul></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>import sys
+<pre><code>import pandas as pd</code></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Beispiel
+</p>
+</li>
+</ul></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>import sys
 
 # Funktion aus dem importierten Modul benutzen
 # - Kommandozeilenargument 0
 print (sys.argv[0])
 
 # - Rückkehr mit Exit-Code 1
-sys.exit(1)</tt></pre>
+sys.exit(1)</code></pre>
 </div></div>
 </div>
 </div>
@@ -1145,7 +1156,7 @@ wie Variablen, d.h. Buchstaben, Ziffern und Sonderzeichen
 </li>
 <li>
 <p>
-keine Kennzeichnung des Funktionstyps
+keine Kennzeichnung des Funktionstyps erforderlich
 </p>
 </li>
 </ul></div>
@@ -1154,24 +1165,24 @@ keine Kennzeichnung des Funktionstyps
 <div class="listingblock">
 <div class="title">Funktion ohne Parameter</div>
 <div class="content">
-<pre><tt># Funktion definieren
+<pre><code># Funktion definieren
 def meineFunktion():
         ort = "Berlin"
 
         return ort
 
 # Funktion aufrufen
-ergebnis = meineFunktion()</tt></pre>
+ergebnis = meineFunktion()</code></pre>
 </div></div>
 <div class="listingblock">
 <div class="title">Funktion mit zwei Parametern und Liste als Rückgabewert</div>
 <div class="content">
-<pre><tt>def umrechnung(parameter1, parameter2):
+<pre><code>def umrechnung(parameter1, parameter2):
         zusatzwert = 15
 
         return [parameter1, parameter2, zusatzwert]
 
-ergebnisliste = umrechnung(2,4)</tt></pre>
+ergebnisliste = umrechnung(2,4)</code></pre>
 </div></div>
 </div>
 </div>
@@ -1181,7 +1192,7 @@ ergebnisliste = umrechnung(2,4)</tt></pre>
 <div class="ulist"><ul>
 <li>
 <p>
-Dokumentation zu Python 3.4, <a href="https://docs.python.org/3.4/index.html">https://docs.python.org/3.4/index.html</a>
+Dokumentation zu Python 3.14, <a href="https://docs.python.org/3.14/index.html">https://docs.python.org/3.14/index.html</a>
 </p>
 </li>
 <li>
@@ -1206,8 +1217,9 @@ Frank Hofmann: GitHub-Repo mit ausführlichen Beispielen, <a href="https://githu
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Version 1.1<br />
-Letzte Änderung 2015-05-20 16:56:33 CEST
+Version 1.2<br />
+Letzte Änderung
+ 2026-06-23 21:39:54 CEST
 </div>
 </div>
 </body>

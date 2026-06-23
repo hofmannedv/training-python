@@ -4,11 +4,11 @@ Frank Hofmann
 :subtitle:
 :doctype: book
 :copyright: Frank Hofmann
-:revnumber: 1.1
+:revnumber: 1.2
 :Author Initials: FH
 :edition: 1
 :lang: de
-:date: 20. Mai 2015
+:date: 23. Juni 2026
 :numbered:
 
 = Vorwort =
@@ -177,8 +177,8 @@ wie eine Liste, aber der Inhalt ist unveränderlich
 herkunft = ("Europa", "USA", "Australien")
 ----
 
-Set (Menge):: 
-wie eine Liste, jedoch kein Element darf mehrfach vorkommen
+Menge (Set):: 
+wie eine Liste, jedoch kein Element kommt mehrfach darin vor
 
 ----
 stadt = {"Oslo", "Berlin", "Lausanne"}
@@ -199,7 +199,7 @@ if "gelb" not in farben:
 	print ("gelb ist nicht in der Farbmenge enthalten")
 ----
 
-assoziatives Array:: 
+assoziatives Array (Dictionary):: 
 wie eine Liste, jedoch mit String als Index anstatt von Integerwerten.
 In anderen Programmiersprachen bekannt als Hashtabelle.
 
@@ -232,7 +232,7 @@ for eintrag in farben:
 	print ("RGB-Code:", rgb[eintrag])
 ----
 
-** `while`-Schleife
+* `while`-Schleife
 ----
 # mit while-Schleife
 farben = ("rot", "grün", "blau")
@@ -248,17 +248,25 @@ while i < anzahlFarben:
 
 == Nutzung bestehender Funktionen (Module) ==
 
-* Modul vollständig benutzen
+* ein Modul vollständig benutzen
 
 ----
 import Modulname
 ----
 
-* nur einen Teil davon benutzen
+* nur einen Teil eines Moduls benutzen
 
 ----
 from Modulname import Funktion
 ----
+
+* ein Modul unter einem anderen Namen einbinden
+
+----
+import pandas as pd
+----
+
+* Beispiel
 
 ----
 import sys
@@ -275,7 +283,7 @@ sys.exit(1)
 
 * Bezeichner
 ** wie Variablen, d.h. Buchstaben, Ziffern und Sonderzeichen
-** keine Kennzeichnung des Funktionstyps
+** keine Kennzeichnung des Funktionstyps erforderlich
 
 .Funktion ohne Parameter
 ----
@@ -301,7 +309,7 @@ ergebnisliste = umrechnung(2,4)
 
 == Weiterführende Dokumente ==
 
-* Dokumentation zu Python 3.4, https://docs.python.org/3.4/index.html
+* Dokumentation zu Python 3.14, https://docs.python.org/3.14/index.html
 * PEP 0008 -- Style Guide for Python Code, https://www.python.org/dev/peps/pep-0008/
 * Python Practice Book, http://anandology.com/python-practice-book/index.html
 * Frank Hofmann: GitHub-Repo mit ausführlichen Beispielen, https://github.com/hofmannedv/training-python
