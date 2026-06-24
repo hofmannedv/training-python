@@ -1,6 +1,8 @@
 README
 ------
 
+* database.sqlite: example sqlite database
+
 * demo-db1.py: reads the given data file, and imports it as sqlite 
   database. Simply outputs the names of the tables found in the database
 
