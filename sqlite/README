@@ -6,3 +6,5 @@ README
 * demo-db1.py: reads the given data file, and imports it as sqlite 
   database. Simply outputs the names of the tables found in the database
 
+* read-users.py: reads the given data file, and imports it as sqlite
+  database. Outputs the content of table benutzer
