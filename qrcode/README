@@ -1,0 +1,5 @@
+README
+------
+
+* generate-basic-qrcode.py: demonstrates how to generate a basic QR code
+  using the qrcode library
