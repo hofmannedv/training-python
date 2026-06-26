@@ -3,3 +3,11 @@ README
 
 * generate-basic-qrcode.py: demonstrates how to generate a basic QR code
   using the qrcode library
+
+* generate-qrcode-with-image.py: demonstrates how to generate a QR code
+  with image using both the qrcode module, and the Python Imaging Library 
+  (PIL)
+
+* python-logo.png: Python logo as PNG image file
+
+* python-logo.png: Python logo as PNG image file
