@@ -3,3 +3,6 @@ README
 
 * hello-world-tk.py
   demonstrates how to greet you using Tkinter
+
+* main-window-tk.py
+  demonstrates how to generate a window with a specific window title
