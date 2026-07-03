@@ -6,3 +6,6 @@ README
 
 * main-window-tk.py
   demonstrates how to generate a window with a specific window title
+
+* main-window-with-size-tk.py
+  demonstrates how to generate a window with size 640 x 400 pixels

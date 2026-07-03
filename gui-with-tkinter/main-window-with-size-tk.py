@@ -1,5 +1,6 @@
 # -----------------------------------------------------------
 # demonstrates how to generate a main window using Tkinter
+# that as a window size of 640 x 400 px
 #o
 # (C) 2026 Frank Hofmann, Freiburg, Germany
 # email frank.hofmann@efho.de
@@ -14,7 +15,10 @@ import tkinter as tk
 root = tk.Tk()
 
 # set the window title
-root.title("Window Example Text")
+root.title("Cool Application")
+
+# define the window size: 640 x 400
+root.geometry('600x400')
 
 # keep the window displaying
 root.mainloop()

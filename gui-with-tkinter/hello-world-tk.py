@@ -1,7 +1,7 @@
 # -----------------------------------------------------------
 # demonstrates how to greet you using Tkinter
 #o
-# (C) 2026 Frank Hofmann, Berlin/Freiburg, Germany
+# (C) 2026 Frank Hofmann, Freiburg, Germany
 # email frank.hofmann@efho.de
 # 
 # License: GNU Public License (GPL) v.3.0 or later
