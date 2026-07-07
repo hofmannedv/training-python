@@ -1,4 +1,5 @@
 README
 ------
 
-* ToDo
+* open-meteo-forecast-5-days.py: uses Open Meteo API to generate a 5 day 
+  temperature forecast for a specific place: Johannesburg, South Africa
