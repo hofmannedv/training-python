@@ -66,5 +66,5 @@ dailyFcDf.rename(columns={
 print(dailyFcDf)
 
 # generate plot, and display it
-dailyFcDf.plot()
+dailyFcDf.plot(kind="bar", stacked=True)
 plt.show()
