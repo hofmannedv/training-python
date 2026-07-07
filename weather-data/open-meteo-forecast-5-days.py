@@ -13,6 +13,7 @@
 # import required modules
 import pandas as pd
 import requests
+import matplotlib.pyplot as plt
 
 # define the location by a pair of latitude, and longitude
 location = {
@@ -53,7 +54,7 @@ dailyFc = data.get('daily')
 # transform the data into a Pandas Dataframe
 dailyFcDf = pd.DataFrame(dailyFc)
 
-# rename the comlumn titles
+# rename the column titles
 dailyFcDf.rename(columns={
     'time':'date', 
     'temperature_2m_min':'minimal temperature', 
@@ -63,3 +64,7 @@ dailyFcDf.rename(columns={
 
 # output collected data as table
 print(dailyFcDf)
+
+# generate plot, and display it
+dailyFcDf.plot()
+plt.show()
