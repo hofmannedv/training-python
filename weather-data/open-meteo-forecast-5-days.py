@@ -72,5 +72,8 @@ dailyFcDf.plot(kind="bar", stacked=True)
 plt.xlabel("Date")
 plt.ylabel("Temperature in °C")
 
+# rotate the x-axis labels by 30 degrees
+plt.xticks(rotation=30, horizontalalignment="center")
+
 # show diagram
 plt.show()
