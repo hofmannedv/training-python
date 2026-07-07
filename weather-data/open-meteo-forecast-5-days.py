@@ -65,6 +65,12 @@ dailyFcDf.rename(columns={
 # output collected data as table
 print(dailyFcDf)
 
-# generate plot, and display it
+# generate plot
 dailyFcDf.plot(kind="bar", stacked=True)
+
+# set label for x, and y axis
+plt.xlabel("Date")
+plt.ylabel("Temperature in °C")
+
+# show diagram
 plt.show()
