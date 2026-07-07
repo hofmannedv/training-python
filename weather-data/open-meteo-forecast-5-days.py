@@ -51,8 +51,9 @@ data = responses.json()
 # extract daily data
 dailyFc = data.get('daily')
 
-# transform the data into a Pandas Dataframe
-dailyFcDf = pd.DataFrame(dailyFc)
+# transform the data into a Pandas Dataframe, and use 
+# the timestamps as index on the x axis
+dailyFcDf = pd.DataFrame(dailyFc, index=dailyFc['time'])
 
 # rename the column titles
 dailyFcDf.rename(columns={
@@ -72,7 +73,7 @@ dailyFcDf.plot(kind="bar", stacked=True)
 plt.xlabel("Date")
 plt.ylabel("Temperature in °C")
 
-# rotate the x-axis labels by 30 degrees
+# rotate the x axis labels by 30 degrees
 plt.xticks(rotation=30, horizontalalignment="center")
 
 # show diagram
