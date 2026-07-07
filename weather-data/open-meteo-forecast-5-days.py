@@ -53,5 +53,13 @@ dailyFc = data.get('daily')
 # transform the data into a Pandas Dataframe
 dailyFcDf = pd.DataFrame(dailyFc)
 
+# rename the comlumn titles
+dailyFcDf.rename(columns={
+    'time':'date', 
+    'temperature_2m_min':'minimal temperature', 
+    'temperature_2m_max':'maximal temperature'
+    }, inplace=True
+)
+
 # output collected data as table
 print(dailyFcDf)
