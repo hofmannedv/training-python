@@ -21,6 +21,9 @@ location = {
     'longitude': 18.36028355
 }
 
+# define the name of the place: Joburg
+place = "Johannesburg, South Africa"
+
 # define the timezone
 timezone = 'Africa/Johannesburg'
 
@@ -66,8 +69,11 @@ dailyFcDf.rename(columns={
 # output collected data as table
 print(dailyFcDf)
 
+# define plot title
+plotTitle = f"Weather forecast for {place}"
+
 # generate plot
-dailyFcDf.plot(kind="bar", stacked=True)
+dailyFcDf.plot(kind="bar", stacked=True, title=plotTitle)
 
 # set label for x, and y axis
 plt.xlabel("Date")
