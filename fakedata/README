@@ -3,3 +3,6 @@ README
 
 * fake-names.py
   demonstrates how to generate fake names using the faker module
+
+* fake-employee-data.py
+  demonstrates how to generate fake employee data using the faker module
