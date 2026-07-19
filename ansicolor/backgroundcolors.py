@@ -1,12 +1,14 @@
 # -----------------------------------------------------------
 # demonstrates the definition and usage of ansi colors (background)
 #o
-# (C) 2016 Frank Hofmann, Berlin, Germany
-# Released under GNU Public License (GPL)
+# (C) 2016-2026 Frank Hofmann, Berlin/Freiburg, Germany
 # email frank.hofmann@efho.de
 #
 # follows the techniques as described in Haoyi's Programming Blog:
 # http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
+#
+# License: GNU Public License (GPL) v.3.0 or later
+# SPDX-License-Identifier: GNU General Public License v3.0 or later
 # -----------------------------------------------------------
 
 # define basic background color set

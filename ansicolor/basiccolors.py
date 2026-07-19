@@ -1,8 +1,9 @@
 # -----------------------------------------------------------
 # demonstrates the definition and usage of ansi colors
 #o
-# (C) 2016-2024 Frank Hofmann, Freiburg, Germany
+# (C) 2016-2026 Frank Hofmann, Freiburg, Germany
 # email frank.hofmann@efho.de
+# 
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
 #
