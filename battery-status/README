@@ -1,0 +1,7 @@
+README
+------
+
+* check-battery-status.py
+  demonstrates how to read the battery status using the psutil library
+
+
