@@ -28,13 +28,29 @@ print(" ")
 print("sorting items by name ...")
 print(" ")
 
-# sort dictionary by name (key)
+# convert data structure to OrderedDict
 orderedPoints = OrderedDict(points.items())
-sortedOrderedPointsByName = {key:orderedPoints[key] for key in sorted(orderedPoints.keys())}
+
+# sort dictionary by name (key)
+sortedOrderedPointsByName = OrderedDict(sorted(orderedPoints.items(), key=lambda item: item[0]))
+
 print("Sorted dictionary:")
 print(sortedOrderedPointsByName)
 
 for name, value in sortedOrderedPointsByName.items():
+    print(f"{name:<10}: {value:3d}")
+
+print(" ")
+print("sorting items by value ...")
+print(" ")
+
+# sort dictionary by value
+sortedOrderedPointsByValue = OrderedDict(sorted(orderedPoints.items(), key=lambda item: item[1]))
+
+print("Sorted dictionary:")
+print(sortedOrderedPointsByValue)
+
+for name, value in sortedOrderedPointsByValue.items():
     print(f"{name:<10}: {value:3d}")
 
 
