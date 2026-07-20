@@ -23,3 +23,18 @@ points = {
 print("Unsorted dictionary:")
 for name, value in points.items():
     print(f"{name:<10}: {value:3d}")
+
+print(" ")
+print("sorting items by name ...")
+print(" ")
+
+# sort dictionary by name (key)
+orderedPoints = OrderedDict(points.items())
+sortedOrderedPointsByName = {key:orderedPoints[key] for key in sorted(orderedPoints.keys())}
+print("Sorted dictionary:")
+print(sortedOrderedPointsByName)
+
+for name, value in sortedOrderedPointsByName.items():
+    print(f"{name:<10}: {value:3d}")
+
+
