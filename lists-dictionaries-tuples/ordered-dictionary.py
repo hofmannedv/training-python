@@ -8,6 +8,11 @@
 # 
 # License: GNU Public License (GPL) v.3.0 or later
 # SPDX-License-Identifier: GNU General Public License v3.0 or later
+#
+# with inspiration from:
+# * https://x.com/driscollis/status/2079189497598894486/photo/1
+# * Python OrderedDict sorting: Keys and values
+#   https://www.w3resource.com/python-exercises/extended-data-types/python-extended-data-types-index-ordereddict-exercise-2.php
 # -----------------------------------------------------------
 
 from collections import OrderedDict
